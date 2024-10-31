@@ -1,0 +1,1 @@
+import{openDrop}from"./module/openDrop.js";if(document.querySelector("#openSearch")){const e=document.querySelector("#openSearch");e.addEventListener("click",()=>{openDrop(e,!1)})}if(document.querySelector("#openDrop1")){const e=document.querySelector("#openDrop1");e.addEventListener("click",()=>{openDrop(e,!1)})}
