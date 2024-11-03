@@ -13,3 +13,29 @@ if(document.querySelector('#openDrop1')){
     openDrop(btnDrop1, false)
   })
 }
+
+if(document.querySelector('#swiper-1')){
+  var swiper1 = new Swiper("#swiper-1", {
+    spaceBetween: 30,
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true
+    },
+    navigation: {
+      nextEl: ".slider-hero__swiper-button-prev",
+      prevEl: ".slider-hero__swiper-button-next",
+    },
+  });
+}
+
+if(document.querySelector('#swiper-2')){
+  var swiper2 = new Swiper("#swiper-2", {
+    slidesPerView: 6,
+    spaceBetween: 20,
+
+    navigation: {
+      nextEl: ".slider-partners__swiper-button-prev",
+      prevEl: ".slider-partners__swiper-button-next",
+    },
+  });
+}
