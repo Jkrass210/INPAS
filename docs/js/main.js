@@ -1,4 +1,5 @@
 import { openDrop } from './module/openDrop.js';
+import { initQuiz } from './module/initQuiz.js';
 
 if(document.querySelector('#openSearch')){
   const btnSearch = document.querySelector('#openSearch');
@@ -37,5 +38,17 @@ if(document.querySelector('#swiper-2')){
       nextEl: ".slider-partners__swiper-button-prev",
       prevEl: ".slider-partners__swiper-button-next",
     },
+  });
+}
+
+if (document.querySelector('.quiz-container') && document.querySelectorAll('.quiz-container__question')) {
+  initQuiz({
+    containerSelector: '.quiz-container',
+    questionSelector: '.quiz-container__question',
+    counterSelector: '.quiz-container__counter',
+    prevButtonSelector: '#prev-btn',
+    nextButtonSelector: '#next-btn',
+    activeClass: 'active',
+    disabledClass: 'disabled'
   });
 }
