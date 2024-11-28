@@ -5,11 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Главная</title>
   <link href="css/normalize.min.css" rel="stylesheet">
-  <link href="css/swiper-bundle.min.css" rel="stylesheet">
+  <!--<link href="css/swiper-bundle.min.css" rel="stylesheet">-->
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <link href="css/style.min.css" rel="stylesheet">
 
-  <script src="js/swiper-bundle.min.js" defer></script>
-  <script src="js/swiper-bundle.min.js.map" defer></script>
+  <!--<script src="js/swiper-bundle.min.js" defer></script>-->
+  <!--<script src="js/swiper-bundle.min.js.map" defer></script>-->
+  <script src="js/jquery-3.6.0.min.js" defer></script>
+  <script src="js/owl.carousel.min.js" defer></script>
   <script src="js/fslightbox-min.js" defer></script>
   <script type="module" src="js/main-min.js"></script>
 </head>
@@ -153,14 +157,12 @@
             </div>
           </div>
           <div class="main-section-1__right">
-            <div class="slider-hero">
-  <svg class="slider-hero__svg" width="100%" height="100%" viewBox="0 0 668 427" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin slice">
-    <path d="M250.792 165.028L493.708 9.47214C503.367 3.28717 514.596 0 526.065 0H608C641.137 0 668 26.8629 668 60V367C668 400.137 641.137 427 608 427H60C26.8629 427 0 400.137 0 367V234.5C0 201.363 26.8629 174.5 60 174.5H218.435C229.904 174.5 241.133 171.213 250.792 165.028Z" fill="white" />
-  </svg>
-  <div class="slider-hero__swiper swiper" id="swiper-1">
-    <ul class="slider-hero__swiper-wrapper swiper-wrapper list-reset">
-      <li class="slider-hero__swiper-slide swiper-slide">
-        <div class="card1">
+            <svg class="main-section-1__svg-beac" width="100%" height="100%" viewBox="0 0 668 427" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin slice">
+              <path d="M250.792 165.028L493.708 9.47214C503.367 3.28717 514.596 0 526.065 0H608C641.137 0 668 26.8629 668 60V367C668 400.137 641.137 427 608 427H60C26.8629 427 0 400.137 0 367V234.5C0 201.363 26.8629 174.5 60 174.5H218.435C229.904 174.5 241.133 171.213 250.792 165.028Z" fill="white" />
+            </svg>
+            <div class="owl-carousel" id="owlCarousel-1">
+  <div>
+    <div class="card1">
   <div class="card1__left">
     <div class="card1__wrapp">
       <a href="#" class="card1__link-title">
@@ -180,9 +182,9 @@
     <img src="img/main/section-1/slider-hero/1.png" alt="img">
   </div>
 </div>
-      </li>
-      <li class="slider-hero__swiper-slide swiper-slide">
-        <div class="card1">
+  </div>
+  <div>
+    <div class="card1">
   <div class="card1__left">
     <div class="card1__wrapp">
       <a href="#" class="card1__link-title">
@@ -202,9 +204,9 @@
     <img src="img/main/section-1/slider-hero/1.png" alt="img">
   </div>
 </div>
-      </li>
-      <li class="slider-hero__swiper-slide swiper-slide">
-        <div class="card1">
+  </div>
+  <div>
+    <div class="card1">
   <div class="card1__left">
     <div class="card1__wrapp">
       <a href="#" class="card1__link-title">
@@ -224,20 +226,6 @@
     <img src="img/main/section-1/slider-hero/1.png" alt="img">
   </div>
 </div>
-      </li>
-    </ul>
-    <div class="slider-hero__group-btn">
-      <button class="slider-hero__btn slider-hero__swiper-button-next btn-reset">
-        <svg width="12" height="20" viewBox="0 0 12 20">
-          <use xlink:href="img/sprite.svg#btnSwiper11"></use>
-        </svg>
-      </button>
-      <button class="slider-hero__btn slider-hero__swiper-button-prev btn-reset">
-        <svg width="12" height="20" viewBox="0 0 12 20">
-          <use xlink:href="img/sprite.svg#btnSwiper12"></use>
-        </svg>
-      </button>
-    </div>
   </div>
 </div>
           </div>
@@ -375,7 +363,7 @@
             </a>
           </div>
           <div class="slider-partners">
-  <div class="slider-partners__btn-wrapp">
+  <!--<div class="slider-partners__btn-wrapp">
     <button class="slider-partners__btn slider-partners__swiper-button-next btn-reset">
       <svg width="12" height="20" viewBox="0 0 12 20">
         <use xlink:href="img/sprite.svg#btnSwiper21"></use>
@@ -448,6 +436,65 @@
         <use xlink:href="img/sprite.svg#btnSwiper22"></use>
       </svg>
     </button>
+  </div>-->
+
+  <div class="owl-carousel" id="owlCarousel-2">
+    <div>
+      <div class="slider-partners__swiper-slide-wrapp">
+        <a href="#">
+          <img src="img/main/section-3/bspb.png" alt="img">
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="slider-partners__swiper-slide-wrapp">
+        <a href="#">
+          <img src="img/main/section-3/rs.png" alt="img">
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="slider-partners__swiper-slide-wrapp">
+        <a href="#">
+          <img src="img/main/section-3/alfa.png" alt="img">
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="slider-partners__swiper-slide-wrapp">
+        <a href="#">
+          <img src="img/main/section-3/mts.png" alt="img">
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="slider-partners__swiper-slide-wrapp">
+        <a href="#">
+          <img src="img/main/section-3/vtb.png" alt="img">
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="slider-partners__swiper-slide-wrapp">
+        <a href="#">
+          <img src="img/main/section-3/ban-rosiya.png" alt="img">
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="slider-partners__swiper-slide-wrapp">
+        <a href="#">
+          <img src="img/main/section-3/rs.png" alt="img">
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="slider-partners__swiper-slide-wrapp">
+        <a href="#">
+          <img src="img/main/section-3/vtb.png" alt="img">
+        </a>
+      </div>
+    </div>
   </div>
 </div>
 
