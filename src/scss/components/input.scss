@@ -1,0 +1,22 @@
+.input1 {
+  padding: 20px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background-color: var(--color-11);
+  font-family: var(--second-family);
+  font-weight: 300;
+  font-size: 17px;
+  color: var(--color-text-black);
+  transition: border-color 0.4s ease-in-out;
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:focus-visible,
+  &:hover,
+  &:active {
+    border-color: var(--yfvfy);
+  }
+}

@@ -1,0 +1,32 @@
+.group-network {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      min-width: 42px;
+      border-radius: 100%;
+      color: var(--color-body);
+      background-color: var(--color-text-white);
+      transition: background-color 0.4s ease-in-out;
+
+      &:focus,
+      &:focus-visible {
+        outline: none;
+      }
+
+      &:hover,
+      &:focus-visible,
+      &:active {
+        background-color: var(--color-2);
+      }
+    }
+  }
+}

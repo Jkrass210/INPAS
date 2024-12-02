@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/components/head.html',{"title":"Главная"})
+<body>
+  <div class="background-body"></div>
+  @@include('html/boxs/header.html')
+  <main class="main">
+    <section class="section main-section-1">
+      <div class="main-section-1__container container">
+        <div class="main-section-1__content">
+          <h1 class="main-section-1__title">
+            Удобные решения по приему платежей
+          </h1>
+          <div class="main-section-1__marker1">
+            @@include('html/components/marker1.html')
+          </div>
+          <div class="main-section-1__left">
+            <div class="main-section-1__left-top">
+              <p>Сервис включает в себя:</p>
+              <ul class="main-section-1__list list-reset">
+                <li>
+                  <p>установку банковского терминала или онлайн-кассы</p>
+                </li>
+                <li>
+                  <p>его подключение к банку</p>
+                </li>
+                <li>
+                  <p>сервисную поддержку.</p>
+                </li>
+              </ul>
+            </div>
+            <div class="main-section-1__left-bottom">
+              <img src="img/main/section-1/marker-2.svg" alt="img">
+              <p class="main-section-1__counter-man">
+                65 000
+              </p>
+              <p class="main-section-1__desc">
+                активных пользователей
+              </p>
+            </div>
+          </div>
+          <div class="main-section-1__right">
+            <svg class="main-section-1__svg-beac" width="100%" height="100%" viewBox="0 0 668 427" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin slice">
+              <path d="M250.792 165.028L493.708 9.47214C503.367 3.28717 514.596 0 526.065 0H608C641.137 0 668 26.8629 668 60V367C668 400.137 641.137 427 608 427H60C26.8629 427 0 400.137 0 367V234.5C0 201.363 26.8629 174.5 60 174.5H218.435C229.904 174.5 241.133 171.213 250.792 165.028Z" fill="white" />
+            </svg>
+            @@include('html/boxs/slider-hero.html')
+          </div>
+        </div>
+        <div class="main-section-1__decision">
+          <div class="main-section-1__top">
+            <p>Выберите решение для вашего вида бизнеса</p>
+            <a href="#">Нужна помощь эксперта?</a>
+          </div>
+          <ul class="main-section-1__bottom-list list-reset">
+            <li>
+              @@include('html/components/card2.html',{"urlImg":"img/main/section-1/bottom-list/retail.svg","text":"Ритейл"})
+            </li>
+            <li>
+              @@include('html/components/card2.html',{"urlImg":"img/main/section-1/bottom-list/delivery.svg","text":"Доставка"})
+            </li>
+            <li>
+              @@include('html/components/card2.html',{"urlImg":"img/main/section-1/bottom-list/pharma.svg","text":"Фарма"})
+            </li>
+            <li>
+              @@include('html/components/card2.html',{"urlImg":"img/main/section-1/bottom-list/horeca.svg","text":"Horeca"})
+            </li>
+            <li>
+              @@include('html/components/card2.html',{"urlImg":"img/main/section-1/bottom-list/vending.svg","text":"Вендинг"})
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="section main-section-2">
+      <div class="main-section-2__container container">
+        <div class="main-section-2__content">
+          <h2 class="main-section-2__title title">
+            Почему выбирают «Прими карту!»
+          </h2>
+          <ul class="main-section-2__list list-reset">
+            <li>
+              @@include('html/components/card3.html',{"urlImg":"img/main/section-2/1.svg","title":"Сервис одного окна","desc":"Подключаем без визита в банк за 3-5 дней, от вас нужны только документы"})
+            </li>
+            <li>
+              @@include('html/components/card3.html',{"urlImg":"img/main/section-2/2.svg","title":"Поддержка","desc":"Оказываем техническую поддержку онлайн 24/7, для сложных проблем есть свои выездные инженеры"})
+            </li>
+            <li>
+              @@include('html/components/card3.html',{"urlImg":"img/main/section-2/3.svg","title":"Эквайринг без РКО","desc":"Не нужно открывать новый расчетный счет, деньги будут поступать на счет в вашем банке"})
+            </li>
+            <li>
+              @@include('html/components/card3.html',{"urlImg":"img/main/section-2/4.svg","title":"Ваше оборудование","desc":"Нет необходимости в покупке нового терминала, подключим уже имеющийся (Verifone)"})
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="section main-section-3">
+      <div class="main-section-3__container container">
+        <div class="main-section-3__content">
+          <div class="main-section-3__top">
+            <div class="main-section-3__title-group">
+              <h2 class="main-section-3__title title">
+                Наши банки партнеры
+              </h2>
+              <p>
+                Подключаем без визита в банк за 3-5 дней, от вас нужны только документы
+              </p>
+            </div>
+            <a href="#" class="main-section-3__btn">
+              <span>
+                Подключиться
+              </span>
+            </a>
+          </div>
+          @@include('html/boxs/slider-partners.html')
+        </div>
+      </div>
+    </section>
+    <section class="section main-section-4">
+      <div class="main-section-4__container container">
+        <div class="main-section-4__content">
+          <h2 class="main-section-4__title title">Подобрать оборудование</h2>
+          @@include('html/boxs/quiz-container.html')
+        </div>
+      </div>
+    </section>
+    <section class="section main-section-5">
+      <div class="main-section-5__container container">
+        @@include('html/boxs/box-swiper.html')
+      </div>
+    </section>
+    @@include('html/boxs/box-contact-us.html')
+  </main>
+  @@include('html/boxs/footer.html')
+</body>
+</html>

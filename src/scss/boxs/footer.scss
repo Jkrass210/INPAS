@@ -1,0 +1,138 @@
+.footer {
+  padding-top: 75px;
+  padding-bottom: 45px;
+  background-color: var(--color-body);
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__box-left {
+    width: calc(375 / 1200 * 100%);
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__group-top {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .logo__link {
+      width: 170px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__phons, &__emails {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+
+    p {
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 75%;
+      color: var(--color-text-white);
+    }
+  }
+
+  &__emails {
+    a {
+      font-family: var(--third-family);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 200%;
+      text-align: right;
+      color: var(--color-text-white);
+      transition: color 0.4s ease-in-out;
+  
+      &:focus,
+      &:focus-visible {
+        outline: none;
+      }
+  
+      &:focus-visible,
+      &:hover,
+      &:active {
+        color: var(--color-2);
+      }
+    }
+  }
+
+  &__info-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__desc, &__link {
+    display: block;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 108%;
+    opacity: 0.5;
+    color: var(--color-text-white);
+    transition: opacity 0.4s ease-in-out;
+  }
+
+  &__link {
+    &:focus,
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      opacity: 1;
+    }
+  }
+
+  &__box-right {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: calc(730 / 1200 * 100%);
+  }
+
+  &__box-top {
+    display: flex;
+    gap: clamp(35px, 10vw, 85px);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    a {
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 100%;
+      color: var(--color-text-white);
+      transition: color 0.4s ease-in-out;
+
+      &:focus,
+      &:focus-visible {
+        outline: none;
+      }
+
+      &:hover,
+      &:focus-visible,
+      &:active {
+        color: var(--color-2);
+      }
+    }
+  }
+}

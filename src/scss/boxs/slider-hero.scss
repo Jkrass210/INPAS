@@ -1,0 +1,38 @@
+.slider-hero {
+  &__swiper-slide {
+    height: auto;
+  }
+
+  &__group-btn {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+    z-index: 3;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    color: var(--color-4);
+    transition: color 0.4s ease-in-out, opacity 0.4s ease-in-out;
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      color: var(--yfvfy);
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+}

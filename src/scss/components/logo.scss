@@ -1,0 +1,12 @@
+.logo {
+  display: flex;
+
+  &__link {
+    display: flex;
+
+    &:focus,
+    &:focus-visible {
+      outline: 1px solid var(--colof-red);
+    }
+  }
+}

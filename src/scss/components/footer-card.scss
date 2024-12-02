@@ -1,0 +1,39 @@
+.footer-card {
+  padding: 30px 30px 40px;
+  border-radius: 25px;
+  background-color: var(--colof-9);
+
+  &__title {
+    margin-bottom: 32px;
+    font-family: var(--font4);
+    font-weight: 500;
+    font-size: 47px;
+    line-height: 128%;
+    color: var(--color-text-white);
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 25px;
+    border-radius: 15px;
+    font-family: var(--third-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 170%;
+    text-align: center;
+    color: var(--color-text-white);
+    background-color: var(--colof-red);
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+
+    &:focus, &:focus-visible {
+      outline: none;
+    }
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      color: var(--color-body);
+      background-color: var(--color-2);
+    }
+  }
+}

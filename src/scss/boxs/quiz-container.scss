@@ -1,0 +1,137 @@
+.quiz-container {
+  position: relative;
+  display: flex;
+  padding: 60px;
+  justify-content: space-between;
+  gap: 20px;
+  border-radius: 20px;
+  background-color: var(--color-text-white);
+
+  &__counter {
+    position: absolute;
+    top: 52px;
+    right: 52px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 23px;
+    color: var(--color-4);
+    display: flex;
+    gap: 7px;
+    align-items: start;
+
+    span:last-child {
+      padding-top: 2px;
+      font-size: 14px;
+    }
+  }
+
+  &__form {
+    width: calc(650 / 1080 * 100%);
+  }
+
+  &__img {
+    flex: 1;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+  }
+
+  &__question {
+    display: none;
+    margin-bottom: 82px;
+
+    &.active {
+      display: block;
+    }
+
+    p {
+      margin-bottom: 24px;
+      font-family: var(--font4);
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 177%;
+      color: var(--color-4);
+    }
+
+    input[type="radio"] {
+      position: absolute;
+      width: 0;
+      height: 0;
+      opacity: 0;
+
+      &:checked + span {
+        background-color: var(--yfvfy);
+      }
+    }
+
+    label {
+      display: flex;
+      cursor: pointer;
+      border-radius: 15px;
+
+      &:nth-child(2) {
+        margin-bottom: 12px;
+      }
+
+      span {
+        border-radius: 15px;
+        padding: 17px 28px;
+        width: 100%;
+        height: 100%;
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: 16px;
+        color: var(--color-text-black);
+        background-color: var(--colof-8);
+        transition: background-color 0.4s ease-in-out;
+      }
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    gap: 15px;
+    align-items: stretch;
+
+    button {
+      padding: 20px;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--colof-red);
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 170%;
+      border: 2px solid transparent;
+      text-align: center;
+      color: var(--color-text-white);
+      transition: opacity 0.4s ease-in-out, border-color 0.4s ease-in-out;
+
+      &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+
+      &:focus,
+      &:focus-visible {
+        outline: none;
+      }
+
+      &:focus-visible,
+      &:hover,
+      &:active {
+        border-color: var(--color-text-white);
+      }
+    }
+
+    button:first-child {
+      padding: 20px 30px;
+    }
+    
+    button:last-child {
+      flex: 1;
+    }
+  }
+}

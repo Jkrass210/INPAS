@@ -1,0 +1,23 @@
+.btn1 {
+  padding: 19px;
+  border-radius: 12px;
+  border: 1px solid var(--colof-red);
+  background-color: var(--colof-red);
+  font-family: var(--font3);
+  font-weight: 500;
+  font-size: 15px;
+  text-align: center;
+  color: var(--color-text-white);
+  transition: border-color 0.4s ease-in-out;
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:focus-visible,
+  &:hover,
+  &:active {
+    border-color: var(--yfvfy);
+  }
+}

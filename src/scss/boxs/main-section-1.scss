@@ -1,0 +1,127 @@
+.main-section-1 {
+  &__content {
+    margin-bottom: 150px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__title {
+    margin-right: 500px;
+    position: absolute;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 74px;
+    line-height: 101%;
+    color: var(--color-text-white);
+  }
+
+  &__marker1 {
+    position: absolute;
+    top: -10px;
+    right: 22%;
+  }
+
+  &__left {
+    padding-top: 180px;
+    width: calc(450 / 1200 * 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__right {
+    width: calc(668 / 1200 * 100%);
+    position: relative;
+
+    .main-section-1__svg-beac {
+      position: absolute;
+    }
+  }
+
+  &__left-top {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    p {
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 16px;
+      color: var(--color-2);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    li {
+      padding-left: 20px;
+      background-image: url(../img/main/section-1/check1.svg);
+      background-repeat: no-repeat;
+      background-position: left center ;
+    }
+  }
+
+  &__left-bottom {
+    max-width: 375px;
+    display: flex;
+    gap: 13px;
+    align-items: start;
+  }
+
+  &__counter-man {
+    white-space: nowrap;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 48px;
+    color: var(--color-text-white);
+  }
+
+  &__desc {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--color-2);
+  }
+
+  &__decision {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--color-5);
+
+    a {
+      transition: color 0.4s ease-in-out;
+      &:focus,
+      &:focus-visible {
+        outline: none;
+      }
+
+      &:hover,
+      &:focus-visible,
+      &:active {
+        color: var(--color-text-white);
+      }
+    }
+  }
+
+  &__bottom-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+  }
+}

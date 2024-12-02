@@ -1,0 +1,24 @@
+<section class="box-contact-us-section section">
+  <div class="box-contact-us-section__container container">
+    <div class="box-contact-us-section__content">
+      <div class="box-contact-us-section__left">
+        <img src="img/box-contact-us-section/1.png" alt="img">
+      </div>
+      <div class="box-contact-us-section__right">
+        <form class="box-contact-us-section__form form" action="#" method="post">
+          <h4>Связаться с нами</h4>
+          <p class="form__desc-top">
+            Наша команда свяжется с вами в ближайшее время
+          </p>
+          @@include('../components/input1.html',{"id":"name","name":"name","type":"text","placeholder":"Имя"})
+          @@include('../components/input1.html',{"id":"email","name":"email","type":"email","placeholder":"Email"})
+          @@include('../components/input1.html',{"id":"phone","name":"phone","type":"text","placeholder":"+7 (999) 999-99-99"})
+          @@include('../components/btn1.html',{"text":"Отправить заявку"})
+          <p class="form__desc-bottom">
+            Нажимая кнопку «Отправить заявку», вы соглашаетесь с политикой конфиденциальности и пользовательскимсоглашением
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
