@@ -15,56 +15,43 @@ if(document.querySelector('#openDrop1')){
   })
 }
 
+if (document.querySelectorAll('.swiper-container').length) {
+  document.querySelectorAll('.swiper-container').forEach((container) => {
+    const swiperWrapper = container.querySelector('.swiper');
+    const swiperWrapper1 = container.querySelector('.swiper-wrapper');
+    const prevButton = container.querySelector('.slider-hero__swiper-button-next, .slider-partners__swiper-button-next');
+    const nextButton = container.querySelector('.slider-hero__swiper-button-prev, .slider-partners__swiper-button-prev');
+    
+    // Проверяем, существует ли обертка слайдов
+    if (!swiperWrapper1) return;
 
-$("#owlCarousel-1").owlCarousel({
-  items:1,
-  mouseDrag:false,
-  touchDrag:false,
-  nav:true,
-  rewind:false,
-  //center:true,
-  navText: [
-    `<svg width="12" height="20" viewBox="0 0 12 20">
-      <use xlink:href="img/sprite.svg#btnSwiper11"></use>
-    </svg>`,
-    `<svg width="12" height="20" viewBox="0 0 12 20">
-        <use xlink:href="img/sprite.svg#btnSwiper12"></use>
-    </svg>`
-  ],
-  animateOut: 'fadeOut',
-  animateIn: 'fadeIn',
-  smartSpeed: 500,
-});
+    const isHeroSlider = container.classList.contains('slider-hero');
+    const isBoxSwiper = container.classList.contains('box-swiper');
 
-// Функция для выравнивания высоты всех слайдов
-function setEqualHeight($carousel) {
-  let maxHeight = 0;
-
-  // Находим максимальную высоту среди всех слайдов
-  $carousel.find('.item').each(function () {
-    $(this).css('height', 'auto'); // Сбрасываем высоту для пересчёта
-    const elementHeight = $(this).outerHeight();
-    if (elementHeight > maxHeight) {
-      maxHeight = elementHeight;
-    }
+    new Swiper(swiperWrapper, {
+      spaceBetween: isHeroSlider ? 30 : isBoxSwiper ? 23 : 20,
+      slidesPerView: isHeroSlider ? 1 : isBoxSwiper ? 3 : 6,
+      effect: isHeroSlider ? 'fade' : 'slide',
+      fadeEffect: isHeroSlider
+        ? {
+            crossFade: true,
+          }
+        : undefined,
+      navigation: {
+        nextEl: nextButton || null,
+        prevEl: prevButton || null,
+      },
+      on: {
+        init: function () {
+          const loadedClass = swiperWrapper.querySelector('.loaded');
+          if (loadedClass) {
+            loadedClass.classList.remove('loaded');
+          }
+        },
+      },
+    });
   });
-
-  // Устанавливаем максимальную высоту всем слайдам
-  $carousel.find('.item').css('height', maxHeight + 'px');
 }
-
-// Инициализация Owl Carousel
-$("#owlCarousel-2").owlCarousel({
-  items: 6,         // Количество видимых элементов
-  margin: 20,       // Отступы между элементами
-  loop: true,       // Зацикливание
-  onInitialized: function (event) {
-    setEqualHeight($("#owlCarousel-2")); // Выравниваем высоту при инициализации
-  },
-  onResized: function (event) {
-    setEqualHeight($("#owlCarousel-2")); // Обновляем высоту при изменении размеров окна
-  }
-});
 
 if (document.querySelector('.quiz-container') && document.querySelectorAll('.quiz-container__question')) {
   initQuiz({
