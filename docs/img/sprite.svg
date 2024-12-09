@@ -75,6 +75,14 @@
     <path d="M1.71712 2.40619L9.63379 10.3229L1.71712 18.2395" stroke="currentColor" stroke-width="3.16667" stroke-linecap="round" stroke-linejoin="round" />
   </symbol>
 
+  <symbol id="btnSwiper31" width="15" height="28" viewBox="0 0 15 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12.6665 2.33331L1.97984 14.0019L12.6665 25.6666" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
+
+  <symbol id="btnSwiper32" width="15" height="28" viewBox="0 0 15 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2.3335 25.6667L13.0202 13.9981L2.3335 2.33335" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
+
   <symbol id="arrow1" width="15" height="13" viewBox="0 0 15 13" fill="none">
     <path d="M6.49322 11.7864L1.4585 6.49999M1.4585 6.49999L6.49322 1.21353M1.4585 6.49999H13.5418" stroke="currentColor" stroke-width="2.41667" stroke-linecap="round" stroke-linejoin="round" />
   </symbol>

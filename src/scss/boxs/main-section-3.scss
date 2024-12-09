@@ -45,6 +45,10 @@
       background-color: var(--color-2);
     }
   }
+
+  &__mobil-hidden {
+    display: none;
+  }
 }
 
 @media (max-width: 900px) {
@@ -57,4 +61,23 @@
       text-align: center;
     }
   }
+}
+
+@media (max-width: 512px) {
+  .main-section-3 {
+    &__title-group {
+      text-align: start;
+    }
+
+    &__top {
+      margin-bottom: 30px;
+    }
+
+    &__btn {
+      font-size: 16px;
+    }
+    &__mobil-hidden {
+      display: block;
+    }
+  } 
 }

@@ -107,5 +107,12 @@ body {
   }
 }
 
+@media (max-width: 512px) {
+  .title {
+    margin-bottom: 30px;
+    font-size: 32px;
+  }
+}
+
 
 

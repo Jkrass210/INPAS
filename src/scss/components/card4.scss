@@ -86,3 +86,27 @@
     }
   }
 }
+
+@media (max-width: 512px) {
+  .card4 {
+    &__info {
+      padding: 20px ;
+    }
+    &__link {
+      margin-bottom: 10px;
+      font-size: 17px;
+    }
+    &__desc {
+      margin-bottom: 24px;
+      font-size: 13px;
+    }
+    &__price {
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+    &__btn {
+      padding: 17px;
+      font-size: 14px;
+    }
+  }
+}

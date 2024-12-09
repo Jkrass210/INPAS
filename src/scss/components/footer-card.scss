@@ -37,3 +37,18 @@
     }
   }
 }
+@media (max-width: 512px) {
+  .footer-card {
+    padding: 19px;
+
+    &__title {
+      margin-bottom: 9px;
+      font-size: 20px;
+    }
+
+    &__btn {
+      padding: 19px;
+      font-size: 14px;
+    }
+  }
+}

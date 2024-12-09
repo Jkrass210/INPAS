@@ -87,3 +87,32 @@
     }
   }
 }
+@media (max-width: 512px) {
+  .card1 {
+    &__link-title {
+      font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (512 - 320)));
+      margin-bottom: 5px;
+    }
+
+    &__desc {
+      font-size: calc(8px + (14 - 8) * ((100vw - 320px) / (512 - 320)));
+    }
+
+    &__link {
+      font-size: calc(6px + (15 - 6) * ((100vw - 320px) / (512 - 320)));
+    }
+
+    &__img {
+      img {
+        max-height: calc(190px + (427 - 190) * ((100vw - 320px) / (512 - 320)));
+      }
+    }
+
+    &__left {
+      padding-top: calc(90px + (210 - 90) * ((100vw - 320px) / (512 - 320)));
+      padding-right: 0;
+      padding-bottom: calc(15px + (35 - 15) * ((100vw - 320px) / (512 - 320)));
+      padding-left: calc(15px + (35 - 15) * ((100vw - 320px) / (512 - 320)));
+    }
+  }
+}

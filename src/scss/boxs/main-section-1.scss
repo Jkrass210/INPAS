@@ -251,3 +251,13 @@
     }
   }
 }
+@media (max-width: 512px) {
+  .main-section-1 {
+    &__content {
+      margin-bottom: 40px;
+    }
+    &__marker1 {
+      bottom: calc(130px + (290 - 130) * ((100vw - 320px) / (512 - 320)));
+    }
+  }
+}

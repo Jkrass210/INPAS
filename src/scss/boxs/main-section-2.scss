@@ -22,3 +22,11 @@
     }
   }
 }
+
+@media (max-width: 512px) {
+  .main-section-2 {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+  }
+}

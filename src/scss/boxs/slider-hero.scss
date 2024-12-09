@@ -36,3 +36,25 @@
     }
   }
 }
+
+@media (max-width: 900px) {
+  .slider-hero {
+    &__group-btn {
+      bottom: 18px;
+      right: 20px;
+    }
+  }
+}
+
+@media (max-width: 512px) {
+  .slider-hero {
+    &__group-btn {
+      gap: 10px;
+    }
+    &__btn {
+      width: 6px;
+      height: 10px;
+    }
+    
+  }
+}

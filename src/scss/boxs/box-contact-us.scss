@@ -94,3 +94,40 @@
     }
   }
 }
+
+@media (max-width: 512px) {
+  .box-contact-us-section {
+    &__left {
+      height: 220px;
+      img {
+        height: 100%;
+      }
+    }
+    &__right {
+      padding: 15px 13px;
+    }
+    &__form {
+      h4 {
+        font-size: 24px;
+      }
+      .form__desc-top {
+        font-size: 8px;
+        margin-bottom: 10px;
+      }
+      input {
+        margin-bottom: 5px;
+
+        &:last-of-type {
+          margin-bottom: 8px;
+        }
+      }
+      button {
+        max-width: 100%;
+        margin-bottom: 9px;
+      }
+    }
+    .form__desc-bottom {
+      font-size: 7px;
+    }
+  }
+}

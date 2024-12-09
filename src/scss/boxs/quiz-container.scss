@@ -152,3 +152,60 @@
     }
   }
 }
+
+@media (max-width: 650px) {
+  .quiz-container {
+    &__counter {
+      top: 19px;
+      right: 16px;
+    }
+  }
+}
+@media (max-width: 512px) {
+  .quiz-container {
+    padding-top: 60px;
+    align-items: center;
+    gap: 30px;
+
+    &__counter {
+      font-size: 18px;
+      span:last-child {
+        font-size: 11px;
+      }
+    }
+
+    &__img {
+      max-width: 222px;
+    }
+
+    &__question {
+      margin-bottom: 13px;
+      p {
+        margin-bottom: 13px;
+        font-size: 16px;
+        line-height: 125%;
+      }
+      label {
+        span {
+          padding: 15px 20px;
+          font-size: 14px;
+        }
+      }
+      label:nth-child(2) {
+        margin-bottom: 7px;
+      }
+    }
+
+    &__navigation {
+      gap: 10px;
+
+      button {
+        padding: 17px;
+      }
+
+      button:first-child {
+        padding: 17px;
+      }
+    }
+  }
+}

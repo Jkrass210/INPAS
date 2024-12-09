@@ -1,6 +1,8 @@
 import { openDrop } from './module/openDrop.js';
 import { initQuiz } from './module/initQuiz.js';
 import { toggleActiveClass } from './module/toggleActiveClass.js';
+import { handleResize } from './module/handleResize.js';
+
 
 if(document.querySelector('#openSearch')){
   const btnSearch = document.querySelector('#openSearch');
@@ -16,56 +18,22 @@ if(document.querySelector('#openDrop1')){
   })
 }
 
-/*if (document.querySelectorAll('.swiper-container').length) {
-  document.querySelectorAll('.swiper-container').forEach((container) => {
-    const swiperWrapper = container.querySelector('.swiper');
-    const swiperWrapper1 = container.querySelector('.swiper-wrapper');
-    const prevButton = container.querySelector('.slider-hero__swiper-button-next, .slider-partners__swiper-button-next');
-    const nextButton = container.querySelector('.slider-hero__swiper-button-prev, .slider-partners__swiper-button-prev');
-    
-    // Проверяем, существует ли обертка слайдов
-    if (!swiperWrapper1) return;
-
-    const isHeroSlider = container.classList.contains('slider-hero');
-    const isBoxSwiper = container.classList.contains('box-swiper');
-
-    new Swiper(swiperWrapper, {
-      spaceBetween: isHeroSlider ? 30 : isBoxSwiper ? 23 : 20,
-      slidesPerView: isHeroSlider ? 1 : isBoxSwiper ? 3 : 6,
-      effect: isHeroSlider ? 'fade' : 'slide',
-      fadeEffect: isHeroSlider
-        ? {
-            crossFade: true,
-          }
-        : undefined,
-      navigation: {
-        nextEl: nextButton || null,
-        prevEl: prevButton || null,
-      },
-      on: {
-        init: function () {
-          const loadedClass = swiperWrapper.querySelector('.loaded');
-          if (loadedClass) {
-            loadedClass.classList.remove('loaded');
-          }
-        },
-      },
-    });
-  });
-}*/
-
 if (document.querySelectorAll('.swiper-container').length) {
   document.querySelectorAll('.swiper-container').forEach((container) => {
     const swiperWrapper = container.querySelector('.swiper');
     const swiperWrapper1 = container.querySelector('.swiper-wrapper');
     const prevButton = container.querySelector('.slider-hero__swiper-button-next, .slider-partners__swiper-button-next');
     const nextButton = container.querySelector('.slider-hero__swiper-button-prev, .slider-partners__swiper-button-prev');
-    
+
     // Проверяем, существует ли обертка слайдов
     if (!swiperWrapper1) return;
 
     const isHeroSlider = container.classList.contains('slider-hero');
     const isBoxSwiper = container.classList.contains('box-swiper');
+
+    // Добавляем уникальные кнопки для box-swiper
+    const boxPrevButton = isBoxSwiper ? container.querySelector('.box-swiper__swiper-button-next') : null;
+    const boxNextButton = isBoxSwiper ? container.querySelector('.box-swiper__swiper-button-prev') : null;
 
     new Swiper(swiperWrapper, {
       spaceBetween: isHeroSlider ? 30 : isBoxSwiper ? 10 : 15,
@@ -77,8 +45,8 @@ if (document.querySelectorAll('.swiper-container').length) {
           }
         : undefined,
       navigation: {
-        nextEl: nextButton || null,
-        prevEl: prevButton || null,
+        nextEl: boxNextButton || nextButton || null,
+        prevEl: boxPrevButton || prevButton || null,
       },
       breakpoints: {
         650: {
@@ -115,6 +83,7 @@ if (document.querySelectorAll('.swiper-container').length) {
 }
 
 
+
 if (document.querySelector('.quiz-container') && document.querySelectorAll('.quiz-container__question')) {
   initQuiz({
     containerSelector: '.quiz-container',
@@ -134,4 +103,20 @@ if (document.querySelector('.header__burger') && document.querySelector('.header
     closeOnLinkClick: true,
     linkSelector: 'a',
   });
+}
+
+if (document.querySelector(".main-section-3__btn") && document.querySelector(".main-section-3__top") && document.querySelector(".main-section-3__mobil-hidden")) {
+  const btn = document.querySelector(".main-section-3__btn");
+  const topSection = document.querySelector(".main-section-3__top");
+  const mobileHidden = document.querySelector(".main-section-3__mobil-hidden");
+  handleResize(mobileHidden, btn, topSection, 512)
+  window.addEventListener("resize", () => handleResize(mobileHidden, btn, topSection, 512));
+}
+
+if (document.querySelector(".box-swiper__link") && document.querySelector(".box-swiper__top-line") && document.querySelector(".box-swiper__mobail-hidden")) {
+  const btn = document.querySelector(".box-swiper__link");
+  const topSection = document.querySelector(".box-swiper__top-line");
+  const mobileHidden = document.querySelector(".box-swiper__mobail-hidden");
+  handleResize(mobileHidden, btn, topSection, 650)
+  window.addEventListener("resize", () => handleResize(mobileHidden, btn, topSection, 650));
 }
