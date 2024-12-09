@@ -75,3 +75,15 @@
     justify-content: center;
   }
 }
+
+@media (max-width: 650px) {
+  .card1 {
+    &__link-title {
+      font-size: 16px;
+    }
+
+    &__desc {
+      font-size: 14px;
+    }
+  }
+}

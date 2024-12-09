@@ -6,7 +6,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 5px;
+    gap: clamp(7px, 3vw, 30px);
+  }
+
+  &__box-info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &__list-nav {
@@ -87,5 +94,108 @@
       color: var(--color-body);
       background-color: var(--color-2);
     }
+  }
+
+  &__burger-box {
+    display: none;
+  }
+}
+
+@media (max-width: 1210px) {
+  .header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    &__burger-box {
+      display: flex;
+    }
+    &__container {
+      position: relative;
+    }
+    &__burger {
+      position: relative;
+      padding: 9px 6px;
+      width: 36px;
+      height: 36px;
+      min-width: 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      span {
+        pointer-events: none;
+        width: 100%;
+        height: 3px;
+        background-color: var(--color-text-white);
+        transition: background-color 0.4s ease-in-out;
+      }
+
+      &.active {
+        span {
+          width: 80%;
+          position: absolute;
+          top: 50%;
+          left: 10%;
+        }
+
+        span:first-child {
+          transform: rotate(45deg);
+        }
+        span:nth-child(2) {
+          display: none;
+        }
+        span:last-child {
+          transform: rotate(-45deg);
+        }
+      }
+
+      &:focus,&:focus-visible {
+        outline: none;
+      }
+
+      &:hover,&:focus-visible,&:active {
+        span {
+          background-color: var(--yfvfy);
+        }
+      }
+    }
+    &__box-info{
+      visibility: hidden;
+      transform: translateY(-120%);
+      width: 100%;
+      position: absolute;
+      justify-content: flex-start;
+      gap: clamp(5px, 2vw, 25px);
+      left: 0;
+      z-index: 2;
+      padding: 10px;
+      top: calc(100%);
+      background-color: var(--color-body);
+      height: calc(100vh - 85px);
+      flex-direction: column;
+      transition: visibility 0.4s ease-in-out, transform 0.4s ease-in-out;
+
+      &.active {
+        visibility: visible;
+        transform: none;
+      }
+
+      .drop-down1 {
+        display: none;
+      }
+
+      .search {
+        display: none;
+      }
+    }
+    &__list-nav {
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }

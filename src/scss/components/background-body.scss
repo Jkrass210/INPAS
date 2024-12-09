@@ -9,3 +9,9 @@
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: top right, top 30% left, bottom 10% right;
 }
+
+@media (max-width: 1210px) {
+  .background-body {
+    display: none;
+  }
+}

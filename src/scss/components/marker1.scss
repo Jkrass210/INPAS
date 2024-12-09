@@ -32,3 +32,22 @@
     color: var(--color-2);
   }
 }
+
+@media (max-width: 650px) {
+  .marker1 {
+    max-width: 140px;
+    &__top {
+      span {
+        width: 24px;
+        min-width: 24px;
+        height: 24px;
+      }
+    }
+    &__title {
+      font-size: 18px;
+    }
+    p {
+      font-size: 9px;
+    }
+  }
+}

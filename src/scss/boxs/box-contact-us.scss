@@ -10,6 +10,10 @@
     border-radius: 20px;
     width: calc(573 / 1200 * 100%);
     background: linear-gradient(44deg, #23326f 0%, #131e4e 100%);
+
+    img {
+      object-fit: cover;
+    }
   }
 
   &__right {
@@ -68,6 +72,25 @@
       font-size: 13px;
       line-height: 138%;
       color: var(--color-text-black);
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .box-contact-us-section {
+    &__content {
+      flex-direction: column;
+    }
+    &__left {
+      width: 100%;
+      justify-content: center;
+      border-radius: 20px 20px 0 0;
+    }
+    &__right {
+      border-radius: 0 0 20px 20px;
+      &::before {
+        display: none;
+      }
     }
   }
 }

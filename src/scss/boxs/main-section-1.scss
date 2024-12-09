@@ -37,6 +37,10 @@
 
     .main-section-1__svg-beac {
       position: absolute;
+
+      &.small {
+        display: none;
+      }
     }
   }
 
@@ -123,5 +127,127 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 25px;
+  }
+}
+
+@media (max-width: 1290px) {
+  .main-section-1 {
+    &__left {
+      padding-top: 255px;
+    }
+  }
+}
+
+@media (max-width: 1210px) {
+  .main-section-1 {
+    &__content {
+      flex-direction: column;
+    }
+    &__marker1 {
+      top: auto;
+      bottom: 40%;
+      right: auto;
+    }
+    &__title {
+      margin-right: 0;
+      width: 100%;
+      position: static;
+    }
+    &__left {
+      padding-top: 0;
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    &__right {
+      margin-left: auto;
+    }
+    &__bottom-list {
+      gap: 10px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  } 
+}
+
+@media (max-width: 900px) {
+  .main-section-1 {
+    &__content {
+      gap: 8px;
+    }
+    &__title {
+      font-size: 54px;
+    }
+    &__right {
+      width: 80%;
+    }
+  }
+}
+@media (max-width: 650px) {
+  .main-section-1 {
+    &__content {
+      margin-bottom: 80px;
+    }
+    &__title {
+      font-size: 32px;
+    }
+    &__left-top {
+      gap: 9px;
+      p {
+        font-size: 14px;
+      }
+    }
+    &__list {
+      gap: 7px;
+    }
+    &__right {
+      width: 100%;
+
+      .main-section-1__svg-beac {
+        &.big {
+          display: none;
+        }
+  
+        &.small {
+          display: block;
+        }
+      }
+    }
+    
+    &__marker1 {
+      bottom: 45%;
+    }
+
+    &__left-bottom {
+      max-width: 290px;
+      gap: 10px;
+      img {
+        width: 18px;
+        min-width: 18px;
+        height: 18px;
+      }
+    }
+    &__counter-man {
+      font-size: 36px;
+    }
+    &__desc {
+      font-size: 14px;
+    }
+    &__decision {
+      position: relative;
+      gap: 22px;
+    }
+    &__bottom-list {
+      row-gap: 16px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &__top {
+      a {
+        max-width: 120px;
+        position: absolute;
+        bottom: 18px;
+        right: 10px;
+      }
+    }
   }
 }

@@ -46,3 +46,15 @@
     }
   }
 }
+
+@media (max-width: 900px) {
+  .main-section-3 {
+    &__top {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__title-group {
+      text-align: center;
+    }
+  }
+}
