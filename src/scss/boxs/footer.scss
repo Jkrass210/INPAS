@@ -2,6 +2,9 @@
   padding-top: 75px;
   padding-bottom: 45px;
   background-color: var(--color-body);
+  &.default {
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+  }
 
   &__content {
     display: flex;

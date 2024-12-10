@@ -2,6 +2,7 @@ import { openDrop } from './module/openDrop.js';
 import { initQuiz } from './module/initQuiz.js';
 import { toggleActiveClass } from './module/toggleActiveClass.js';
 import { handleResize } from './module/handleResize.js';
+import { initTabLogic } from './module/initTabLogic.js';
 
 
 if(document.querySelector('#openSearch')){
@@ -119,4 +120,26 @@ if (document.querySelector(".box-swiper__link") && document.querySelector(".box-
   const mobileHidden = document.querySelector(".box-swiper__mobail-hidden");
   handleResize(mobileHidden, btn, topSection, 650)
   window.addEventListener("resize", () => handleResize(mobileHidden, btn, topSection, 650));
+}
+
+if (document.querySelector('#swiper-5') && document.querySelector('#swiper-5 > .swiper-wrapper') && document.querySelectorAll('#swiper-5 > .swiper-slide') && document.querySelector('#swiper-6') && document.querySelector('#swiper-6 > .swiper-wrapper') && document.querySelectorAll('#swiper-6 > .swiper-slide')) {
+  const swiper6 = new Swiper("#swiper-6", {
+    spaceBetween: 17,
+    slidesPerView: 4,
+    freeMode: false,
+  });
+  const swiper5 = new Swiper("#swiper-5", {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".product-card-section-1__button-prev",
+      prevEl: ".product-card-section-1__button-next",
+    },
+    thumbs: {
+      swiper: swiper6,
+    },
+  })
+}
+
+if (document.querySelector('.box-info')) {
+  initTabLogic('.box-info');
 }

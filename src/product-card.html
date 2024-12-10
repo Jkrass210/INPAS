@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/components/head.html',{"title":"Карточка товара"})
+<body>
+    @@include('html/boxs/header-default.html')
+    <main class="main">
+        @@include('html/boxs/path.html',{"text":"POS-терминалы","text1":"A50 (переносной мини-POS)"})
+        <section class="section product-card-section-1">
+            <div class="product-card-section-1__container container">
+                <h1 class="product-card-section-1__title">
+                    A50 (переносной мини-POS)
+                </h1>
+                <div class="product-card-section-1__content">
+                    <div class="product-card-section-1__box-left">
+                        <div class="product-card-section-1__swiper swiper-5 swiper" id="swiper-5">
+                            <ul class="product-card-section-1__swiper-wrapper swiper-wrapper swiper-wrapper-5 list-reset">
+                              <li class="product-card-section-1__swiper-slide swiper-slide swiper-slide-5">
+                                <a data-fslightbox="gallery" href="img/product-card/1.png">
+                                  <span class="product-card-section-1__box-img">
+                                    <img src="img/product-card/1.png" alt="img">
+                                  </span>
+                                </a>
+                              </li>
+                              <li class="product-card-section-1__swiper-slide swiper-slide swiper-slide-5">
+                                <a data-fslightbox="gallery" href="img/product-card/1.png">
+                                  <span class="product-card-section-1__box-img">
+                                    <img src="img/product-card/1.png" alt="img">
+                                  </span>
+                                </a>
+                              </li>
+                            </ul>
+                        </div>
+                        <div class="product-card-section-1__box-swiper">
+                            <button class="product-card-section-1__button-next btn-reset">
+                                <svg width="12" height="20" viewBox="0 0 12 20">
+                                    <use xlink:href="img/sprite.svg#btnSwiper11"></use>
+                                </svg>
+                            </button>
+                            <div class="product-card-section-1__swiper swiper-6 swiper" id="swiper-6">
+                                <ul class="product-card-section-1__swiper-wrapper swiper-wrapper swiper-wrapper-6 list-reset">
+                                    <li class="product-card-section-1__swiper-slide swiper-slide swiper-slide-6">
+                                        <span class="product-card-section-1__box-img">
+                                            <img src="img/product-card/1.png" alt="img">
+                                        </span>
+                                    </li>
+                                    <li class="product-card-section-1__swiper-slide swiper-slide swiper-slide-6">
+                                        <span class="product-card-section-1__box-img">
+                                            <img src="img/product-card/1.png" alt="img">
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button class="product-card-section-1__button-prev btn-reset">
+                                <svg width="12" height="20" viewBox="0 0 12 20">
+                                    <use xlink:href="img/sprite.svg#btnSwiper12"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card-section-1__box-right">
+                        <h4 class="product-card-section-1__caption">
+                            Мини-POS A50
+                        </h4>
+                        <p class="product-card-section-1__desc-top">
+                            Android-устройство в привычном корпусе смартфона: терминал + онлайн-касса
+                        </p>
+                        <div class="product-card-section-1__box-desc">
+                            <p>
+                                A50 - это мини-POS нового поколения, специально разработанный для современных торговых точек, ищущих интеллектуальные и мобильные платежные решения.
+                            </p>
+                            <p>
+                                Эргономичный корпус A50 уверенно лежит в руке, а 4,5-дюймовый сенсорный экран и отсутствие клавиатуры обеспечивают простоту и удобство использования. A50 имеет встроенную камеру со вспышкой для сканирования QR- и штрихкодов.
+                            </p>
+                            <p>
+                                Эргономичный корпус A50 уверенно лежит в руке, а 4,5-дюймовый сенсорный экран и отсутствие клавиатуры обеспечивают простоту и удобство использования. A50 имеет встроенную камеру со вспышкой для сканирования QR- и штрихкодов.
+                            </p>
+                            <p>
+                                Эргономичный корпус A50 уверенно лежит в руке, а 4,5-дюймовый сенсорный экран и отсутствие клавиатуры обеспечивают простоту и удобство использования. A50 имеет встроенную камеру со вспышкой для сканирования QR- и штрихкодов.
+                            </p>
+                            <p>
+                                Эргономичный корпус A50 уверенно лежит в руке, а 4,5-дюймовый сенсорный экран и отсутствие клавиатуры обеспечивают простоту и удобство использования. A50 имеет встроенную камеру со вспышкой для сканирования QR- и штрихкодов.
+                            </p>
+                        </div>
+                        <div class="product-card-section-1__box-price">
+                            <p>Цена:<span>16 670 ₽</span></p>
+                        </div>
+                        <div class="product-card-section-1__btn-group">
+                            <a class="card4__btn" href="#">
+                                Купить
+                            </a>
+                            <button class="product-card-section-1__btn-question card4__btn btn-reset">
+                                Задать вопрос
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card-section-1__box-info">
+                    @@include('html/boxs/box-info.html')
+                </div>
+            </div>
+        </section>
+        <section class="section product-card-section-2">
+            <div class="product-card-section-2__container container">
+                @@include('html/boxs/box-swiper.html',{"title":"Похожие модели"})
+            </div>
+        </section>
+    </main>
+    @@include('html/boxs/footer-default.html')
+</body>
+</html>

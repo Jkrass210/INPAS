@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Карточка товара</title>
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css" rel="stylesheet">
+  <!--<link rel="stylesheet" href="css/owl.carousel.min.css">-->
+  <!--<link rel="stylesheet" href="css/owl.theme.default.min.css">-->
+  <link href="css/style.min.css" rel="stylesheet">
+
+  <script src="js/swiper-bundle.min.js" defer></script>
+  <script src="js/swiper-bundle.min.js.map" defer></script>
+  <!--<script src="js/jquery-3.6.0.min.js" defer></script>-->
+  <!--<script src="js/owl.carousel.min.js" defer></script>-->
+  <script src="js/fslightbox-min.js" defer></script>
+  <script type="module" src="js/main-min.js"></script>
+</head>
+<body>
+    <header class="header default">
+  <div class="header__container container">
+    <div class="header__content">
+      <div class="logo">
+  <a class="logo__link" href="#">
+    <img src="img/logo/logo.svg" alt="logo">
+  </a>
+</div>
+      <div class="header__box-info">
+        <nav class="header__nav">
+          <ul class="header__list-nav list-reset">
+            <li>
+              <a href="#">
+                Партнерам
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Сервис
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                О нас
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="drop-down1">
+  <div class="drop-down1__wrapp">
+    <button class="drop-down1__btn btn-reset" id="openDrop1">
+      <span>Узнать ставку по MCC коду</span>
+      <svg width="12" height="7" viewBox="0 0 12 7">
+        <use xlink:href="img/sprite.svg#drop1"></use>
+      </svg>
+    </button>
+    <span class="drop-down1__info">3.2%</span>
+  </div>
+  <ul class="drop-down1__list list-reset" data-drop-id="openDrop1">
+    <li>
+      <a href="#">
+        dfhdhdhdrrh
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        dfhdhdhdrrh
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        dfhdhdhdrrh
+      </a>
+    </li>
+  </ul>
+</div>
+        <div class="search">
+  <button class="search__btn btn-reset" id="openSearch">
+    <svg width="16" height="16" viewBox="0 0 16 16">
+      <use xlink:href="img/sprite.svg#search"></use>
+    </svg>
+  </button>
+  <form class="search__form" data-drop-id="openSearch">
+    <input class="search__input" type="text" name="search" id="searchInput">
+    <button class="search__btn-sabmit btn-reset">
+      <svg width="16" height="16" viewBox="0 0 16 16">
+        <use xlink:href="img/sprite.svg#search"></use>
+      </svg>
+    </button>
+  </form>
+</div>
+        <a href="#" class="header__link-log">
+          <svg width="20" height="20" viewBox="0 0 20 20">
+            <use xlink:href="img/sprite.svg#log"></use>
+          </svg>
+          <span>Войти</span>
+        </a>
+        <a href="#" class="header__link-connect">
+          Подключиться
+        </a>
+        <div class="group-phones">
+  <a href="tel:+78007005324" class="group-phones__link">
+    8 (800) 700 53 24
+  </a>
+  <a href="tel:+74957213621" class="group-phones__link">
+    8 (495) 721 36 21
+  </a>
+</div>
+      </div>
+      <div class="header__burger-box">
+        <button class="header__burger btn-reset">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+    <main class="main">
+        <div class="path">
+    <div class="path__container container">
+        <ul class="path__list list-reset">
+            <li>
+                <a href="/">Главная</a><span>/</span>
+            </li>
+            <li>
+                <a href="#">POS-терминалы</a><span>/</span>
+            </li>
+            <li>
+                <a href="#">A50 (переносной мини-POS)</a>
+            </li>
+        </ul>
+    </div>
+</div>
+        <section class="section product-card-section-1">
+            <div class="product-card-section-1__container container">
+                <h1 class="product-card-section-1__title">
+                    A50 (переносной мини-POS)
+                </h1>
+                <div class="product-card-section-1__content">
+                    <div class="product-card-section-1__box-left">
+                        <div class="product-card-section-1__swiper swiper-5 swiper" id="swiper-5">
+                            <ul class="product-card-section-1__swiper-wrapper swiper-wrapper swiper-wrapper-5 list-reset">
+                              <li class="product-card-section-1__swiper-slide swiper-slide swiper-slide-5">
+                                <a data-fslightbox="gallery" href="img/product-card/1.png">
+                                  <span class="product-card-section-1__box-img">
+                                    <img src="img/product-card/1.png" alt="img">
+                                  </span>
+                                </a>
+                              </li>
+                              <li class="product-card-section-1__swiper-slide swiper-slide swiper-slide-5">
+                                <a data-fslightbox="gallery" href="img/product-card/1.png">
+                                  <span class="product-card-section-1__box-img">
+                                    <img src="img/product-card/1.png" alt="img">
+                                  </span>
+                                </a>
+                              </li>
+                            </ul>
+                        </div>
+                        <div class="product-card-section-1__box-swiper">
+                            <button class="product-card-section-1__button-next btn-reset">
+                                <svg width="12" height="20" viewBox="0 0 12 20">
+                                    <use xlink:href="img/sprite.svg#btnSwiper11"></use>
+                                </svg>
+                            </button>
+                            <div class="product-card-section-1__swiper swiper-6 swiper" id="swiper-6">
+                                <ul class="product-card-section-1__swiper-wrapper swiper-wrapper swiper-wrapper-6 list-reset">
+                                    <li class="product-card-section-1__swiper-slide swiper-slide swiper-slide-6">
+                                        <span class="product-card-section-1__box-img">
+                                            <img src="img/product-card/1.png" alt="img">
+                                        </span>
+                                    </li>
+                                    <li class="product-card-section-1__swiper-slide swiper-slide swiper-slide-6">
+                                        <span class="product-card-section-1__box-img">
+                                            <img src="img/product-card/1.png" alt="img">
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button class="product-card-section-1__button-prev btn-reset">
+                                <svg width="12" height="20" viewBox="0 0 12 20">
+                                    <use xlink:href="img/sprite.svg#btnSwiper12"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card-section-1__box-right">
+                        <h4 class="product-card-section-1__caption">
+                            Мини-POS A50
+                        </h4>
+                        <p class="product-card-section-1__desc-top">
+                            Android-устройство в привычном корпусе смартфона: терминал + онлайн-касса
+                        </p>
+                        <div class="product-card-section-1__box-desc">
+                            <p>
+                                A50 - это мини-POS нового поколения, специально разработанный для современных торговых точек, ищущих интеллектуальные и мобильные платежные решения.
+                            </p>
+                            <p>
+                                Эргономичный корпус A50 уверенно лежит в руке, а 4,5-дюймовый сенсорный экран и отсутствие клавиатуры обеспечивают простоту и удобство использования. A50 имеет встроенную камеру со вспышкой для сканирования QR- и штрихкодов.
+                            </p>
+                            <p>
+                                Эргономичный корпус A50 уверенно лежит в руке, а 4,5-дюймовый сенсорный экран и отсутствие клавиатуры обеспечивают простоту и удобство использования. A50 имеет встроенную камеру со вспышкой для сканирования QR- и штрихкодов.
+                            </p>
+                            <p>
+                                Эргономичный корпус A50 уверенно лежит в руке, а 4,5-дюймовый сенсорный экран и отсутствие клавиатуры обеспечивают простоту и удобство использования. A50 имеет встроенную камеру со вспышкой для сканирования QR- и штрихкодов.
+                            </p>
+                            <p>
+                                Эргономичный корпус A50 уверенно лежит в руке, а 4,5-дюймовый сенсорный экран и отсутствие клавиатуры обеспечивают простоту и удобство использования. A50 имеет встроенную камеру со вспышкой для сканирования QR- и штрихкодов.
+                            </p>
+                        </div>
+                        <div class="product-card-section-1__box-price">
+                            <p>Цена:<span>16 670 ₽</span></p>
+                        </div>
+                        <div class="product-card-section-1__btn-group">
+                            <a class="card4__btn" href="#">
+                                Купить
+                            </a>
+                            <button class="product-card-section-1__btn-question card4__btn btn-reset">
+                                Задать вопрос
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card-section-1__box-info">
+                    <div class="box-info">
+    <div class="box-info__btn-group">
+        <button class="btn-reset">
+            Преимущества
+        </button>
+        <button class="btn-reset">
+            Технические характеристики
+        </button>
+    </div>
+    <div class="box-info__box-wrapp">
+        <div class="box-info__item">
+            <ul class="box-info__list list-reset">
+                <li>
+                    Встроенная камера для считывания QR- и штрихкодов
+                </li>
+                <li>
+                    Легкое, компактное и функциональное решение в привычном для пользователя формате смартфона
+                </li>
+                <li>
+                    USB-C разъем для зарядки, нет нужды в покупке специальных кабелей
+                </li>
+                <li>
+                    Гарантия от производителя 3 года
+                </li>
+            </ul>
+        </div>
+        <div class="box-info__item">
+            <ul class="box-info__table list-reset">
+                <li class="box-info__table-row">
+                  <p>Макс. мощность</p>
+                  <p>6,500 Lumens</p>
+                </li>
+                <li class="box-info__table-row">
+                  <p>Макс. дальность</p>
+                  <p>400 Meters</p>
+                </li>
+                <li class="box-info__table-row">
+                  <p>Время работы</p>
+                  <p>40230 cd</p>
+                </li>
+                <li class="box-info__table-row">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur obcaecati animi optio temporibus, id, quae repudiandae eaque fugit architecto, sit earum itaque aliquid mollitia. Ipsam vitae obcaecati architecto voluptates quaerat.</p>
+                </li>
+              </ul>
+        </div>
+    </div>
+</div>
+                </div>
+            </div>
+        </section>
+        <section class="section product-card-section-2">
+            <div class="product-card-section-2__container container">
+                <div class="box-swiper swiper-container">
+  <div class="box-swiper__top-line">
+    <h2 class="box-swiper__title title">
+      Похожие модели
+    </h2>
+    <div class="box-swiper__group-btn">
+      <button class="box-swiper__btn box-swiper__swiper-button-next btn-reset">
+        <svg width="15" height="28" viewBox="0 0 15 28">
+          <use xlink:href="img/sprite.svg#btnSwiper31"></use>
+        </svg>
+      </button>
+      <button class="box-swiper__btn box-swiper__swiper-button-prev btn-reset">
+        <svg width="15" height="28" viewBox="0 0 15 28">
+          <use xlink:href="img/sprite.svg#btnSwiper32"></use>
+        </svg>
+      </button>
+    </div>
+    <a class="box-swiper__link" href="#">
+      Все терминалы
+      <svg  width="9" height="14" viewBox="0 0 9 14">
+        <use xlink:href="img/sprite.svg#allTerminals"></use>
+      </svg>
+    </a>
+  </div>
+  <div class="box-swiper__swiper swiper">
+    <ul class="box-swiper__swiper-wrapper list-reset swiper-wrapper">
+      <li class="box-swiper__swiper-slide swiper-slide">
+        <div class="card4">
+  <div class="card4__img-box">
+    <img src="img/main/section-5/1.png" alt="img">
+  </div>
+  <div class="card4__info">
+    <a class="card4__link" href="#">
+      A50 (переносной мини-POS)
+    </a>
+    <p class="card4__desc">
+      Подключаем без визита в банк за 3-5 дней, от вас нужны только документы
+    </p>
+    <p class="card4__price">
+      16 670 ₽
+    </p>
+    <a class="card4__btn" href="#">
+      Купить
+    </a>
+  </div>
+</div>
+      </li>
+      <li class="box-swiper__swiper-slide swiper-slide">
+        <div class="card4">
+  <div class="card4__img-box">
+    <img src="img/main/section-5/2.png" alt="img">
+  </div>
+  <div class="card4__info">
+    <a class="card4__link" href="#">
+      S920 (переносной)
+    </a>
+    <p class="card4__desc">
+      Подключаем без визита в банк за 3-5 дней, от вас нужны только документы Подключаем без визита в банк за 3-5 дней, от вас нужны только документы Подключаем без визита в банк за 3-5 дней, от вас нужны только документы Подключаем без визита в банк за 3-5 дней, от вас нужны только документы Подключаем без визита в банк за 3-5 дней, от вас нужны только документы
+    </p>
+    <p class="card4__price">
+      16 670 ₽
+    </p>
+    <a class="card4__btn" href="#">
+      Купить
+    </a>
+  </div>
+</div>
+      </li>
+      <li class="box-swiper__swiper-slide swiper-slide">
+        <div class="card4">
+  <div class="card4__img-box">
+    <img src="img/main/section-5/3.png" alt="img">
+  </div>
+  <div class="card4__info">
+    <a class="card4__link" href="#">
+      D210E (переносной)
+    </a>
+    <p class="card4__desc">
+      Подключаем без визита в банк за 3-5 дней, от вас нужны только документы
+    </p>
+    <p class="card4__price">
+      16 670 ₽
+    </p>
+    <a class="card4__btn" href="#">
+      Купить
+    </a>
+  </div>
+</div>
+      </li>
+      <li class="box-swiper__swiper-slide swiper-slide">
+        <div class="card4">
+  <div class="card4__img-box">
+    <img src="img/main/section-5/2.png" alt="img">
+  </div>
+  <div class="card4__info">
+    <a class="card4__link" href="#">
+      S920 (переносной)
+    </a>
+    <p class="card4__desc">
+      Подключаем без визита в банк за 3-5 дней, от вас нужны только документы
+    </p>
+    <p class="card4__price">
+      16 670 ₽
+    </p>
+    <a class="card4__btn" href="#">
+      Купить
+    </a>
+  </div>
+</div>
+      </li>
+      <li class="box-swiper__swiper-slide swiper-slide">
+        <div class="card4">
+  <div class="card4__img-box">
+    <img src="img/main/section-5/2.png" alt="img">
+  </div>
+  <div class="card4__info">
+    <a class="card4__link" href="#">
+      S920 (переносной)
+    </a>
+    <p class="card4__desc">
+      Подключаем без визита в банк за 3-5 дней, от вас нужны только документы Подключаем без визита в банк за 3-5 дней, от вас нужны только документы Подключаем без визита в банк за 3-5 дней, от вас нужны только документы Подключаем без визита в банк за 3-5 дней, от вас нужны только документы Подключаем без визита в банк за 3-5 дней, от вас нужны только документы
+    </p>
+    <p class="card4__price">
+      16 670 ₽
+    </p>
+    <a class="card4__btn" href="#">
+      Купить
+    </a>
+  </div>
+</div>
+      </li>
+      <li class="box-swiper__swiper-slide swiper-slide">
+        <div class="card4">
+  <div class="card4__img-box">
+    <img src="img/main/section-5/2.png" alt="img">
+  </div>
+  <div class="card4__info">
+    <a class="card4__link" href="#">
+      S920 (переносной)
+    </a>
+    <p class="card4__desc">
+      Подключаем без визита в банк за 3-5 дней, от вас нужны только документы
+    </p>
+    <p class="card4__price">
+      16 670 ₽
+    </p>
+    <a class="card4__btn" href="#">
+      Купить
+    </a>
+  </div>
+</div>
+      </li>
+    </ul>
+  </div>
+  <div class="box-swiper__mobail-hidden"></div>
+</div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer default">
+  <div class="footer__container container">
+    <div class="footer__content">
+      <div class="footer__box-left">
+        <div class="footer__group-top">
+          <div class="logo">
+  <a class="logo__link" href="#">
+    <img src="img/logo/logo.svg" alt="logo">
+  </a>
+</div>
+          <div class="footer__phons">
+            <p>Телефон</p>
+            <div class="group-phones">
+  <a href="tel:+78007005324" class="group-phones__link">
+    8 (800) 700 53 24
+  </a>
+  <a href="tel:+74957213621" class="group-phones__link">
+    8 (495) 721 36 21
+  </a>
+</div>
+          </div>
+          <div class="footer__emails">
+            <p>Email</p>
+            <a href="mailto:hello@primikartu.ru">
+              hello@primikartu.ru
+            </a>
+          </div>
+          <div class="group-network">
+  <ul class="group-network__list list-reset">
+    <li>
+      <a href="#">
+        <svg width="20" height="12" viewBox="0 0 20 12">
+          <use xlink:href="img/sprite.svg#vk"></use>
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <svg width="19" height="15" viewBox="0 0 19 15">
+          <use xlink:href="img/sprite.svg#yt"></use>
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <svg width="19" height="18" viewBox="0 0 19 18">
+          <use xlink:href="img/sprite.svg#tg"></use>
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <svg width="20" height="19" viewBox="0 0 20 19">
+          <use xlink:href="img/sprite.svg#zen"></use>
+        </svg>
+      </a>
+    </li>
+  </ul>
+</div>
+          <div class="footer__info-group">
+            <p class="footer__desc">
+              Все права принадлежат компании INPAS
+            </p>
+            <a href="#" class="footer__link">
+              Ознакомиться с правилами сервиса
+            </a>
+            <a href="#" class="footer__link">
+              Политика конфиденциальности
+            </a>
+          </div>
+        </div>
+        <p class="footer__desc">
+          © Payselection 2022 - 2024. All rights reserved.
+        </p>
+      </div>
+      <div class="footer__box-right">
+        <div class="footer__box-top">
+          <ul class="footer__list list-reset left">
+            <li>
+              <a href="#">
+                Ритейл
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Системы самообслуживания
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                HORECA
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Доставка
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Фарма
+              </a>
+            </li>
+          </ul>
+          <nav class="footer__nav">
+            <ul class="footer__list list-reset right">
+              <li><a href="#">
+                Партнерам
+              </a></li>
+              <li><a href="#">
+                Сервисы
+              </a></li>
+              <li><a href="#">
+                О нас
+              </a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__box-bottom">
+          <div class="footer-card">
+  <h3 class="footer-card__title">
+    Есть вопрос?
+  </h3>
+  <button class="footer-card__btn btn-reset">
+    Оставить заявку
+  </button>
+</div>
+        </div>
+      </div>
+      <div class="footer__box-logo-mob">
+        <div class="logo">
+  <a class="logo__link" href="#">
+    <img src="img/logo/logo.svg" alt="logo">
+  </a>
+</div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

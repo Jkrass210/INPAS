@@ -1,6 +1,9 @@
 .header {
   padding-top: 63px;
   padding-bottom: 55px;
+  &.default {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  }
   
   &__content {
     display: flex;
@@ -197,6 +200,9 @@
   .header {
     padding-top: 20px;
     padding-bottom: 20px;
+    &.default {
+      border-bottom: none;
+    }
 
     &__box-info{
       height: calc(100vh - 75px);

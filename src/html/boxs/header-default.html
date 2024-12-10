@@ -1,0 +1,47 @@
+<header class="header default">
+  <div class="header__container container">
+    <div class="header__content">
+      @@include('../components/logo.html')
+      <div class="header__box-info">
+        <nav class="header__nav">
+          <ul class="header__list-nav list-reset">
+            <li>
+              <a href="#">
+                Партнерам
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Сервис
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                О нас
+              </a>
+            </li>
+          </ul>
+        </nav>
+        @@include('../components/drop-down1.html')
+        @@include('../components/search.html')
+        <a href="#" class="header__link-log">
+          <svg width="20" height="20" viewBox="0 0 20 20">
+            <use xlink:href="img/sprite.svg#log"></use>
+          </svg>
+          <span>Войти</span>
+        </a>
+        <a href="#" class="header__link-connect">
+          Подключиться
+        </a>
+        @@include('../components/group-phones.html')
+      </div>
+      <div class="header__burger-box">
+        <button class="header__burger btn-reset">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
