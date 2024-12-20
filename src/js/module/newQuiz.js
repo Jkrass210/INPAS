@@ -130,7 +130,7 @@ export function newQuiz(){
 
 
 
-   document.addEventListener("DOMContentLoaded", () => {
+   /*document.addEventListener("DOMContentLoaded", () => {
     const nextBtn = document.getElementById("next-btn");
     const prevBtn = document.getElementById("prev-btn");
     const questions = document.querySelectorAll(".quiz-container__question");
@@ -217,6 +217,137 @@ export function newQuiz(){
   
     // Показываем первый вопрос и инициализируем счетчик
     showQuestion(currentQuestion);
+  });*/
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const nextBtn = document.getElementById("next-btn");
+    const prevBtn = document.getElementById("prev-btn");
+    const questions = document.querySelectorAll(".quiz-container__question");
+    const counter = document.querySelector(".quiz-container__counter");
+    const questionsMap = {
+      "question-1": {
+        1: "question-2.1",
+        2: "question-2.1",
+        3: "question-2.1",
+        4: "question-3.2",
+        5: "question-2.2",
+      },
+      "question-2.1": {
+        1: "question-6.1",
+        2: "question-5.1",
+        3: "question-3.1",
+        4: "question-3.2",
+      },
+      "question-2.2": {
+        1: "question-3.3",
+        2: "question-3.4",
+      },
+      "question-3.1": {
+        1: "question-6.3",
+        2: "question-6.4",
+      },
+    };
+  
+    let currentQuestion = "question-1";
+    let pathQuestions = ["question-1"]; // Массив для отслеживания пути пользователя
+    let totalBranchQuestions = 7; // Общее количество вопросов в текущей ветке
+  
+    // Функция для подсчета количества вопросов в ветке
+    function calculateBranchLength(start) {
+      let count = 0;
+      let visited = new Set();
+      let stack = [start];
+  
+      while (stack.length > 0) {
+        const current = stack.pop();
+        if (!visited.has(current)) {
+          visited.add(current);
+          count++;
+          const nextQuestions = Object.values(questionsMap[current] || {});
+          stack.push(...nextQuestions);
+        }
+      }
+      return count;
+    }
+  
+    // Функция обновления нумерации
+    function updateCounter() {
+      const currentIndex = pathQuestions.indexOf(currentQuestion) + 1;
+      counter.querySelector("span:first-child").textContent = currentIndex
+        .toString()
+        .padStart(2, "0");
+      counter.querySelector("span:last-child").textContent = totalBranchQuestions
+        .toString()
+        .padStart(2, "0");
+    }
+  
+    function updateNextButtonText() {
+      if (currentQuestion.startsWith("question-6")) {
+        nextBtn.textContent = "Оставить заявку";
+      } else {
+        nextBtn.textContent = "Далее";
+      }
+    }
+  
+    function showQuestion(id) {
+      questions.forEach((q) => {
+        q.classList.remove("active");
+        q.style.display = "none";
+      });
+      const nextQuestion = document.getElementById(id);
+      if (nextQuestion) {
+        nextQuestion.classList.add("active");
+        nextQuestion.style.display = "flex";
+      }
+      currentQuestion = id;
+      updateCounter();
+      updateNextButtonText();
+    }
+  
+    function handleNext() {
+      const currentBlock = document.getElementById(currentQuestion);
+      const selectedInput = currentBlock.querySelector("input:checked");
+  
+      if (!selectedInput) {
+        alert("Выберите ответ перед переходом.");
+        return;
+      }
+  
+      const selectedValue = Number(selectedInput.value);
+      const nextQuestionId = questionsMap[currentQuestion]?.[selectedValue];
+  
+      if (nextQuestionId) {
+        // Если пользователь впервые выбирает путь, пересчитываем ветку
+        if (pathQuestions.length === 1) {
+          totalBranchQuestions = calculateBranchLength(nextQuestionId) + 1; // +1 для первого вопроса
+        }
+  
+        // Добавляем вопрос в путь только если его еще нет
+        if (!pathQuestions.includes(nextQuestionId)) {
+          pathQuestions.push(nextQuestionId);
+        }
+        showQuestion(nextQuestionId);
+      } else {
+        alert("Следующий вопрос не найден.");
+      }
+    }
+  
+    function handlePrev() {
+      if (pathQuestions.length > 1) {
+        pathQuestions.pop(); // Удаляем текущий вопрос из пути
+        const previousQuestion = pathQuestions[pathQuestions.length - 1];
+        showQuestion(previousQuestion);
+      } else {
+        alert("Это первый вопрос.");
+      }
+    }
+  
+    nextBtn.addEventListener("click", handleNext);
+    prevBtn.addEventListener("click", handlePrev);
+  
+    // Показываем первый вопрос и инициализируем счетчик
+    showQuestion(currentQuestion);
   });
+  
   
 };

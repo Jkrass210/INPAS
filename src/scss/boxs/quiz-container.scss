@@ -46,6 +46,12 @@
       display: flex;
     }
 
+    &.question-6 {
+      .quiz-container__img {
+        display: none;
+      }
+    }
+
     p {
       margin-bottom: 24px;
       font-family: var(--font4);

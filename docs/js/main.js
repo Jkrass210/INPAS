@@ -148,3 +148,32 @@ if (document.querySelector('#swiper-5') && document.querySelector('#swiper-5 > .
 if (document.querySelector('.box-info')) {
   initTabLogic('.box-info');
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const targetElement = document.querySelector(".quiz-container__question.question-6");
+  const imgContainer = document.querySelector(".quiz-container__img");
+
+  if (!targetElement || !imgContainer) return;
+
+  // Callback для обработки изменений
+  const observerCallback = (mutationsList) => {
+    for (let mutation of mutationsList) {
+      if (
+        mutation.type === "attributes" &&
+        mutation.attributeName === "class"
+      ) {
+        if (targetElement.classList.contains("active")) {
+          imgContainer.style.display = "none";
+        } else {
+          imgContainer.style.display = ""; // Убираем стиль, возвращая отображение по умолчанию
+        }
+      }
+    }
+  };
+
+  // Создаем наблюдатель
+  const observer = new MutationObserver(observerCallback);
+
+  // Указываем, за чем следить
+  observer.observe(targetElement, { attributes: true });
+});
