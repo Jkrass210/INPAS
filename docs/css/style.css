@@ -89,6 +89,7 @@ body {
   --color-12: rgba(25, 25, 50, 0.3);
   --color-13: rgba(255, 255, 255, 0.6);
   --color-14: rgba(0, 0, 0, 0.8);
+  --color-15: #cbe6e9;
 }
 
 .title {
@@ -1354,6 +1355,9 @@ body {
   color: var(--color-text-black);
   background-color: var(--colof-8);
   transition: background-color 0.4s ease-in-out;
+}
+.quiz-container__question label:hover span {
+  background-color: var(--color-15);
 }
 .quiz-container__navigation {
   display: flex;

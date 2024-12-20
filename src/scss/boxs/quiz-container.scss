@@ -83,6 +83,12 @@
         background-color: var(--colof-8);
         transition: background-color 0.4s ease-in-out;
       }
+
+      &:hover {
+        span {
+          background-color: var(--color-15);
+        }
+      }
     }
   }
 
