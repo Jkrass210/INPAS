@@ -1,5 +1,6 @@
 import { openDrop } from './module/openDrop.js';
 import { initQuiz } from './module/initQuiz.js';
+import { newQuiz } from './module/newQuiz.js';
 import { toggleActiveClass } from './module/toggleActiveClass.js';
 import { handleResize } from './module/handleResize.js';
 import { initTabLogic } from './module/initTabLogic.js';
@@ -86,7 +87,7 @@ if (document.querySelectorAll('.swiper-container').length) {
 
 
 if (document.querySelector('.quiz-container') && document.querySelectorAll('.quiz-container__question')) {
-  initQuiz({
+  /*initQuiz({
     containerSelector: '.quiz-container',
     questionSelector: '.quiz-container__question',
     counterSelector: '.quiz-container__counter',
@@ -94,7 +95,11 @@ if (document.querySelector('.quiz-container') && document.querySelectorAll('.qui
     nextButtonSelector: '#next-btn',
     activeClass: 'active',
     disabledClass: 'disabled'
-  });
+  });*/
+
+
+
+  newQuiz()
 }
 
 if (document.querySelector('.header__burger') && document.querySelector('.header__box-info')) {

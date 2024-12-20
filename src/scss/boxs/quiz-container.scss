@@ -32,16 +32,18 @@
   &__img {
     flex: 1;
     display: flex;
-    align-items: end;
+    align-items: center;
     justify-content: center;
   }
 
   &__question {
     display: none;
     margin-bottom: 82px;
+    gap: 12px;
+    flex-direction: column;
 
     &.active {
-      display: block;
+      display: flex;
     }
 
     p {
@@ -68,10 +70,6 @@
       display: flex;
       cursor: pointer;
       border-radius: 15px;
-
-      &:nth-child(2) {
-        margin-bottom: 12px;
-      }
 
       span {
         border-radius: 15px;
