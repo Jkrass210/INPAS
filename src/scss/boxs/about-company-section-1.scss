@@ -49,3 +49,38 @@
     transform: translate(-50%,-50%);
   }
 }
+
+@media (max-width: 900px) {
+  .about-company-section-1 {
+    &__content {
+      flex-direction: column;
+      gap: 0;
+    }
+    &__left {
+      width: 100%;
+    }
+    &__title {
+      span:last-child {
+        text-transform: uppercase;
+      }
+    }
+    .about-company-section-1__right {
+      display: none;
+    }
+  } 
+}
+@media (max-width: 650px) {
+  .about-company-section-1 {
+    padding-top: 0;
+    &__title {
+      margin-bottom: 18px;
+      span:first-child {
+        margin-bottom: 7px;
+      }
+    }
+    &__desc {
+      margin-bottom: 19px;
+      font-size: 14px;
+    }
+  }
+}

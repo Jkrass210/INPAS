@@ -1,5 +1,5 @@
 export function handleResize(mobileHidden, btn, topSection, size) {
-    if (window.innerWidth < size) {
+    if (window.innerWidth <= size) {
         if (!mobileHidden.contains(btn)) {
             mobileHidden.appendChild(btn);
         }

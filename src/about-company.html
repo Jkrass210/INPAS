@@ -73,10 +73,24 @@
     </section>
     <section class="about-company-section-4 section">
       <div class="about-company-section-4__container container">
-        <h2 class="about-company-section-4__title title">
-          С нами удобно
-        </h2>
-        <div class="about-company-section-4__content">
+        <div class="about-company-section-4__top">
+          <h2 class="about-company-section-4__title title">
+            С нами удобно
+          </h2>
+          <div class="about-company-section-4__group-btn">
+            <button class="box-swiper__btn swiper-7__swiper-button-next btn-reset">
+              <svg width="15" height="28" viewBox="0 0 15 28">
+                <use xlink:href="img/sprite.svg#btnSwiper31"></use>
+              </svg>
+            </button>
+            <button class="box-swiper__btn swiper-7__swiper-button-prev btn-reset">
+              <svg width="15" height="28" viewBox="0 0 15 28">
+                <use xlink:href="img/sprite.svg#btnSwiper32"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="about-company-section-4__content" id="swiper-7">
           <ul class="about-company-section-4__list list-reset">
             <li>@@include('html/components/card5.html',{"urlImg":"img/about-company/u1.svg","desc":"Легкое подключение без визита в банк"})</li>
             <li>@@include('html/components/card5.html',{"urlImg":"img/about-company/u2.svg","desc":"Гарантия безопасных платежей"})</li>

@@ -46,3 +46,44 @@
     }
   }
 }
+
+@media (max-width: 900px) {
+  .box-freedom-choice {
+    border: 1px solid var(--color-12);
+    flex-direction: column-reverse;
+
+    &__right {
+      img {
+        border-radius: 20px 20px 0 0;
+        max-height: 500px;
+      }
+    }
+
+    &__left {
+      width: 100%;
+      padding: 11px 14px 18px;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .box-freedom-choice {
+    &__right {
+      img {
+        max-height: 150px;
+      }
+    }
+    &__title {
+      margin-bottom: 2px;
+      font-size: 22px;
+      line-height: 130%;
+    }
+    &__desc {
+      margin-bottom: 24px;
+      font-size: 14px;
+    }
+    .btn1 {
+      max-width: 100%;
+    }
+  }
+}

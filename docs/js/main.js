@@ -4,6 +4,7 @@ import { newQuiz } from './module/newQuiz.js';
 import { toggleActiveClass } from './module/toggleActiveClass.js';
 import { handleResize } from './module/handleResize.js';
 import { initTabLogic } from './module/initTabLogic.js';
+import { handleSwiperClasses } from './module/handleSwiperClasses.js';
 
 
 if(document.querySelector('#openSearch')){
@@ -135,7 +136,6 @@ if (document.querySelector('.box-info')) {
   initTabLogic('.box-info');
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const targetElements = document.querySelectorAll(".quiz-container__question.question-6");
   const imgContainer = document.querySelector(".quiz-container__img");
@@ -194,3 +194,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // Также следим за элементом с ID "contacts-form-7"
   observer.observe(contactsForm, { attributes: true });
 });
+
+if (document.querySelector('#swiper-7')) {
+  document.addEventListener("DOMContentLoaded", () => {
+    handleSwiperClasses("swiper-7", ".about-company-section-4__list", 900);
+
+    let resizeTimeout;
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        handleSwiperClasses("swiper-7", ".about-company-section-4__list", 900);
+      }, 200); // Задержка для оптимизации
+    });
+  });
+}

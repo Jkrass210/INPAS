@@ -7,4 +7,41 @@
     grid-template-columns: 194px 1.2fr 1.5fr 1.8fr;
     gap: 15px;
   }
+  &__top {
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .about-company-section-4__title {
+      margin-bottom: 0;
+    }
+  }
+  &__group-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-company-section-4 {
+    &__list {
+      &.swiper-wrapper {
+        display: flex;
+        gap: 0;
+        .swiper-slide {
+          box-sizing: border-box;
+          height: auto !important;
+        }
+      }
+    }
+    &__top {
+      margin-bottom: 26px;
+    }
+    &__group-btn {
+      display: flex;
+      gap: 40px;
+    }
+  }
+}
+@media (max-width: 650px) {
+  
 }
