@@ -5,27 +5,98 @@
   @@include('html/boxs/header-default.html')
   <main class="main">
     @@include('html/boxs/path-1.html',{"text1":"О компании"})
-    <div class="about-company-section-1__container container">
-      <img src="img/about-company/1.png" alt="img">
-    </div>
-    <section class="section about-company-section-1">
+    <section class="about-company-section-1 section">
       <div class="about-company-section-1__container container">
-        <img src="img/about-company/2.png" alt="img">
+        <div class="about-company-section-1__content content">
+          <div class="about-company-section-1__left">
+            <h1 class="about-company-section-1__title title-h1">
+              <span>О компании</span> 
+              <span>Прими карту!</span>
+            </h1>
+            <p class="about-company-section-1__desc">
+              ПРИМИ КАРТУ! — это удобное решение по приему платежей в Вашей торговой точке. Сервис включает в себя установку онлайн-кассы/ банковского терминала, его подключение к банку и сервисную поддержку.
+            </p>
+            <ul class="about-company-section-1__list list list-reset">
+              <li>
+                <p>Без отказов от банка</p>
+              </li>
+              <li>
+                <p>С низкой комиссией от разных банков-эквайеров</p>
+              </li>
+              <li>
+                <p>Широкий выбор оборудовани</p>
+              </li>
+            </ul>
+          </div>
+          <div class="about-company-section-1__right">
+            <img class="about-company-section-1__img" src="img/about-company/1-or.jpg" alt="img">
+            <div class="about-company-section-1__play">
+              @@include('html/components/play.html')
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-    <section class="section about-company-section-1">
-      <div class="about-company-section-1__container container">
-        <img src="img/about-company/3.png" alt="img">
+    <section class="about-company-section-2 section">
+      <div class="about-company-section-2__container container">
+        <h2 class="about-company-section-2__title title">
+          Для кого
+        </h2>
+        <div class="about-company-section-1__content content">
+          <div class="about-company-section-1__left">
+            <p class="about-company-section-1__desc">
+              Для представителей малого бизнеса в сфере розничной торговли и услуг. Сервис позволяет выбрать подходящий банковский POS-терминал или онлайн-кассу с функцией приема безналичных платежей, в том числе бесконтактных. Для каждого вида бизнеса есть свое оптимальное решение:
+            </p>
+          </div>
+          <div class="about-company-section-1__right">
+            <ul class="about-company-section-2__list list list-reset">
+              <li>
+                <p>Без отказов от банка</p>
+              </li>
+              <li>
+                <p>С низкой комиссией от разных банков-эквайеров</p>
+              </li>
+              <li>
+                <p>Широкий выбор оборудовани</p>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
-    <section class="section about-company-section-1">
-      <div class="about-company-section-1__container container">
-        <img src="img/about-company/4.png" alt="img">
+    <section class="about-company-section-3 section">
+      <div class="about-company-section-3__container container">
+        <div class="about-company-section-3__content content">
+          @@include('html/boxs/box-freedom-choice.html')
+        </div>
       </div>
     </section>
-    <section class="section about-company-section-1">
-      <div class="about-company-section-1__container container">
-        <img src="img/about-company/5.png" alt="img">
+    <section class="about-company-section-4 section">
+      <div class="about-company-section-4__container container">
+        <h2 class="about-company-section-4__title title">
+          С нами удобно
+        </h2>
+        <div class="about-company-section-4__content">
+          <ul class="about-company-section-4__list list-reset">
+            <li>@@include('html/components/card5.html',{"urlImg":"img/about-company/u1.svg","desc":"Легкое подключение без визита в банк"})</li>
+            <li>@@include('html/components/card5.html',{"urlImg":"img/about-company/u2.svg","desc":"Гарантия безопасных платежей"})</li>
+            <li>@@include('html/components/card5.html',{"urlImg":"img/about-company/u3.svg","desc":"Современные устройства с гарантией 3 года"})</li>
+            <li>@@include('html/components/card5.html',{"urlImg":"img/about-company/u4.svg","desc":"Возможность смены банка в процессе работы"})</li>
+            <li>@@include('html/components/card5.html',{"urlImg":"img/about-company/u5.svg","desc":"Надежные банки-партнеры"})</li>
+            <li>@@include('html/components/card5.html',{"urlImg":"img/about-company/u6.svg","desc":"Круглосуточная техподдержка"})</li>
+            <li>@@include('html/components/card5.html',{"urlImg":"img/about-company/u7.svg","desc":"Низкая комиссия от разных банков-эквайеров"})</li>
+            <li>@@include('html/components/card5.html',{"urlImg":"img/about-company/u8.svg","desc":"Решение проблем в случае неисправности терминала в течение 72 часов"})</li>
+            <li>@@include('html/components/card5.html',{"urlImg":"img/about-company/u9.svg","desc":"Бесплатное ПО"})</li>
+            <li>@@include('html/components/card5.html',{"urlImg":"img/about-company/u10.svg","desc":"Обучение продавцов работе с терминалом"})</li>
+            <li>@@include('html/components/card5.html',{"urlImg":"img/about-company/u11.svg","desc":"Представительства сервисной службы в каждом регионе России"})</li>
+            <li>@@include('html/components/card5.html',{"urlImg":"img/about-company/u12.svg","desc":"Расчетный счет может быть в любом российском банке"})</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="about-company-section-5 section">
+      <div class="about-company-section-5__container container">
+        @@include('html/boxs/box-reliable-business-partner.html')
       </div>
     </section>
   </main>

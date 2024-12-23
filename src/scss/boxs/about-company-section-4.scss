@@ -1,0 +1,10 @@
+.about-company-section-4 {
+  &__title {
+    margin-bottom: 35px;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: 194px 1.2fr 1.5fr 1.8fr;
+    gap: 15px;
+  }
+}

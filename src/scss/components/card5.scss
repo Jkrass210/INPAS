@@ -1,0 +1,22 @@
+.card5 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  padding: 30px 8px 18px 16px;
+  border-radius: 10px;
+  background-color: var(--colof-9);
+
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+
+  &__desc {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--color-text-white);
+  }
+}

@@ -1559,7 +1559,6 @@ body {
 @media (max-width: 512px) {
   .quiz-container {
     justify-content: center;
-    padding-top: 60px;
     align-items: center;
     gap: 30px;
   }
@@ -2431,6 +2430,76 @@ body {
 }
 .box-freedom-choice__right img {
   border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card5 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  padding: 30px 8px 18px 16px;
+  border-radius: 10px;
+  background-color: var(--colof-9);
+}
+.card5__img {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.card5__desc {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-text-white);
+}
+
+.about-company-section-4__title {
+  margin-bottom: 35px;
+}
+.about-company-section-4__list {
+  display: grid;
+  grid-template-columns: 194px 1.2fr 1.5fr 1.8fr;
+  gap: 15px;
+}
+
+.box-reliable-business-partner {
+  display: flex;
+  padding: 36px 34px;
+  gap: clamp(10px, 10vw, 100px);
+  border: 1px solid var(--color-12);
+  border-radius: 20px;
+  box-shadow: inset 0 0 14px 0 rgba(0, 3, 81, 0.3);
+  background-color: var(--yfvfy);
+}
+.box-reliable-business-partner__left {
+  padding: 24px 0 0 24px;
+  width: 59.5555555556%;
+}
+.box-reliable-business-partner__title {
+  margin-bottom: 22px;
+  font-family: var(--font4);
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 122%;
+  color: var(--color-text-black);
+}
+.box-reliable-business-partner__desc {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-text-black);
+}
+.box-reliable-business-partner__right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box-reliable-business-partner__right img {
+  border-radius: 19px;
   width: 100%;
   height: 100%;
   object-fit: cover;
