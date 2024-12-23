@@ -84,21 +84,7 @@ if (document.querySelectorAll('.swiper-container').length) {
   });
 }
 
-
-
 if (document.querySelector('.quiz-container') && document.querySelectorAll('.quiz-container__question')) {
-  /*initQuiz({
-    containerSelector: '.quiz-container',
-    questionSelector: '.quiz-container__question',
-    counterSelector: '.quiz-container__counter',
-    prevButtonSelector: '#prev-btn',
-    nextButtonSelector: '#next-btn',
-    activeClass: 'active',
-    disabledClass: 'disabled'
-  });*/
-
-
-
   newQuiz()
 }
 
@@ -149,31 +135,62 @@ if (document.querySelector('.box-info')) {
   initTabLogic('.box-info');
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const targetElement = document.querySelector(".quiz-container__question.question-6");
-  const imgContainer = document.querySelector(".quiz-container__img");
 
-  if (!targetElement || !imgContainer) return;
+document.addEventListener("DOMContentLoaded", () => {
+  const targetElements = document.querySelectorAll(".quiz-container__question.question-6");
+  const imgContainer = document.querySelector(".quiz-container__img");
+  const formContainer = document.querySelector(".quiz-container__form");
+  const contactsForm = document.getElementById("contacts-form-7");
+  const quizNavigation1 = document.getElementById("quiz-navigation-1");
+  const quizNavigation2 = document.getElementById("quiz-navigation-2");
+  const prevBtn = document.getElementById("prev-btn");
+
+  if (
+    !targetElements.length ||
+    !imgContainer ||
+    !formContainer ||
+    !contactsForm ||
+    !quizNavigation1 ||
+    !quizNavigation2 ||
+    !prevBtn
+  )
+    return;
 
   // Callback для обработки изменений
   const observerCallback = (mutationsList) => {
-    for (let mutation of mutationsList) {
-      if (
-        mutation.type === "attributes" &&
-        mutation.attributeName === "class"
-      ) {
+    mutationsList.forEach((mutation) => {
+      if (mutation.type === "attributes" && mutation.attributeName === "class") {
+        const targetElement = mutation.target;
+
+        // Условие для элементов с классом "question-6"
         if (targetElement.classList.contains("active")) {
           imgContainer.style.display = "none";
+          formContainer.classList.add("question-6");
         } else {
           imgContainer.style.display = ""; // Убираем стиль, возвращая отображение по умолчанию
+          formContainer.classList.remove("question-6");
+        }
+
+        // Условие для элемента с ID "contacts-form-7"
+        if (contactsForm.classList.contains("active")) {
+          quizNavigation1.style.display = "none";
+          quizNavigation2.insertBefore(prevBtn, quizNavigation2.firstChild); // Перемещаем кнопку в quiz-navigation-2
+        } else {
+          quizNavigation1.style.display = ""; // Восстанавливаем отображение по умолчанию
+          quizNavigation1.insertBefore(prevBtn, quizNavigation1.firstChild); // Перемещаем кнопку обратно в quiz-navigation-1
         }
       }
-    }
+    });
   };
 
   // Создаем наблюдатель
   const observer = new MutationObserver(observerCallback);
 
-  // Указываем, за чем следить
-  observer.observe(targetElement, { attributes: true });
+  // Указываем, за чем следить для каждого элемента
+  targetElements.forEach((element) => {
+    observer.observe(element, { attributes: true });
+  });
+
+  // Также следим за элементом с ID "contacts-form-7"
+  observer.observe(contactsForm, { attributes: true });
 });

@@ -1,0 +1,19 @@
+.title-h1 {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 74px;
+  line-height: 101%;
+  color: var(--color-text-white);
+}
+
+@media (max-width: 900px) {
+  .title-h1 {
+    font-size: 54px;
+  }
+}
+
+@media (max-width: 650px) {
+  .title-h1 {
+    font-size: 32px;
+  }
+}

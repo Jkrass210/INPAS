@@ -11,7 +11,6 @@
   <link href="css/style.min.css" rel="stylesheet">
 
   <script src="js/swiper-bundle.min.js" defer></script>
-  <script src="js/swiper-bundle.min.js.map" defer></script>
   <!--<script src="js/jquery-3.6.0.min.js" defer></script>-->
   <!--<script src="js/owl.carousel.min.js" defer></script>-->
   <script src="js/fslightbox-min.js" defer></script>
@@ -122,7 +121,7 @@
     <section class="section main-section-1">
       <div class="main-section-1__container container">
         <div class="main-section-1__content">
-          <h1 class="main-section-1__title">
+          <h1 class="main-section-1__title title-h1">
             Удобные решения по приему платежей
           </h1>
           <div class="main-section-1__marker1">
@@ -143,7 +142,7 @@
           <div class="main-section-1__left">
             <div class="main-section-1__left-top">
               <p>Сервис включает в себя:</p>
-              <ul class="main-section-1__list list-reset">
+              <ul class="main-section-1__list list list-reset">
                 <li>
                   <p>установку банковского терминала или онлайн-кассы</p>
                 </li>
@@ -488,6 +487,7 @@
       <label> <input type="radio" name="q1" value="2" /> <span>HoReCa</span> </label>
       <label> <input type="radio" name="q1" value="3" /> <span>Фарма</span> </label>
       <label> <input type="radio" name="q1" value="4" /> <span>Доставка</span> </label>
+      <label> <input type="radio" name="q1" value="5" /> <span>Системы самообслуживания</span> </label>
     </div>
 
     <div class="quiz-container__question" id="question-2.1">
@@ -634,9 +634,45 @@
       <label> <input type="radio" name="q6.9" value="3" />
         <img src="img/quiz-container/6.9-3.jpg" alt="img">
       </label>
+    </div> 
+
+    <div class="quiz-container__question question-6" id="question-6.10">
+      <p>Выберите кассовое ПО?</p>
+      <label> <input type="radio" name="q6.10" value="1" />
+        <img src="img/quiz-container/6.9-1.jpg" alt="img">
+      </label>
+      <label> <input type="radio" name="q6.10" value="2" />
+        <img src="img/quiz-container/6.9-2.jpg" alt="img">
+      </label>
+      <label> <input type="radio" name="q6.10" value="3" />
+        <img src="img/quiz-container/6.9-3.jpg" alt="img">
+      </label>
     </div>
 
-    <div class="quiz-container__navigation">
+    <div class="quiz-container__question contacts-7" id="contacts-form-7">
+      <div class="contacts-7__wrapp">
+        <div class="contacts-7__left">
+           <p>Укажите контактные данные</p>
+          <label>
+            <input type="text" name="name" placeholder="Ваше имя" />
+          </label>
+          <label>
+            <input type="text" name="email" placeholder="Email" />
+          </label>
+          <label>
+            <input type="text" name="phone" placeholder="Телефон" />
+          </label>
+          <div class="quiz-container__navigation contacts-7__btn-group" id="quiz-navigation-2">
+            <button class="btn-reset" type="button" id="next-btn-submit">Отправить</button>
+          </div>
+        </div>
+        <div class="contacts-7__img">
+          <img src="img/quiz-container/6.5-2.jpg" alt="img">
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz-container__navigation" id="quiz-navigation-1">
       <button class="btn-reset" type="button" id="prev-btn">
         <svg width="15" height="13" viewBox="0 0 15 13">
           <use xlink:href="img/sprite.svg#arrow1"></use>

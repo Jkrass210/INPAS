@@ -10,11 +10,6 @@
   &__title {
     margin-right: 500px;
     position: absolute;
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 74px;
-    line-height: 101%;
-    color: var(--color-text-white);
   }
 
   &__marker1 {
@@ -57,7 +52,7 @@
     }
   }
 
-  &__list {
+  /*&__list {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -68,7 +63,7 @@
       background-repeat: no-repeat;
       background-position: left center ;
     }
-  }
+  }*/
 
   &__left-bottom {
     max-width: 375px;
@@ -175,9 +170,6 @@
     &__content {
       gap: 8px;
     }
-    &__title {
-      font-size: 54px;
-    }
     &__right {
       width: 80%;
     }
@@ -188,18 +180,15 @@
     &__content {
       margin-bottom: 80px;
     }
-    &__title {
-      font-size: 32px;
-    }
     &__left-top {
       gap: 9px;
       p {
         font-size: 14px;
       }
     }
-    &__list {
+    /*&__list {
       gap: 7px;
-    }
+    }*/
     &__right {
       width: 100%;
 

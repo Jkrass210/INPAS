@@ -110,4 +110,8 @@
   <symbol id="check" width="14" height="10" viewBox="0 0 14 10" fill="none">
     <path d="M12.3337 1L5.00033 8.33333L1.66699 5" stroke="currentColor" stroke-opacity="0.4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
   </symbol>
+
+  <symbol id="play" width="40" height="45" viewBox="0 0 40 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M37.7143 18.5222C40.7619 20.2901 40.7619 24.7099 37.7143 26.4778L6.85715 44.3778C3.80953 46.1457 -1.53824e-07 43.9358 0 40.4L1.55747e-06 4.6C1.71129e-06 1.0642 3.80953 -1.14569 6.85714 0.622217L37.7143 18.5222Z" fill="currentColor" />
+  </symbol>
 </svg>

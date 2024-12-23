@@ -1,7 +1,8 @@
-export function newQuiz(){
-  /*const nextBtn = document.getElementById("next-btn");
+/*export function newQuiz() {
+  const nextBtn = document.getElementById("next-btn");
   const prevBtn = document.getElementById("prev-btn");
   const questions = document.querySelectorAll(".quiz-container__question");
+  const counter = document.querySelector(".quiz-container__counter");
   const questionsMap = {
     "question-1": {
       1: "question-2.1",
@@ -24,24 +25,126 @@ export function newQuiz(){
       1: "question-6.3",
       2: "question-6.4",
     },
+    "question-3.2": {
+      1: "question-4.1",
+      2: "question-4.2",
+    },
+    "question-3.3": {
+      1: "question-6.7",
+      2: "question-6.8",
+    },
+    "question-3.4": {
+      1: "question-6.9",
+      2: "question-6.10",
+    },
+    "question-4.1": {
+      1: "question-6.5",
+      2: "question-6.6",
+    },
+    "question-4.2": {
+      1: "question-6.3",
+      2: "question-6.6",
+    },
+    "question-5.1": {
+      1: "contacts-form-7",
+      2: "question-6.2",
+      3: "question-6.2",
+      4: "question-6.2",
+      5: "question-6.2",
+    },
+    "question-6.1": "contacts-form-7",
+    "question-6.2": "contacts-form-7",
+    "question-6.3": "contacts-form-7",
+    "question-6.4": "contacts-form-7",
+    "question-6.5": "contacts-form-7",
+    "question-6.6": "contacts-form-7",
+    "question-6.7": "contacts-form-7",
+    "question-6.8": "contacts-form-7",
+    "question-6.9": "contacts-form-7",
+    "question-6.10": "contacts-form-7",
   };
 
   let currentQuestion = "question-1";
+  let pathQuestions = ["question-1"];
+  let totalBranchQuestions = 7;
+
+  function calculateBranchLength(start) {
+    let count = 0;
+    let visited = new Set();
+    let stack = [start];
+
+    while (stack.length > 0) {
+      const current = stack.pop();
+      if (!visited.has(current)) {
+        visited.add(current);
+        count++;
+        const nextQuestions = Object.values(questionsMap[current] || {});
+        stack.push(...nextQuestions);
+      }
+    }
+    return count;
+  }
+
+  function updateCounter() {
+    const currentIndex = pathQuestions.indexOf(currentQuestion) + 1;
+    counter.querySelector("span:first-child").textContent = currentIndex
+      .toString()
+      .padStart(2, "0");
+    counter.querySelector("span:last-child").textContent = totalBranchQuestions
+      .toString()
+      .padStart(2, "0");
+  }
+
+  function updateNextButtonText() {
+    if (currentQuestion.startsWith("question-6")) {
+      nextBtn.textContent = "Оставить заявку";
+    } else {
+      nextBtn.textContent = "Далее";
+    }
+  }
+
+  function updateButtonStates() {
+    // Проверяем кнопку "Назад"
+    if (pathQuestions.length === 1) {
+      prevBtn.classList.add("disabled");
+    } else {
+      prevBtn.classList.remove("disabled");
+    }
+
+    // Проверяем кнопку "Далее/Оставить заявку"
+    const currentBlock = document.getElementById(currentQuestion);
+    const selectedInput = currentBlock.querySelector("input:checked");
+
+    if (selectedInput) {
+      nextBtn.classList.remove("disabled");
+    } else {
+      nextBtn.classList.add("disabled");
+    }
+  }
 
   function showQuestion(id) {
     questions.forEach((q) => {
       q.classList.remove("active");
-      q.style.display = "none";
     });
     const nextQuestion = document.getElementById(id);
     if (nextQuestion) {
       nextQuestion.classList.add("active");
-      nextQuestion.style.display = "flex";
     }
     currentQuestion = id;
+    updateCounter();
+    updateNextButtonText();
+    updateButtonStates();
   }
 
   function handleNext() {
+    if (nextBtn.classList.contains("disabled")) return;
+
+    if (currentQuestion.startsWith("question-6")) {
+      showQuestion("contacts-form-7");
+      pathQuestions.push("contacts-form-7");
+      return;
+    }
+
     const currentBlock = document.getElementById(currentQuestion);
     const selectedInput = currentBlock.querySelector("input:checked");
 
@@ -54,6 +157,13 @@ export function newQuiz(){
     const nextQuestionId = questionsMap[currentQuestion]?.[selectedValue];
 
     if (nextQuestionId) {
+      if (pathQuestions.length === 1) {
+        totalBranchQuestions = calculateBranchLength(nextQuestionId) + 1;
+      }
+
+      if (!pathQuestions.includes(nextQuestionId)) {
+        pathQuestions.push(nextQuestionId);
+      }
       showQuestion(nextQuestionId);
     } else {
       alert("Следующий вопрос не найден.");
@@ -61,293 +171,248 @@ export function newQuiz(){
   }
 
   function handlePrev() {
-    // Определяем предыдущий блок через стек или дополнительную логику
-    alert("Логика возврата к предыдущему блоку не реализована.");
+    if (prevBtn.classList.contains("disabled")) return;
+
+    if (pathQuestions.length > 1) {
+      pathQuestions.pop();
+      const previousQuestion = pathQuestions[pathQuestions.length - 1];
+      showQuestion(previousQuestion);
+    } else {
+      alert("Это первый вопрос.");
+    }
+  }
+
+  function handleInputChange() {
+    updateButtonStates();
+  }
+
+  // Добавляем обработчик на радиокнопки
+  function attachRadioHandlers() {
+    questions.forEach((q) => {
+      const inputs = q.querySelectorAll("input[type='radio']");
+      inputs.forEach((input) => {
+        input.addEventListener("change", handleInputChange);
+      });
+    });
   }
 
   nextBtn.addEventListener("click", handleNext);
   prevBtn.addEventListener("click", handlePrev);
 
-  // Показываем первый вопрос
-  showQuestion(currentQuestion);*/
+  attachRadioHandlers();
+  showQuestion(currentQuestion);
+};*/
 
+export function newQuiz() {
+  const nextBtn = document.getElementById("next-btn");
+  const prevBtn = document.getElementById("prev-btn");
+  const questions = document.querySelectorAll(".quiz-container__question");
+  const counter = document.querySelector(".quiz-container__counter");
+  const questionsMap = {
+    "question-1": {
+      1: "question-2.1",
+      2: "question-2.1",
+      3: "question-2.1",
+      4: "question-3.2",
+      5: "question-2.2",
+    },
+    "question-2.1": {
+      1: "question-6.1",
+      2: "question-5.1",
+      3: "question-3.1",
+      4: "question-3.2",
+    },
+    "question-2.2": {
+      1: "question-3.3",
+      2: "question-3.4",
+    },
+    "question-3.1": {
+      1: "question-6.3",
+      2: "question-6.4",
+    },
+    "question-3.2": {
+      1: "question-4.1",
+      2: "question-4.2",
+    },
+    "question-3.3": {
+      1: "question-6.7",
+      2: "question-6.8",
+    },
+    "question-3.4": {
+      1: "question-6.9",
+      2: "question-6.10",
+    },
+    "question-4.1": {
+      1: "question-6.5",
+      2: "question-6.6",
+    },
+    "question-4.2": {
+      1: "question-6.3",
+      2: "question-6.6",
+    },
+    "question-5.1": {
+      1: "question-6.2",
+      2: "question-6.2",
+      3: "question-6.2",
+      4: "question-6.2",
+      5: "contacts-form-7",
+    },
+    "question-6.1": "contacts-form-7",
+    "question-6.2": "contacts-form-7",
+    "question-6.3": "contacts-form-7",
+    "question-6.4": "contacts-form-7",
+    "question-6.5": "contacts-form-7",
+    "question-6.6": "contacts-form-7",
+    "question-6.7": "contacts-form-7",
+    "question-6.8": "contacts-form-7",
+    "question-6.9": "contacts-form-7",
+    "question-6.10": "contacts-form-7",
+  };
 
+  let currentQuestion = "question-1";
+  let pathQuestions = ["question-1"];
+  let totalBranchQuestions = calculateBranchLength(currentQuestion);
 
+  function calculateBranchLength(start) {
+    let count = 0;
+    let visited = new Set();
+    let stack = [start];
 
-
-  /*ааааааааааааа*/
- 
-    /*const questions = document.querySelectorAll(".quiz-container__question");
-    const counter = document.querySelector(".quiz-container__counter");
-    const prevButton = document.getElementById("prev-btn");
-    const nextButton = document.getElementById("next-btn");
-  
-    let currentQuestionIndex = 0;
-  
-    // Функция для обновления состояния
-    function updateQuizState(index) {
-      // Скрываем все вопросы, кроме текущего
-      questions.forEach((question, i) => {
-        question.classList.toggle("active", i === index);
-      });
-  
-      // Обновляем счетчик
-      const current = (index + 1).toString().padStart(2, "0");
-      const total = questions.length.toString().padStart(2, "0");
-      counter.querySelector("span:first-child").textContent = current;
-      counter.querySelector("span:last-child").textContent = total;
-  
-      // Управляем кнопками
-      prevButton.disabled = index === 0; // Блокируем "Назад" на первом вопросе
-      nextButton.disabled = index === questions.length - 1; // Блокируем "Далее" на последнем вопросе
-    }
-  
-    // Функция для обработки клика по кнопке "Далее"
-    function goToNextQuestion() {
-      console.log('@@@@@@@@@@')
-      if (currentQuestionIndex < questions.length - 1) {
-        currentQuestionIndex++;
-        updateQuizState(currentQuestionIndex);
+    while (stack.length > 0) {
+      const current = stack.pop();
+      if (!visited.has(current)) {
+        visited.add(current);
+        count++;
+        const nextQuestions = Object.values(questionsMap[current] || {});
+        stack.push(...nextQuestions);
       }
     }
-  
-    // Функция для обработки клика по кнопке "Назад"
-    function goToPreviousQuestion() {
-      if (currentQuestionIndex > 0) {
-        currentQuestionIndex--;
-        updateQuizState(currentQuestionIndex);
-      }
-    }
-  
-    // Навешиваем обработчики событий на кнопки
-    nextButton.addEventListener("click", goToNextQuestion);
-    prevButton.addEventListener("click", goToPreviousQuestion);
-  
-    // Инициализация состояния
-    updateQuizState(currentQuestionIndex);*/
- 
-   /*ааааааааааааа*/
+    return count;
+  }
 
+  function updateCounter() {
+    const currentIndex = pathQuestions.indexOf(currentQuestion) + 1;
+    counter.querySelector("span:first-child").textContent = currentIndex
+      .toString()
+      .padStart(2, "0");
+    counter.querySelector("span:last-child").textContent = totalBranchQuestions
+      .toString()
+      .padStart(2, "0");
+  }
 
+  function updateNextButtonText() {
+    if (currentQuestion.startsWith("question-6")) {
+      nextBtn.textContent = "Оставить заявку";
+    } else {
+      nextBtn.textContent = "Далее";
+    }
+  }
 
-   /*document.addEventListener("DOMContentLoaded", () => {
-    const nextBtn = document.getElementById("next-btn");
-    const prevBtn = document.getElementById("prev-btn");
-    const questions = document.querySelectorAll(".quiz-container__question");
-    const counter = document.querySelector(".quiz-container__counter");
-    const totalQuestions = questions.length; // Общее количество вопросов
-    const questionsMap = {
-      "question-1": {
-        1: "question-2.1",
-        2: "question-2.1",
-        3: "question-2.1",
-        4: "question-3.2",
-        5: "question-2.2",
-      },
-      "question-2.1": {
-        1: "question-6.1",
-        2: "question-5.1",
-        3: "question-3.1",
-        4: "question-3.2",
-      },
-      "question-2.2": {
-        1: "question-3.3",
-        2: "question-3.4",
-      },
-      "question-3.1": {
-        1: "question-6.3",
-        2: "question-6.4",
-      },
-    };
-  
-    let currentQuestion = "question-1";
-  
-    // Функция обновления нумерации
-    function updateCounter() {
-      const currentIndex = Array.from(questions).findIndex(
-        (q) => q.id === currentQuestion
-      );
-      const current = (currentIndex + 1).toString().padStart(2, "0");
-      const total = totalQuestions.toString().padStart(2, "0");
-  
-      counter.querySelector("span:first-child").textContent = current;
-      counter.querySelector("span:last-child").textContent = total;
+  function updateButtonStates() {
+    if (pathQuestions.length === 1) {
+      prevBtn.classList.add("disabled");
+    } else {
+      prevBtn.classList.remove("disabled");
     }
-  
-    function showQuestion(id) {
-      questions.forEach((q) => {
-        q.classList.remove("active");
-        q.style.display = "none";
-      });
-      const nextQuestion = document.getElementById(id);
-      if (nextQuestion) {
-        nextQuestion.classList.add("active");
-        nextQuestion.style.display = "flex";
-      }
-      currentQuestion = id;
-      updateCounter(); // Обновляем нумерацию
+
+    const currentBlock = document.getElementById(currentQuestion);
+    const selectedInput = currentBlock.querySelector("input:checked");
+
+    if (selectedInput) {
+      nextBtn.classList.remove("disabled");
+    } else {
+      nextBtn.classList.add("disabled");
     }
-  
-    function handleNext() {
-      const currentBlock = document.getElementById(currentQuestion);
-      const selectedInput = currentBlock.querySelector("input:checked");
-  
-      if (!selectedInput) {
-        alert("Выберите ответ перед переходом.");
-        return;
+  }
+
+  function showQuestion(id) {
+    questions.forEach((q) => {
+      q.classList.remove("active");
+    });
+    const nextQuestion = document.getElementById(id);
+    if (nextQuestion) {
+      nextQuestion.classList.add("active");
+    }
+    currentQuestion = id;
+    updateCounter();
+    updateNextButtonText();
+    updateButtonStates();
+  }
+
+  function handleNext() {
+    if (nextBtn.classList.contains("disabled")) return;
+
+    if (currentQuestion.startsWith("question-6")) {
+      showQuestion("contacts-form-7");
+      pathQuestions.push("contacts-form-7");
+      return;
+    }
+
+    const currentBlock = document.getElementById(currentQuestion);
+    const selectedInput = currentBlock.querySelector("input:checked");
+
+    if (!selectedInput) {
+      alert("Выберите ответ перед переходом.");
+      return;
+    }
+
+    const selectedValue = Number(selectedInput.value);
+    const nextQuestionId = questionsMap[currentQuestion]?.[selectedValue];
+
+    if (nextQuestionId) {
+      if (pathQuestions.length === 1) {
+        totalBranchQuestions = calculateBranchLength(nextQuestionId) + 1;
       }
-  
+
+      if (!pathQuestions.includes(nextQuestionId)) {
+        pathQuestions.push(nextQuestionId);
+      }
+      showQuestion(nextQuestionId);
+    } else {
+      alert("Следующий вопрос не найден.");
+    }
+  }
+
+  function handlePrev() {
+    if (prevBtn.classList.contains("disabled")) return;
+
+    if (pathQuestions.length > 1) {
+      pathQuestions.pop();
+      const previousQuestion = pathQuestions[pathQuestions.length - 1];
+      showQuestion(previousQuestion);
+    } else {
+      alert("Это первый вопрос.");
+    }
+  }
+
+  function handleInputChange() {
+    const currentBlock = document.getElementById(currentQuestion);
+    const selectedInput = currentBlock.querySelector("input:checked");
+
+    if (selectedInput) {
       const selectedValue = Number(selectedInput.value);
       const nextQuestionId = questionsMap[currentQuestion]?.[selectedValue];
-  
       if (nextQuestionId) {
-        showQuestion(nextQuestionId);
-      } else {
-        alert("Следующий вопрос не найден.");
+        totalBranchQuestions = calculateBranchLength(nextQuestionId) + 1;
       }
     }
-  
-    function handlePrev() {
-      // Определяем предыдущий блок через стек или дополнительную логику
-      alert("Логика возврата к предыдущему блоку не реализована.");
-    }
-  
-    nextBtn.addEventListener("click", handleNext);
-    prevBtn.addEventListener("click", handlePrev);
-  
-    // Показываем первый вопрос и инициализируем счетчик
-    showQuestion(currentQuestion);
-  });*/
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const nextBtn = document.getElementById("next-btn");
-    const prevBtn = document.getElementById("prev-btn");
-    const questions = document.querySelectorAll(".quiz-container__question");
-    const counter = document.querySelector(".quiz-container__counter");
-    const questionsMap = {
-      "question-1": {
-        1: "question-2.1",
-        2: "question-2.1",
-        3: "question-2.1",
-        4: "question-3.2",
-        5: "question-2.2",
-      },
-      "question-2.1": {
-        1: "question-6.1",
-        2: "question-5.1",
-        3: "question-3.1",
-        4: "question-3.2",
-      },
-      "question-2.2": {
-        1: "question-3.3",
-        2: "question-3.4",
-      },
-      "question-3.1": {
-        1: "question-6.3",
-        2: "question-6.4",
-      },
-    };
-  
-    let currentQuestion = "question-1";
-    let pathQuestions = ["question-1"]; // Массив для отслеживания пути пользователя
-    let totalBranchQuestions = 7; // Общее количество вопросов в текущей ветке
-  
-    // Функция для подсчета количества вопросов в ветке
-    function calculateBranchLength(start) {
-      let count = 0;
-      let visited = new Set();
-      let stack = [start];
-  
-      while (stack.length > 0) {
-        const current = stack.pop();
-        if (!visited.has(current)) {
-          visited.add(current);
-          count++;
-          const nextQuestions = Object.values(questionsMap[current] || {});
-          stack.push(...nextQuestions);
-        }
-      }
-      return count;
-    }
-  
-    // Функция обновления нумерации
-    function updateCounter() {
-      const currentIndex = pathQuestions.indexOf(currentQuestion) + 1;
-      counter.querySelector("span:first-child").textContent = currentIndex
-        .toString()
-        .padStart(2, "0");
-      counter.querySelector("span:last-child").textContent = totalBranchQuestions
-        .toString()
-        .padStart(2, "0");
-    }
-  
-    function updateNextButtonText() {
-      if (currentQuestion.startsWith("question-6")) {
-        nextBtn.textContent = "Оставить заявку";
-      } else {
-        nextBtn.textContent = "Далее";
-      }
-    }
-  
-    function showQuestion(id) {
-      questions.forEach((q) => {
-        q.classList.remove("active");
-        q.style.display = "none";
+    updateCounter();
+    updateButtonStates();
+  }
+
+  function attachRadioHandlers() {
+    questions.forEach((q) => {
+      const inputs = q.querySelectorAll("input[type='radio']");
+      inputs.forEach((input) => {
+        input.addEventListener("change", handleInputChange);
       });
-      const nextQuestion = document.getElementById(id);
-      if (nextQuestion) {
-        nextQuestion.classList.add("active");
-        nextQuestion.style.display = "flex";
-      }
-      currentQuestion = id;
-      updateCounter();
-      updateNextButtonText();
-    }
-  
-    function handleNext() {
-      const currentBlock = document.getElementById(currentQuestion);
-      const selectedInput = currentBlock.querySelector("input:checked");
-  
-      if (!selectedInput) {
-        alert("Выберите ответ перед переходом.");
-        return;
-      }
-  
-      const selectedValue = Number(selectedInput.value);
-      const nextQuestionId = questionsMap[currentQuestion]?.[selectedValue];
-  
-      if (nextQuestionId) {
-        // Если пользователь впервые выбирает путь, пересчитываем ветку
-        if (pathQuestions.length === 1) {
-          totalBranchQuestions = calculateBranchLength(nextQuestionId) + 1; // +1 для первого вопроса
-        }
-  
-        // Добавляем вопрос в путь только если его еще нет
-        if (!pathQuestions.includes(nextQuestionId)) {
-          pathQuestions.push(nextQuestionId);
-        }
-        showQuestion(nextQuestionId);
-      } else {
-        alert("Следующий вопрос не найден.");
-      }
-    }
-  
-    function handlePrev() {
-      if (pathQuestions.length > 1) {
-        pathQuestions.pop(); // Удаляем текущий вопрос из пути
-        const previousQuestion = pathQuestions[pathQuestions.length - 1];
-        showQuestion(previousQuestion);
-      } else {
-        alert("Это первый вопрос.");
-      }
-    }
-  
-    nextBtn.addEventListener("click", handleNext);
-    prevBtn.addEventListener("click", handlePrev);
-  
-    // Показываем первый вопрос и инициализируем счетчик
-    showQuestion(currentQuestion);
-  });
-  
-  
-};
+    });
+  }
+
+  nextBtn.addEventListener("click", handleNext);
+  prevBtn.addEventListener("click", handlePrev);
+
+  attachRadioHandlers();
+  showQuestion(currentQuestion);
+}
