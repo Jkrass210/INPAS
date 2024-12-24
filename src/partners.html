@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   @@include('html/components/head.html',{"title":"Партнерам"})
 <body>
   @@include('html/boxs/header-default.html')
@@ -7,7 +7,35 @@
     @@include('html/boxs/path-1.html',{"text1":"Партнерам"})
     <section class="section partners-section-1">
       <div class="partners-section-1__container container">
-        <img src="img/partners/1.png" alt="img">
+        <div class="partners-section-1__content">
+          <div class="partners-section-1__top-info">
+            <h1 class="about-company-section-1__title title-h1">
+              <span>Стать партнером</span> 
+              <span>Прими карту!</span>
+            </h1>
+            <p class="about-company-section-1__desc">
+              Сервис «ПРИМИ КАРТУ!» приглашает к сотрудничеству компании, занимающихся автоматизацией и обслуживанием торгово-сервисных предприятий. Являясь партнером нашего сервиса Вы можете выбрать следующую форму вознаграждения за привлечение клиента:
+            </p>
+            @@include('html/components/btn-group.html',{"btn-1":"Стать партнером","btn-2":"Портал для партнеров"})
+          </div>
+          <div class="partners-section-1__box-img">
+            <img src="img/partners/1.jpg" alt="img">
+          </div>
+          <div class="partners-section-1__card-1">
+            @@include('html/components/card6.html',{"urlImg":"img/partners/1svg.svg","textSpan":"Разовая выплата","textDesc":"в размере 2000руб. за каждого подключенного клиента, после заключения договора эквайринга;"})
+          </div>
+          <div class="partners-section-1__card-2">
+            @@include('html/components/card6.html',{"urlImg":"img/partners/2svg.svg","textSpan":"Процентная ставка с транзакционного дохода","textDesc":", составляющая 0,1% от ставки, указанной на сайте."})
+          </div>
+        </div>
+        <div class="partners-section-1__content-bottom">
+          <div class="partners-section-1__card-3">
+            @@include('html/components/card7.html')
+          </div>
+          <div class="partners-section-1__card-4">
+            @@include('html/components/card8.html')
+          </div>
+        </div>
       </div>
     </section>
   </main>

@@ -1,0 +1,29 @@
+.card6 {
+  height: 100%;
+  padding: 30px 26px 26px;
+  background-color: var(--colof-9);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__img {
+    display: flex;
+  }
+
+  p {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--color-text-white);
+  }
+}
+
+@media (max-width: 650px) {
+  .card6 {
+    gap: 30px;
+    p {
+      font-size: 14px;
+    }
+  }
+}
