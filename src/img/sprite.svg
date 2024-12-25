@@ -114,4 +114,8 @@
   <symbol id="play" width="40" height="45" viewBox="0 0 40 45" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M37.7143 18.5222C40.7619 20.2901 40.7619 24.7099 37.7143 26.4778L6.85715 44.3778C3.80953 46.1457 -1.53824e-07 43.9358 0 40.4L1.55747e-06 4.6C1.71129e-06 1.0642 3.80953 -1.14569 6.85714 0.622217L37.7143 18.5222Z" fill="currentColor" />
   </symbol>
+
+  <symbol id="arrowTabs" width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1 1L7 8L1 15" stroke="currentColor" stroke-linecap="round" />
+  </symbol>
 </svg>

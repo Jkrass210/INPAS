@@ -1,0 +1,26 @@
+.btn-video-play {
+  width: 115px;
+  min-width: 115px;
+  height: 115px;
+  border: 1px solid var(--color-text-white);
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: var(--color-text-white);
+  transition: color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+
+  &:focus,&:focus-visible {
+    outline: none;
+  }
+
+  &:focus-visible,&:hover,&:active {
+    color: var(--yfvfy);
+    border-color: var(--yfvfy);
+  }
+
+  &.hidden {
+    display: none;
+  }
+}

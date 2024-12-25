@@ -5,7 +5,8 @@ import { toggleActiveClass } from './module/toggleActiveClass.js';
 import { handleResize } from './module/handleResize.js';
 import { initTabLogic } from './module/initTabLogic.js';
 import { handleSwiperClasses } from './module/handleSwiperClasses.js';
-
+import { initTabs } from './module/initTabs.js';
+import { playVideo } from './module/playVideo.js';
 
 if(document.querySelector('#openSearch')){
   const btnSearch = document.querySelector('#openSearch');
@@ -207,4 +208,12 @@ if (document.querySelector('#swiper-7')) {
       }, 200); // Задержка для оптимизации
     });
   });
+}
+
+if(document.querySelector('#tabs-1')) {
+  initTabs('#tabs-1', '.tabs__btn', '.tabs__info');
+}
+
+if(document.querySelectorAll(".btn-video-play")) {
+  playVideo()
 }

@@ -1,0 +1,33 @@
+.service-support-section-3 {
+  &__top-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 36px;
+  }
+  &__title {
+    margin-bottom: 0;
+  }
+  &__link {
+    width: 100%;
+    max-width: 220px;
+    display: inline-block;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    li {
+      position: relative;
+      display: flex;
+      
+      video {
+        border-radius: 25px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

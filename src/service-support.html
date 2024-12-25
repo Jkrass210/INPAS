@@ -1,15 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   @@include('html/components/head.html',{"title":"Сервисная поддержка"})
 <body>
   @@include('html/boxs/header-default.html')
   <main class="main">
     @@include('html/boxs/path-1.html',{"text1":"Сервисная поддержка"})
-    <section class="section partners-section-1">
-      <div class="partners-section-1__container container">
-        <img src="img/service-support/1.png" alt="img">
+    <section class="service-support-section-1 section">
+      <div class="service-support-section-1__container container">
+        <div class="service-support-section-1__container">
+          <div class="service-support-section-1__left">
+            <h1 class="service-support-section-1__title title-h1">
+              Сервисная поддержка
+            </h1>
+            <p class="service-support-section-1__desc">
+              Сервис «ПРИМИ КАРТУ!» приглашает к сотрудничеству компании, занимающихся автоматизацией и обслуживанием торгово-сервисных предприятий.
+            </p>
+          </div>
+          <div class="service-support-section-1__right">
+            <img src="img/service-support/1.jpg" alt="img">
+          </div>
+        </div>
       </div>
     </section>
+    <section class="service-support-section-2 section">
+      <div class="service-support-section-2__container container">
+        <div class="service-support-section-2__content">
+          <h2 class="service-support-section-2__title title">
+            Отвечаем на Ваши вопросы
+          </h2>
+          @@include('html/boxs/tabs.html')
+        </div>
+      </div>
+    </section>
+    <section class="service-support-section-3 section">
+      <div class="service-support-section-3__container container">
+        <div class="service-support-section-3__content">
+          <div class="service-support-section-3__top-line">
+            <h2 class="service-support-section-3__title title">
+              Видеоучебник
+            </h2>
+            <a href="#" class="service-support-section-3__link btn-group__btn-2">
+              Все видео
+            </a>
+          </div>
+          <div class="service-support-section-3__box-video">
+            <ul class="service-support-section-3__list list-reset">
+              <li>
+                <video poster="img/video/1.jpg">
+                  <source src="video/video.mp4" type="video/mp4">
+                  <source src="video/video1.webm" type="video/webm">
+                  Your browser does not support the video tag.
+                </video>
+                @@include('html/components/btn-video-play.html')
+              </li>
+              <li>
+                <video poster="img/video/2.jpg">
+                  <source src="video/video.mp4" type="video/mp4">
+                  <source src="video/video1.webm" type="video/webm">
+                  Your browser does not support the video tag.
+                </video>
+                @@include('html/components/btn-video-play.html')
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="service-support-section-4 section">
+      <div class="service-support-section-4__container container">
+        <div class="service-support-section-4__content">
+          <h2 class="service-support-section-4__title title">
+            Сервисные пакеты
+          </h2>
+          <ul class="service-support-section-4__list list-reset">
+            <li>
+              @@include('html/components/card9.html',{"title":"Базовый","desc":"Сервис «ПРИМИ КАРТУ!» приглашает к сотрудничеству компании, занимающихся автоматизацией"})
+            </li>
+            <li>
+              @@include('html/components/card9.html',{"title":"Стандарт","desc":"Сервис «ПРИМИ КАРТУ!» приглашает к сотрудничеству компании, занимающихся автоматизацией"})
+            </li>
+            <li>
+              @@include('html/components/card9.html',{"title":"Премиум","desc":"Сервис «ПРИМИ КАРТУ!» приглашает к сотрудничеству компании, занимающихся автоматизацией"})
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    @@include('html/boxs/box-contact-us.html')
   </main>
   @@include('html/boxs/footer-default.html')
 </body>

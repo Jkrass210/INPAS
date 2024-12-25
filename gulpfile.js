@@ -26,6 +26,7 @@ import { vendorCssSwiper } from './gulp/tasks/vendorCssSwiper.js';
 //import { vendorCssOwlCarusel } from './gulp/tasks/vendorCssOwlCarusel.js';
 //import { vendorJsOwlCarusel } from './gulp/tasks/vendorJsOwlCarusel.js';
 import { fslightbox } from './gulp/tasks/fslightbox.js';
+import { video } from './gulp/tasks/video.js';
 
 function watcher() {
   gulp.watch(path.watch.html, html)
@@ -37,7 +38,7 @@ function watcher() {
 
 export { svgSprive }
 
-const mainTasks = gulp.parallel(html, normalize, scss, jsModules, js, images, fonts, vendorJsSwiper, vendorCssSwiper, fslightbox)
+const mainTasks = gulp.parallel(html, normalize, scss, jsModules, js, images, fonts, vendorJsSwiper, vendorCssSwiper, fslightbox, video)
 
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
