@@ -3,3 +3,12 @@
     margin-bottom: 40px;
   }
 }
+
+@media (max-width: 650px) {
+  .service-support-section-2 {
+    &__title {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+  }
+}

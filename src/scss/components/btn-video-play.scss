@@ -1,4 +1,7 @@
 .btn-video-play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 115px;
   min-width: 115px;
   height: 115px;
@@ -22,5 +25,18 @@
 
   &.hidden {
     display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .btn-video-play {
+    width: 58px;
+    min-width: 58px;
+    height: 58px;
+
+    svg {
+      width: 17px;
+      height: 20px;
+    }
   }
 }

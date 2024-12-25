@@ -46,3 +46,16 @@
     transition: color 0.4s ease-in-out;
   }
 }
+
+@media (max-width: 650px) {
+  .card9 {
+    &__link {
+      padding: 27px 22px 30px;
+      gap: 10px;
+    }
+    &__title {
+      font-size: 20px;
+      line-height: 120%;
+    }
+  }
+}

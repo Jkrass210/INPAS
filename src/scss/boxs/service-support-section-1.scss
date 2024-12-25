@@ -22,6 +22,7 @@
   }
 
   &__right {
+    display: flex;
     flex: 1;
 
     img {
@@ -33,7 +34,29 @@
       box-shadow: inset 0 0 14px 0 rgba(0, 3, 81, 0.3);
     }
   }
+}
 
- 
- 
+@media (max-width: 900px) {
+  .service-support-section-1 {
+    &__container {
+      flex-direction: column-reverse;
+      gap: 20px;
+    }
+
+    &__left {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .service-support-section-1 {
+    &__title {
+      margin-bottom: 20px;
+    }
+    &__desc {
+      font-size: 14px;
+    }
+    
+  }
 }

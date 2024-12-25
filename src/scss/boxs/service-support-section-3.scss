@@ -3,6 +3,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
     margin-bottom: 36px;
   }
   &__title {
@@ -28,6 +30,28 @@
         height: 100%;
         object-fit: cover;
       }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .service-support-section-3 {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .service-support-section-3 {
+    &__top-line {
+      margin-bottom: 20px;
+    }
+    &__title {
+      font-size: 24px;
+    }
+    &__link {
+      display: none;
     }
   }
 }

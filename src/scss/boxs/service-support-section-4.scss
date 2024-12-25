@@ -9,3 +9,19 @@
     gap: 20px;
   }
 }
+
+@media (max-width: 900px) {
+  .service-support-section-4 {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+@media (max-width: 650px) {
+  .service-support-section-4 {
+    &__title {
+      margin-bottom: 30px;
+      font-size: 24px;
+    }
+  }
+}
