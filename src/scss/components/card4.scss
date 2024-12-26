@@ -63,16 +63,16 @@
     align-items: center;
     justify-content: center;
     border-radius: 15px;
-    border: 2px solid var(--colof-red);
-    padding: 20px;
+    outline: 1px solid transparent;
+    padding: 21px;
     font-family: var(--third-family);
     font-weight: 600;
     font-size: 16px;
-    line-height: 170%;
+    line-height: 100%;
     text-align: center;
     color: var(--color-text-white);
     background-color: var(--colof-red);
-    transition: border-color 0.4s ease-in-out;
+    transition: outline-color 0.4s ease-in-out;
 
     &:focus,
     &:focus-visible {
@@ -82,7 +82,7 @@
     &:focus-visible,
     &:hover,
     &:active {
-      border-color: rgba(25, 25, 50, 0.3);
+      outline-color: var(--colof-red);
     }
   }
 }

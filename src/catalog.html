@@ -5,9 +5,62 @@
   @@include('html/boxs/header-default.html')
   <main class="main">
     @@include('html/boxs/path-1.html',{"text1":"Каталог"})
-    <section class="section partners-section-1">
-      <div class="partners-section-1__container container">
-        <img src="img/catalog/1.png" alt="img">
+    <section class="catalog-section-1 section">
+      <div class="catalog-section-1__container container">
+        <h2 class="catalog-section-1__title title">
+          Каталог
+        </h2>
+        <div class="catalog-section-1__content">
+          <aside class="catalog-section-1__aside">
+            @@include('html/components/filter.html')
+          </aside>
+          <div class="catalog-section-1__right">
+            <div class="catalog-section-1__top-line">
+              <div class="catalog-section-1__box-drop">
+                <p>Упорядочить по:</p>
+                @@include('html/components/drop-down-1.html',{"text1":"умолчанию","text2":"убыванию","text3":"возрастанию"})
+              </div>
+            </div>
+            <ul class="catalog-section-1__list-cards list-reset">
+              <li>
+                @@include('html/components/card4.html',{"url":"img/main/section-5/1.png","name":"A50 (переносной мини-POS)","desc":"Подключаем без визита в банк за 3-5 дней, от вас нужны только документы"})
+              </li>
+              <li>
+                @@include('html/components/card4.html',{"url":"img/main/section-5/2.png","name":"S920 (переносной)","desc":"Подключаем без визита в банк за 3-5 дней, от вас нужны только документы"})
+              </li>
+              <li>
+                @@include('html/components/card4.html',{"url":"img/main/section-5/3.png","name":"D210E (переносной)","desc":"Подключаем без визита в банк за 3-5 дней, от вас нужны только документы"})
+              </li>
+              <li>
+                @@include('html/components/card4.html',{"url":"img/main/section-5/2.png","name":"S920 (переносной)","desc":"Подключаем без визита в банк за 3-5 дней, от вас нужны только документы"})
+              </li>
+              <li>
+                @@include('html/components/card4.html',{"url":"img/main/section-5/2.png","name":"S920 (переносной)","desc":"Подключаем без визита в банк за 3-5 дней, от вас нужны только документы"})
+              </li>
+              <li>
+                @@include('html/components/card4.html',{"url":"img/main/section-5/1.png","name":"A50 (переносной мини-POS)","desc":"Подключаем без визита в банк за 3-5 дней, от вас нужны только документы"})
+              </li>
+              <li>
+                @@include('html/components/card4.html',{"url":"img/main/section-5/1.png","name":"A50 (переносной мини-POS)","desc":"Подключаем без визита в банк за 3-5 дней, от вас нужны только документы"})
+              </li>
+              <li>
+                @@include('html/components/card4.html',{"url":"img/main/section-5/2.png","name":"S920 (переносной)","desc":"Подключаем без визита в банк за 3-5 дней, от вас нужны только документы"})
+              </li>
+              <li>
+                @@include('html/components/card4.html',{"url":"img/main/section-5/2.png","name":"S920 (переносной)","desc":"Подключаем без визита в банк за 3-5 дней, от вас нужны только документы"})
+              </li>
+              <li>
+                @@include('html/components/card4.html',{"url":"img/main/section-5/2.png","name":"S920 (переносной)","desc":"Подключаем без визита в банк за 3-5 дней, от вас нужны только документы"})
+              </li>
+              <li>
+                @@include('html/components/card4.html',{"url":"img/main/section-5/2.png","name":"S920 (переносной)","desc":"Подключаем без визита в банк за 3-5 дней, от вас нужны только документы"})
+              </li>
+              <li>
+                @@include('html/components/card4.html',{"url":"img/main/section-5/2.png","name":"S920 (переносной)","desc":"Подключаем без визита в банк за 3-5 дней, от вас нужны только документы"})
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   </main>

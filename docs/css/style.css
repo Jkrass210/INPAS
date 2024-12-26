@@ -94,6 +94,7 @@ body {
   --color-17: #37424a;
   --color-18: rgba(255, 255, 255, 0.3);
   --color-19: rgba(255, 255, 255, 0.5);
+  --color-20: #d1d1d1;
 }
 
 .title {
@@ -1741,22 +1742,22 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 15px;
-  border: 2px solid var(--colof-red);
-  padding: 20px;
+  outline: 1px solid transparent;
+  padding: 21px;
   font-family: var(--third-family);
   font-weight: 600;
   font-size: 16px;
-  line-height: 170%;
+  line-height: 100%;
   text-align: center;
   color: var(--color-text-white);
   background-color: var(--colof-red);
-  transition: border-color 0.4s ease-in-out;
+  transition: outline-color 0.4s ease-in-out;
 }
 .card4__btn:focus, .card4__btn:focus-visible {
   outline: none;
 }
 .card4__btn:focus-visible, .card4__btn:hover, .card4__btn:active {
-  border-color: rgba(25, 25, 50, 0.3);
+  outline-color: var(--colof-red);
 }
 
 @media (max-width: 512px) {
@@ -3207,6 +3208,244 @@ body {
     height: 20px;
   }
 }
+.catalog-section-1__content {
+  display: flex;
+  gap: 4.1666666667%;
+}
+.catalog-section-1__aside {
+  width: 20.8333333333%;
+}
+.catalog-section-1__right {
+  flex: 1;
+}
+.catalog-section-1__top-line {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 25px;
+}
+.catalog-section-1__box-drop {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.catalog-section-1__box-drop p {
+  font-family: var(--font6);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 135%;
+  color: var(--color-11);
+}
+.catalog-section-1__list-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 24px;
+  column-gap: 20px;
+}
+.catalog-section-1__list-cards .card4__info {
+  padding: 24px;
+}
+.catalog-section-1__list-cards .card4__link {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.catalog-section-1__list-cards .card4__desc {
+  margin-bottom: 17px;
+  font-size: 16px;
+}
+.catalog-section-1__list-cards .card4__price {
+  margin-bottom: 17px;
+  font-size: 22px;
+}
+
+.drop-down-1 {
+  position: relative;
+}
+.drop-down-1__btn {
+  display: flex;
+  align-items: center;
+  color: var(--color-text-white);
+  transition: color 0.4s ease-in-out;
+}
+.drop-down-1__btn span {
+  font-family: var(--font6);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 135%;
+}
+.drop-down-1__btn svg {
+  transition: transform 0.4s ease-in-out;
+}
+.drop-down-1__btn.active svg {
+  transform: rotate(180deg);
+}
+.drop-down-1__btn.active + .drop-down-1__list {
+  visibility: visible;
+  opacity: 1;
+}
+.drop-down-1__btn:focus, .drop-down-1__btn:focus-visible {
+  outline: none;
+}
+.drop-down-1__btn:focus-visible, .drop-down-1__btn:hover, .drop-down-1__btn:active {
+  color: var(--yfvfy);
+}
+.drop-down-1__list {
+  visibility: hidden;
+  opacity: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  background-color: var(--colof-9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(255, 255, 255, 0.1) inset;
+  transition: visibility 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+.drop-down-1__list li {
+  cursor: pointer;
+  padding: 15px;
+  font-family: var(--font6);
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--color-text-white);
+  transition: background-color 0.4s ease-in-out;
+}
+.drop-down-1__list li:focus-visible, .drop-down-1__list li:hover, .drop-down-1__list li:active {
+  background-color: var(--color-body);
+}
+.drop-down-1__item.active {
+  background-color: var(--color-body);
+}
+
+.drop-down-2 {
+  position: relative;
+}
+.drop-down-2__btn {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--color-text-white);
+  transition: color 0.4s ease-in-out;
+}
+.drop-down-2__btn:focus, .drop-down-2__btn:focus-visible {
+  outline: none;
+}
+.drop-down-2__btn:focus-visible, .drop-down-2__btn:hover, .drop-down-2__btn:active {
+  color: var(--yfvfy);
+}
+.drop-down-2__btn svg {
+  transition: transform 0.4s ease-in-out;
+}
+.drop-down-2__btn span {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 170%;
+}
+.drop-down-2__btn.active svg {
+  transform: rotate(180deg);
+}
+.drop-down-2__btn.active + .drop-down-2__box {
+  display: flex;
+}
+.drop-down-2__box {
+  margin-bottom: 20px;
+  display: none;
+  flex-direction: column;
+  gap: 14px;
+}
+.drop-down-2__box label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 13px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 170%;
+  color: var(--color-text-white);
+  transition: color 0.4s ease-in-out;
+}
+.drop-down-2__box label:focus-visible, .drop-down-2__box label:hover, .drop-down-2__box label:active {
+  color: var(--yfvfy);
+}
+.drop-down-2__box label input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  visibility: hidden;
+}
+.drop-down-2__box label input:focus, .drop-down-2__box label input:focus-visible {
+  outline: none;
+}
+.drop-down-2__box label input:checked + .drop-down-2__castom {
+  background-color: var(--yfvfy);
+}
+.drop-down-2__box label .drop-down-2__castom {
+  width: 17px;
+  min-width: 17px;
+  height: 17px;
+  border-radius: 100%;
+  border: 2px solid var(--color-text-white);
+  background-color: var(--color-20);
+}
+
+.filter__title {
+  margin-bottom: 22px;
+  font-family: var(--font4);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 87%;
+  color: var(--color-text-white);
+}
+.filter__list {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.filter__btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.filter__submit {
+  padding: 21px;
+  border-radius: 15px;
+  outline: 1px solid transparent;
+  font-family: var(--third-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  color: var(--color-text-black);
+  background-color: var(--yfvfy);
+  transition: outline-color 0.4s ease-in-out;
+}
+.filter__submit:focus, .filter__submit:focus-visible {
+  outline: none;
+}
+.filter__submit:focus-visible, .filter__submit:hover, .filter__submit:active {
+  outline-color: var(--yfvfy);
+}
+.filter__close {
+  padding: 21px;
+  border-radius: 15px;
+  font-family: var(--third-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 170%;
+  text-align: center;
+  color: var(--color-text-white);
+  transition: color 0.4s ease-in-out;
+}
+.filter__close:focus, .filter__close:focus-visible {
+  outline: none;
+}
+.filter__close:focus-visible, .filter__close:hover, .filter__close:active {
+  color: var(--yfvfy);
+}
+
 .footer {
   padding-top: 75px;
   padding-bottom: 45px;

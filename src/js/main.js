@@ -22,6 +22,13 @@ if(document.querySelector('#openDrop1')){
   })
 }
 
+if(document.querySelector('#openDrop2')){
+  const btnDrop1 = document.querySelector('#openDrop2');
+  btnDrop1.addEventListener('click', () => {
+    openDrop(btnDrop1, ".drop-down-1__item", true)
+  })
+}
+
 if (document.querySelectorAll('.swiper-container').length) {
   document.querySelectorAll('.swiper-container').forEach((container) => {
     const swiperWrapper = container.querySelector('.swiper');

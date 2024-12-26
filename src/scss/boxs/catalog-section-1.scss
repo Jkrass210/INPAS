@@ -1,0 +1,58 @@
+.catalog-section-1 {
+  &__content {
+    display: flex;
+    gap: calc(50 / 1200 * 100%);
+  }
+
+  &__aside {
+    width: calc(250 / 1200 * 100%);
+  }
+
+  &__right {
+    flex: 1;
+  }
+
+  &__top-line {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 25px;
+  }
+
+  &__box-drop {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    p {
+      font-family: var(--font6);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 135%;
+      color: var(--color-11);
+    }
+  }
+
+  &__list-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 24px;
+    column-gap: 20px;
+
+    .card4 {
+      &__info {
+        padding: 24px;
+      }
+      &__link {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+      &__desc {
+        margin-bottom: 17px;
+        font-size: 16px;
+      }
+      &__price {
+        margin-bottom: 17px;
+        font-size: 22px;
+      }
+    }
+  }
+}
