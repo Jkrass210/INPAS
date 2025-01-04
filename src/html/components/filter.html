@@ -7,13 +7,169 @@
       <li>
         @@include('./drop-down-3.html',{"title":"Тип терминала","textRadio1":"Стационарный","textRadio2":"Мобильный"})
       </li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li>
+        <div class="drop-down-2 drop-down-5">
+          <button class="drop-down-2__btn btn-reset">
+            <span>Тип коммуникации</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 10L12.0008 14.58L17 10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div class="drop-down-2__box">
+            <label>
+              <input type="checkbox" name="Тип коммуникации" value="Bluetooth">
+              <span class="drop-down-2__castom"></span>
+              Bluetooth
+            </label>
+            <label>
+              <input type="checkbox" name="Тип коммуникации" value="Ethernet">
+              <span class="drop-down-2__castom"></span>
+              Ethernet
+            </label>
+            <label>
+              <input type="checkbox" name="Тип коммуникации" value="WiFi">
+              <span class="drop-down-2__castom"></span>
+              WiFi
+            </label>
+            <label>
+              <input type="checkbox" name="Тип коммуникации" value="4G">
+              <span class="drop-down-2__castom"></span>
+              4G
+            </label>
+            <label>
+              <input type="checkbox" name="Тип коммуникации" value="3G">
+              <span class="drop-down-2__castom"></span>
+              3G
+            </label>
+            <label>
+              <input type="checkbox" name="Тип коммуникации" value="GRPS">
+              <span class="drop-down-2__castom"></span>
+              GRPS
+            </label>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="drop-down-2 drop-down-5">
+          <button class="drop-down-2__btn btn-reset">
+            <span>Порты подключения</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 10L12.0008 14.58L17 10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div class="drop-down-2__box">
+            <label>
+              <input type="checkbox" name="Порты подключения" value="RS232">
+              <span class="drop-down-2__castom"></span>
+              RS232
+            </label>
+            <label>
+              <input type="checkbox" name="Порты подключения" value="LAN">
+              <span class="drop-down-2__castom"></span>
+              LAN
+            </label>
+            <label>
+              <input type="checkbox" name="Порты подключения" value="RJ45">
+              <span class="drop-down-2__castom"></span>
+              RJ45
+            </label>
+            <label>
+              <input type="checkbox" name="Порты подключения" value="USB">
+              <span class="drop-down-2__castom"></span>
+              USB (MINI, MICRO, TYPE-C)
+            </label>
+            <label>
+              <input type="checkbox" name="Порты подключения" value="MDB">
+              <span class="drop-down-2__castom"></span>
+              MDB
+            </label>
+            <label>
+              <input type="checkbox" name="Порты подключения" value="Мультипорт">
+              <span class="drop-down-2__castom"></span>
+              Мультипорт
+            </label>
+            <label>
+              <input type="checkbox" name="Порты подключения" value="Ethernet">
+              <span class="drop-down-2__castom"></span>
+              Ethernet
+            </label>
+          </div>
+        </div>
+      </li>
+      <li>
+        @@include('./drop-down-3.html',{"title":"Сенсорный экран","textRadio1":"Да","textRadio2":"Нет"})
+      </li>
+      <li>
+        @@include('./drop-down-4.html',{"title":"Считыватель карт","textRadio1":"NFC","textRadio2":"Чип","textRadio3":"Магнитная полоса"})
+      </li>
+      <li>
+        @@include('./drop-down-3.html',{"title":"Наличие принтера","textRadio1":"Да","textRadio2":"Нет"})
+      </li>
+      <li>
+        @@include('./drop-down-3.html',{"title":"Кассовое решение","textRadio1":"Да","textRadio2":"Нет"})
+      </li>
+      <li>
+        <div class="drop-down-2 drop-down-5">
+          <button class="drop-down-2__btn btn-reset">
+            <span>Интеграция с Кассовым ПО</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 10L12.0008 14.58L17 10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div class="drop-down-2__box">
+            <label>
+              <input type="checkbox" name="Интеграция с Кассовым ПО" value="1С">
+              <span class="drop-down-2__castom"></span>
+              1С
+            </label>
+            <label>
+              <input type="checkbox" name="Интеграция с Кассовым ПО" value="Мой Склад">
+              <span class="drop-down-2__castom"></span>
+              Мой Склад
+            </label>
+            <label>
+              <input type="checkbox" name="Интеграция с Кассовым ПО" value="Эвотор">
+              <span class="drop-down-2__castom"></span>
+              Эвотор
+            </label>
+            <label>
+              <input type="checkbox" name="Интеграция с Кассовым ПО" value="Атол">
+              <span class="drop-down-2__castom"></span>
+              Атол
+            </label>
+            <label>
+              <input type="checkbox" name="Интеграция с Кассовым ПО" value="Дримкас">
+              <span class="drop-down-2__castom"></span>
+              Дримкас
+            </label>
+            <label>
+              <input type="checkbox" name="Интеграция с Кассовым ПО" value="DataMobile">
+              <span class="drop-down-2__castom"></span>
+              DataMobile
+            </label>
+            <label>
+              <input type="checkbox" name="Интеграция с Кассовым ПО" value="iReca">
+              <span class="drop-down-2__castom"></span>
+              iReca
+            </label>
+            <label>
+              <input type="checkbox" name="Интеграция с Кассовым ПО" value="Бифит">
+              <span class="drop-down-2__castom"></span>
+              Бифит
+            </label>
+            <label>
+              <input type="checkbox" name="Интеграция с Кассовым ПО" value="iLexx">
+              <span class="drop-down-2__castom"></span>
+              iLexx
+            </label>
+            <label>
+              <input type="checkbox" name="Интеграция с Кассовым ПО" value="LifePOS">
+              <span class="drop-down-2__castom"></span>
+              LifePOS
+            </label>
+          </div>
+        </div>
+      </li>
     </ul>
     <div class="filter__btn-group">
       <button class="filter__submit btn-reset">

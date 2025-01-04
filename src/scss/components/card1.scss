@@ -13,6 +13,9 @@
 
   &__img {
     width: calc(398 / 668 * 100%);
+    picture {
+      display: flex;
+    }
     img {
       max-height: 427px;
     }

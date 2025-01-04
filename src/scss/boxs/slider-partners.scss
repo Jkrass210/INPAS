@@ -75,6 +75,10 @@
       &:active {
         border-color: var(--color-body);
       }
+
+      picture {
+        display: flex;
+      }
     }
   }
 }

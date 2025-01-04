@@ -11,6 +11,10 @@
     width: calc(573 / 1200 * 100%);
     background: linear-gradient(44deg, #23326f 0%, #131e4e 100%);
 
+    picture {
+      display: flex;
+    }
+
     img {
       object-fit: cover;
     }

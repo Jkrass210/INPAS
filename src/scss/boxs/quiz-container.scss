@@ -41,6 +41,12 @@
     }
   }
 
+  &__img {
+    picture {
+      display: flex;
+    }
+  }
+
   &__img, .contacts-7__img {
     flex: 1;
     display: flex;

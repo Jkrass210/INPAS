@@ -23,3 +23,10 @@
     }
   }
 }
+@media (max-width: 1210px) {
+  .group-phones {
+    &__link {
+      text-align: start;
+    }
+  }
+}

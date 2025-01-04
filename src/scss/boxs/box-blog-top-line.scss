@@ -1,0 +1,41 @@
+.box-blog-top-line {
+  margin-bottom: 40px;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  li {
+    flex: 1;
+  }
+
+  &__link {
+    min-width: 155px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid var(--colof-red);
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: var(--color-text-white);
+    transition: font-weight 0.4s ease-in-out;
+
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+
+    &:focus-visible,&:hover,&:active {
+      font-weight: 700;
+    }
+
+    &.active {
+      font-weight: 700;
+    }
+  }
+}

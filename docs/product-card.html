@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Карточка товара</title>
-  <link href="css/normalize.min.css" rel="stylesheet">
-  <link href="css/swiper-bundle.min.css" rel="stylesheet">
-  <!--<link rel="stylesheet" href="css/owl.carousel.min.css">-->
-  <!--<link rel="stylesheet" href="css/owl.theme.default.min.css">-->
-  <link href="css/style.min.css" rel="stylesheet">
+  <link href="css/normalize.min.css?_v=20250103172446" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css?_v=20250103172446" rel="stylesheet">
+  <!--<link rel="stylesheet" href="css/owl.carousel.min.css?_v=20250103172446">-->
+  <!--<link rel="stylesheet" href="css/owl.theme.default.min.css?_v=20250103172446">-->
+  <link href="css/style.min.css?_v=20250103172446" rel="stylesheet">
 
-  <script src="js/swiper-bundle.min.js" defer></script>
-  <!--<script src="js/jquery-3.6.0.min.js" defer></script>-->
-  <!--<script src="js/owl.carousel.min.js" defer></script>-->
-  <script src="js/fslightbox-min.js" defer></script>
-  <script type="module" src="js/main-min.js"></script>
+  <script src="js/swiper-bundle.min.js?_v=20250103172446" defer></script>
+  <!--<script src="js/jquery-3.6.0.min.js?_v=20250103172446" defer></script>-->
+  <!--<script src="js/owl.carousel.min.js?_v=20250103172446" defer></script>-->
+  <script src="js/fslightbox-min.js?_v=20250103172446" defer></script>
+  <script type="module" src="js/main-min.js?_v=20250103172446"></script>
 </head>
 
 <body>
@@ -40,9 +40,31 @@
               </a>
             </li>
             <li>
-              <a href="#">
-                О нас
-              </a>
+              <div class="about-company-drop-down">
+  <button class="about-company-drop-down__btn btn-reset" id="openAboutCompany">
+    <span>О нас</span>
+    <svg width="10" height="6" viewBox="0 0 10 6">
+      <use xlink:href="img/sprite.svg#newArrow"></use>
+    </svg>
+  </button>
+  <ul class="about-company-drop-down__list list-reset" data-drop-id="openAboutCompany">
+    <li>
+      <a class="about-company-drop-down__link" href="#">
+        О компании
+      </a>
+    </li>
+    <li>
+      <a class="about-company-drop-down__link" href="#">
+        Банки-эвайеры
+      </a>
+    </li>
+    <li>
+      <a class="about-company-drop-down__link" href="#">
+        Контакты
+      </a>
+    </li>
+  </ul>
+</div>
             </li>
           </ul>
         </nav>
@@ -54,23 +76,60 @@
         <use xlink:href="img/sprite.svg#drop1"></use>
       </svg>
     </button>
-    <span class="drop-down1__info">3.2%</span>
+    <span class="drop-down1__info">0,0%</span>
   </div>
   <ul class="drop-down1__list list-reset" data-drop-id="openDrop1">
     <li>
-      <a href="#">
-        dfhdhdhdrrh
-      </a>
+      <span>Вендинг самообслуживание</span>
+      <span class="hidden">от 1,9%</span>
     </li>
     <li>
-      <a href="#">
-        dfhdhdhdrrh
-      </a>
+      <span>Рестораны быстрого обслуживания</span>
+      <span class="hidden">от 1,6%</span>
     </li>
     <li>
-      <a href="#">
-        dfhdhdhdrrh
-      </a>
+      <span>Паркинги</span>
+      <span class="hidden">от 2,1%</span>
+    </li>
+    <li>
+      <span>Супермаркеты и бакалейные магазины</span>
+      <span class="hidden">от 1,8%</span>
+    </li>
+    <li>
+      <span>АЗС</span>
+      <span class="hidden">от 1,8%</span>
+    </li>
+    <li>
+      <span>Розничная торговля</span>
+      <span class="hidden">от 2,2%</span>
+    </li>
+    <li>
+      <span>Медицинские услуги, аптеки</span>
+      <span class="hidden">от 1,7%</span>
+    </li>
+    <li>
+      <span>Cалоны красоты, парикмахерская, массажный салон, продажа косметики</span>
+      <span class="hidden">от 2,2%</span>
+    </li>
+    <li>
+      <span>Цветы и флористика</span>
+      <span class="hidden">от 2,2%</span>
+    </li>
+    <li>
+      <span>Гостиничный бизнес, отели, хостел</span>
+      <span class="hidden">от 2,2%</span>
+    </li>
+    <li>
+      <span>Станции тех обслуживания, ремонт авто; продажа автозапчастей</span>
+      <span class="hidden">от 2,2%</span>
+    </li>
+    <li>
+      <span>Ветеринарные услуги зоомагазины</span>
+      <span class="hidden">от 2,2%</span>
+    </li>
+    <li>
+      <span>Прочие категории</span>
+      <span class="hidden">от 1,99%</span>
     </li>
   </ul>
 </div>
@@ -146,35 +205,35 @@
                                 <li class="product-card-section-1__swiper-slide swiper-slide swiper-slide-5">
                                     <a data-fslightbox="gallery" href="img/product-card/1.png">
                                         <span class="product-card-section-1__box-img">
-                                            <img src="img/product-card/1.png" alt="img">
+                                            <picture><source srcset="img/product-card/1.webp" type="image/webp"><img src="img/product-card/1.png" alt="img"></picture>
                                         </span>
                                     </a>
                                 </li>
                                 <li class="product-card-section-1__swiper-slide swiper-slide swiper-slide-5">
                                     <a data-fslightbox="gallery" href="img/product-card/1.png">
                                         <span class="product-card-section-1__box-img">
-                                            <img src="img/product-card/1.png" alt="img">
+                                            <picture><source srcset="img/product-card/1.webp" type="image/webp"><img src="img/product-card/1.png" alt="img"></picture>
                                         </span>
                                     </a>
                                 </li>
                                 <li class="product-card-section-1__swiper-slide swiper-slide swiper-slide-5">
                                     <a data-fslightbox="gallery" href="img/product-card/1.png">
                                         <span class="product-card-section-1__box-img">
-                                            <img src="img/product-card/1.png" alt="img">
+                                            <picture><source srcset="img/product-card/1.webp" type="image/webp"><img src="img/product-card/1.png" alt="img"></picture>
                                         </span>
                                     </a>
                                 </li>
                                 <li class="product-card-section-1__swiper-slide swiper-slide swiper-slide-5">
                                     <a data-fslightbox="gallery" href="img/product-card/1.png">
                                         <span class="product-card-section-1__box-img">
-                                            <img src="img/product-card/1.png" alt="img">
+                                            <picture><source srcset="img/product-card/1.webp" type="image/webp"><img src="img/product-card/1.png" alt="img"></picture>
                                         </span>
                                     </a>
                                 </li>
                                 <li class="product-card-section-1__swiper-slide swiper-slide swiper-slide-5">
                                     <a data-fslightbox="gallery" href="img/product-card/1.png">
                                         <span class="product-card-section-1__box-img">
-                                            <img src="img/product-card/1.png" alt="img">
+                                            <picture><source srcset="img/product-card/1.webp" type="image/webp"><img src="img/product-card/1.png" alt="img"></picture>
                                         </span>
                                     </a>
                                 </li>
@@ -191,27 +250,27 @@
                                     class="product-card-section-1__swiper-wrapper swiper-wrapper swiper-wrapper-6 list-reset">
                                     <li class="product-card-section-1__swiper-slide swiper-slide swiper-slide-6">
                                         <span class="product-card-section-1__box-img">
-                                            <img src="img/product-card/1.png" alt="img">
+                                            <picture><source srcset="img/product-card/1.webp" type="image/webp"><img src="img/product-card/1.png" alt="img"></picture>
                                         </span>
                                     </li>
                                     <li class="product-card-section-1__swiper-slide swiper-slide swiper-slide-6">
                                         <span class="product-card-section-1__box-img">
-                                            <img src="img/product-card/1.png" alt="img">
+                                            <picture><source srcset="img/product-card/1.webp" type="image/webp"><img src="img/product-card/1.png" alt="img"></picture>
                                         </span>
                                     </li>
                                     <li class="product-card-section-1__swiper-slide swiper-slide swiper-slide-6">
                                         <span class="product-card-section-1__box-img">
-                                            <img src="img/product-card/1.png" alt="img">
+                                            <picture><source srcset="img/product-card/1.webp" type="image/webp"><img src="img/product-card/1.png" alt="img"></picture>
                                         </span>
                                     </li>
                                     <li class="product-card-section-1__swiper-slide swiper-slide swiper-slide-6">
                                         <span class="product-card-section-1__box-img">
-                                            <img src="img/product-card/1.png" alt="img">
+                                            <picture><source srcset="img/product-card/1.webp" type="image/webp"><img src="img/product-card/1.png" alt="img"></picture>
                                         </span>
                                     </li>
                                     <li class="product-card-section-1__swiper-slide swiper-slide swiper-slide-6">
                                         <span class="product-card-section-1__box-img">
-                                            <img src="img/product-card/1.png" alt="img">
+                                            <picture><source srcset="img/product-card/1.webp" type="image/webp"><img src="img/product-card/1.png" alt="img"></picture>
                                         </span>
                                     </li>
                                 </ul>
@@ -352,7 +411,7 @@
       <li class="box-swiper__swiper-slide swiper-slide">
         <div class="card4">
   <div class="card4__img-box">
-    <img src="img/main/section-5/1.png" alt="img">
+    <picture><source srcset="img/main/section-5/1.webp" type="image/webp"><img src="img/main/section-5/1.png" alt="img"></picture>
   </div>
   <div class="card4__info">
     <a class="card4__link" href="#">
@@ -373,7 +432,7 @@
       <li class="box-swiper__swiper-slide swiper-slide">
         <div class="card4">
   <div class="card4__img-box">
-    <img src="img/main/section-5/2.png" alt="img">
+    <picture><source srcset="img/main/section-5/2.webp" type="image/webp"><img src="img/main/section-5/2.png" alt="img"></picture>
   </div>
   <div class="card4__info">
     <a class="card4__link" href="#">
@@ -394,7 +453,7 @@
       <li class="box-swiper__swiper-slide swiper-slide">
         <div class="card4">
   <div class="card4__img-box">
-    <img src="img/main/section-5/3.png" alt="img">
+    <picture><source srcset="img/main/section-5/3.webp" type="image/webp"><img src="img/main/section-5/3.png" alt="img"></picture>
   </div>
   <div class="card4__info">
     <a class="card4__link" href="#">
@@ -415,7 +474,7 @@
       <li class="box-swiper__swiper-slide swiper-slide">
         <div class="card4">
   <div class="card4__img-box">
-    <img src="img/main/section-5/2.png" alt="img">
+    <picture><source srcset="img/main/section-5/2.webp" type="image/webp"><img src="img/main/section-5/2.png" alt="img"></picture>
   </div>
   <div class="card4__info">
     <a class="card4__link" href="#">
@@ -436,7 +495,7 @@
       <li class="box-swiper__swiper-slide swiper-slide">
         <div class="card4">
   <div class="card4__img-box">
-    <img src="img/main/section-5/2.png" alt="img">
+    <picture><source srcset="img/main/section-5/2.webp" type="image/webp"><img src="img/main/section-5/2.png" alt="img"></picture>
   </div>
   <div class="card4__info">
     <a class="card4__link" href="#">
@@ -457,7 +516,7 @@
       <li class="box-swiper__swiper-slide swiper-slide">
         <div class="card4">
   <div class="card4__img-box">
-    <img src="img/main/section-5/2.png" alt="img">
+    <picture><source srcset="img/main/section-5/2.webp" type="image/webp"><img src="img/main/section-5/2.png" alt="img"></picture>
   </div>
   <div class="card4__info">
     <a class="card4__link" href="#">

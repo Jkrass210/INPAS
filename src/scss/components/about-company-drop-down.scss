@@ -1,0 +1,106 @@
+.about-company-drop-down {
+  position: relative;
+  &__btn {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 131%;
+    color: var(--color-text-white);
+    transition: color 0.4s ease-in-out;
+
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+
+    &:focus-visible,&:hover,&:active {
+      color: var(--color-2);
+    }
+
+    svg {
+      transition: transform 0.4s ease-in-out;
+    }
+
+    &.active {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__list {
+    position: absolute;
+    top: 42px;
+    right: 4px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(50%, 0);
+    padding: 30px;
+    border-radius: 20px;
+    z-index: 2;
+    background-color: var(--color-text-white);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .5), 0 1px 2px rgba(255, 255, 255, .1) inset;
+    transition: visibility 0.4s ease-in-out, opacity 0.4s ease-in-out;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 50%;
+      transform: translate(50%,-100%);
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 25px solid var(--color-text-white);
+    }
+
+    a.about-company-drop-down__link {
+      color: var(--color-text-black);
+
+      &:focus-visible,&:hover,&:active {
+       color: var(--yfvfy); 
+      }
+    }
+  }
+}
+
+@media (max-width: 1210px) {
+  .about-company-drop-down {
+    &__list {
+      display: none;
+      position: static;
+      transform: none;
+      background-color: transparent;
+      box-shadow: none;
+      padding: 10px;
+
+      &.active {
+        display: flex;
+        gap: 10px;
+      }
+
+      &::before {
+        display: none;
+      }
+
+      a.about-company-drop-down__link {
+        color: var(--color-text-white);
+  
+        &:focus-visible,&:hover,&:active {
+         color: var(--color-2); 
+        }
+      }
+    }
+  }
+}

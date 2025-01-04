@@ -6,7 +6,18 @@ import { handleResize } from './module/handleResize.js';
 import { initTabLogic } from './module/initTabLogic.js';
 import { handleSwiperClasses } from './module/handleSwiperClasses.js';
 import { initTabs } from './module/initTabs.js';
+import { testWebP } from './module/testWebP.js'
 import { playVideo } from './module/playVideo.js';
+import { initCatalogTabs1 } from './module/initCatalogTabs1.js';
+
+testWebP(function (support) {
+  if (support == true) {
+    document.querySelector('body').classList.add('webp');
+    console.log("выполнился webp")
+  }else{
+    document.querySelector('body').classList.add('no-webp');
+  }
+});
 
 if(document.querySelector('#openSearch')){
   const btnSearch = document.querySelector('#openSearch');
@@ -15,10 +26,17 @@ if(document.querySelector('#openSearch')){
   })
 }
 
+if(document.querySelector('#openAboutCompany')){
+  const btnSearch = document.querySelector('#openAboutCompany');
+  btnSearch.addEventListener('click', () => {
+    openDrop(btnSearch, false)
+  })
+}
+
 if(document.querySelector('#openDrop1')){
   const btnDrop1 = document.querySelector('#openDrop1');
   btnDrop1.addEventListener('click', () => {
-    openDrop(btnDrop1, false)
+    openDrop(btnDrop1, "li", true, true)
   })
 }
 
@@ -103,6 +121,7 @@ if (document.querySelector('.header__burger') && document.querySelector('.header
     targetClass: 'header__box-info',
     closeOnLinkClick: true,
     linkSelector: 'a',
+    addStopScroll: true,
   });
 }
 
@@ -112,6 +131,14 @@ if (document.querySelector(".main-section-3__btn") && document.querySelector(".m
   const mobileHidden = document.querySelector(".main-section-3__mobil-hidden");
   handleResize(mobileHidden, btn, topSection, 512)
   window.addEventListener("resize", () => handleResize(mobileHidden, btn, topSection, 512));
+}
+
+if (document.querySelector(".watch-rest") && document.querySelector(".box-blog__list>li:last-child") && document.querySelector(".box-blog__mobil-hidden")) {
+  const btn = document.querySelector(".watch-rest");
+  const topSection = document.querySelector(".box-blog__list>li:last-child");
+  const mobileHidden = document.querySelector(".box-blog__mobil-hidden");
+  handleResize(mobileHidden, btn, topSection, 1210)
+  window.addEventListener("resize", () => handleResize(mobileHidden, btn, topSection, 1210));
 }
 
 if (document.querySelector(".box-swiper__link") && document.querySelector(".box-swiper__top-line") && document.querySelector(".box-swiper__mobail-hidden")) {
@@ -124,9 +151,14 @@ if (document.querySelector(".box-swiper__link") && document.querySelector(".box-
 
 if (document.querySelector('#swiper-5') && document.querySelector('#swiper-5 > .swiper-wrapper') && document.querySelectorAll('#swiper-5 > .swiper-slide') && document.querySelector('#swiper-6') && document.querySelector('#swiper-6 > .swiper-wrapper') && document.querySelectorAll('#swiper-6 > .swiper-slide')) {
   const swiper6 = new Swiper("#swiper-6", {
-    spaceBetween: 17,
+    spaceBetween: 10,
     slidesPerView: 4,
     freeMode: false,
+    breakpoints: {
+      650: {
+        spaceBetween: 17,
+      },
+    },
   });
   const swiper5 = new Swiper("#swiper-5", {
     spaceBetween: 10,
@@ -203,18 +235,97 @@ document.addEventListener("DOMContentLoaded", () => {
   observer.observe(contactsForm, { attributes: true });
 });
 
-if (document.querySelector('#swiper-7')) {
+if (document.querySelector('#swiper-7') || document.querySelector('#swiper-8')) {
   document.addEventListener("DOMContentLoaded", () => {
-    handleSwiperClasses("swiper-7", ".about-company-section-4__list", 900);
+    handleSwiperClasses([
+      {
+        elementId: "swiper-7",
+        classWrapp: ".about-company-section-4__list",
+        breakpoint: 900,
+        swiperConfig: {
+          slidesPerView: 1,
+          spaceBetween: 18,
+          grid: {
+            rows: 3, // 3 строки
+            fill: "row",
+          },
+          navigation: {
+            nextEl: ".swiper-7__swiper-button-prev",
+            prevEl: ".swiper-7__swiper-button-next",
+          },
+          loop: false, // Нет бесконечного прокручивания
+          breakpoints: {
+            // Для окон шириной меньше 650px
+            650: {
+              slidesPerView: 2, // 2 столбца
+              spaceBetween: 18,
+              grid: {
+                rows: 3, // Оставляем 3 строки
+              },
+               // Отступы остаются такими же
+            },
+          },
+        },
+      },
+      {
+        elementId: "swiper-8",
+        classWrapp: ".box-blog__list",
+        breakpoint: 900,
+        swiperConfig: {
+          slidesPerView: 1, // Обычный свайпер в одну строку
+          spaceBetween: 10,
+          navigation: {
+            nextEl: ".swiper-8__swiper-button-prev",
+            prevEl: ".swiper-8__swiper-button-next",
+          },
+          breakpoints: {
+            650: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            }
+          }
+        },
+      },
+    ]);
 
     let resizeTimeout;
     window.addEventListener("resize", () => {
       clearTimeout(resizeTimeout);
       resizeTimeout = setTimeout(() => {
-        handleSwiperClasses("swiper-7", ".about-company-section-4__list", 900);
+        handleSwiperClasses([
+          {
+            elementId: "swiper-7",
+            classWrapp: ".about-company-section-4__list",
+            breakpoint: 900,
+            swiperConfig: {
+              grid: {
+                rows: 3, // 3 строки
+                fill: "row",
+              },
+              navigation: {
+                nextEl: ".swiper-7__swiper-button-next",
+                prevEl: ".swiper-7__swiper-button-prev",
+              },
+            },
+          },
+          {
+            elementId: "swiper-8",
+            classWrapp: ".box-blog__list",
+            breakpoint: 900,
+            swiperConfig: {
+              slidesPerView: 2, // Обычный свайпер в одну строку
+              spaceBetween: 20,
+              navigation: {
+                nextEl: ".swiper-8__swiper-button-next",
+                prevEl: ".swiper-8__swiper-button-prev",
+              },
+            },
+          },
+        ]);
       }, 200); // Задержка для оптимизации
-    });
+    })
   });
+  
 }
 
 if(document.querySelector('#tabs-1')) {
@@ -223,4 +334,18 @@ if(document.querySelector('#tabs-1')) {
 
 if(document.querySelectorAll(".btn-video-play")) {
   playVideo()
+}
+
+if(document.querySelector('.filter')){
+  initCatalogTabs1('.filter__list', 'drop-down-2__btn', 'drop-down-2__box', 'active');
+}
+
+if (document.querySelector('.initFilter') && document.querySelector('.catalog-section-1__aside')){
+  toggleActiveClass({
+    buttonClass: 'initFilter',
+    targetClass: 'catalog-section-1__aside',
+    closeOnLinkClick: true,
+    linkSelector: 'a',
+    addStopScroll: true,
+  });
 }

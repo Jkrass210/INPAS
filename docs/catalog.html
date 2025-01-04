@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Каталог</title>
-  <link href="css/normalize.min.css" rel="stylesheet">
-  <link href="css/swiper-bundle.min.css" rel="stylesheet">
-  <!--<link rel="stylesheet" href="css/owl.carousel.min.css">-->
-  <!--<link rel="stylesheet" href="css/owl.theme.default.min.css">-->
-  <link href="css/style.min.css" rel="stylesheet">
+  <link href="css/normalize.min.css?_v=20250103172446" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css?_v=20250103172446" rel="stylesheet">
+  <!--<link rel="stylesheet" href="css/owl.carousel.min.css?_v=20250103172446">-->
+  <!--<link rel="stylesheet" href="css/owl.theme.default.min.css?_v=20250103172446">-->
+  <link href="css/style.min.css?_v=20250103172446" rel="stylesheet">
 
-  <script src="js/swiper-bundle.min.js" defer></script>
-  <!--<script src="js/jquery-3.6.0.min.js" defer></script>-->
-  <!--<script src="js/owl.carousel.min.js" defer></script>-->
-  <script src="js/fslightbox-min.js" defer></script>
-  <script type="module" src="js/main-min.js"></script>
+  <script src="js/swiper-bundle.min.js?_v=20250103172446" defer></script>
+  <!--<script src="js/jquery-3.6.0.min.js?_v=20250103172446" defer></script>-->
+  <!--<script src="js/owl.carousel.min.js?_v=20250103172446" defer></script>-->
+  <script src="js/fslightbox-min.js?_v=20250103172446" defer></script>
+  <script type="module" src="js/main-min.js?_v=20250103172446"></script>
 </head>
 <body>
   <header class="header default">
@@ -39,9 +39,31 @@
               </a>
             </li>
             <li>
-              <a href="#">
-                О нас
-              </a>
+              <div class="about-company-drop-down">
+  <button class="about-company-drop-down__btn btn-reset" id="openAboutCompany">
+    <span>О нас</span>
+    <svg width="10" height="6" viewBox="0 0 10 6">
+      <use xlink:href="img/sprite.svg#newArrow"></use>
+    </svg>
+  </button>
+  <ul class="about-company-drop-down__list list-reset" data-drop-id="openAboutCompany">
+    <li>
+      <a class="about-company-drop-down__link" href="#">
+        О компании
+      </a>
+    </li>
+    <li>
+      <a class="about-company-drop-down__link" href="#">
+        Банки-эвайеры
+      </a>
+    </li>
+    <li>
+      <a class="about-company-drop-down__link" href="#">
+        Контакты
+      </a>
+    </li>
+  </ul>
+</div>
             </li>
           </ul>
         </nav>
@@ -53,23 +75,60 @@
         <use xlink:href="img/sprite.svg#drop1"></use>
       </svg>
     </button>
-    <span class="drop-down1__info">3.2%</span>
+    <span class="drop-down1__info">0,0%</span>
   </div>
   <ul class="drop-down1__list list-reset" data-drop-id="openDrop1">
     <li>
-      <a href="#">
-        dfhdhdhdrrh
-      </a>
+      <span>Вендинг самообслуживание</span>
+      <span class="hidden">от 1,9%</span>
     </li>
     <li>
-      <a href="#">
-        dfhdhdhdrrh
-      </a>
+      <span>Рестораны быстрого обслуживания</span>
+      <span class="hidden">от 1,6%</span>
     </li>
     <li>
-      <a href="#">
-        dfhdhdhdrrh
-      </a>
+      <span>Паркинги</span>
+      <span class="hidden">от 2,1%</span>
+    </li>
+    <li>
+      <span>Супермаркеты и бакалейные магазины</span>
+      <span class="hidden">от 1,8%</span>
+    </li>
+    <li>
+      <span>АЗС</span>
+      <span class="hidden">от 1,8%</span>
+    </li>
+    <li>
+      <span>Розничная торговля</span>
+      <span class="hidden">от 2,2%</span>
+    </li>
+    <li>
+      <span>Медицинские услуги, аптеки</span>
+      <span class="hidden">от 1,7%</span>
+    </li>
+    <li>
+      <span>Cалоны красоты, парикмахерская, массажный салон, продажа косметики</span>
+      <span class="hidden">от 2,2%</span>
+    </li>
+    <li>
+      <span>Цветы и флористика</span>
+      <span class="hidden">от 2,2%</span>
+    </li>
+    <li>
+      <span>Гостиничный бизнес, отели, хостел</span>
+      <span class="hidden">от 2,2%</span>
+    </li>
+    <li>
+      <span>Станции тех обслуживания, ремонт авто; продажа автозапчастей</span>
+      <span class="hidden">от 2,2%</span>
+    </li>
+    <li>
+      <span>Ветеринарные услуги зоомагазины</span>
+      <span class="hidden">от 2,2%</span>
+    </li>
+    <li>
+      <span>Прочие категории</span>
+      <span class="hidden">от 1,99%</span>
     </li>
   </ul>
 </div>
@@ -152,25 +211,262 @@
   </button>
   <div class="drop-down-2__box">
     <label>
-      <input type="radio" name="Тип терминала">
+      <input type="radio" name="Тип терминала" value="Стационарный">
       <span class="drop-down-2__castom"></span>
       Стационарный
     </label>
     <label>
-      <input type="radio" name="Тип терминала">
+      <input type="radio" name="Тип терминала" value="Мобильный">
       <span class="drop-down-2__castom"></span>
       Мобильный
     </label>
   </div>
 </div>
       </li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li>
+        <div class="drop-down-2 drop-down-5">
+          <button class="drop-down-2__btn btn-reset">
+            <span>Тип коммуникации</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 10L12.0008 14.58L17 10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div class="drop-down-2__box">
+            <label>
+              <input type="checkbox" name="Тип коммуникации" value="Bluetooth">
+              <span class="drop-down-2__castom"></span>
+              Bluetooth
+            </label>
+            <label>
+              <input type="checkbox" name="Тип коммуникации" value="Ethernet">
+              <span class="drop-down-2__castom"></span>
+              Ethernet
+            </label>
+            <label>
+              <input type="checkbox" name="Тип коммуникации" value="WiFi">
+              <span class="drop-down-2__castom"></span>
+              WiFi
+            </label>
+            <label>
+              <input type="checkbox" name="Тип коммуникации" value="4G">
+              <span class="drop-down-2__castom"></span>
+              4G
+            </label>
+            <label>
+              <input type="checkbox" name="Тип коммуникации" value="3G">
+              <span class="drop-down-2__castom"></span>
+              3G
+            </label>
+            <label>
+              <input type="checkbox" name="Тип коммуникации" value="GRPS">
+              <span class="drop-down-2__castom"></span>
+              GRPS
+            </label>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="drop-down-2 drop-down-5">
+          <button class="drop-down-2__btn btn-reset">
+            <span>Порты подключения</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 10L12.0008 14.58L17 10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div class="drop-down-2__box">
+            <label>
+              <input type="checkbox" name="Порты подключения" value="RS232">
+              <span class="drop-down-2__castom"></span>
+              RS232
+            </label>
+            <label>
+              <input type="checkbox" name="Порты подключения" value="LAN">
+              <span class="drop-down-2__castom"></span>
+              LAN
+            </label>
+            <label>
+              <input type="checkbox" name="Порты подключения" value="RJ45">
+              <span class="drop-down-2__castom"></span>
+              RJ45
+            </label>
+            <label>
+              <input type="checkbox" name="Порты подключения" value="USB">
+              <span class="drop-down-2__castom"></span>
+              USB (MINI, MICRO, TYPE-C)
+            </label>
+            <label>
+              <input type="checkbox" name="Порты подключения" value="MDB">
+              <span class="drop-down-2__castom"></span>
+              MDB
+            </label>
+            <label>
+              <input type="checkbox" name="Порты подключения" value="Мультипорт">
+              <span class="drop-down-2__castom"></span>
+              Мультипорт
+            </label>
+            <label>
+              <input type="checkbox" name="Порты подключения" value="Ethernet">
+              <span class="drop-down-2__castom"></span>
+              Ethernet
+            </label>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="drop-down-2 drop-down-3">
+  <button class="drop-down-2__btn btn-reset">
+    <span>Сенсорный экран</span>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7 10L12.0008 14.58L17 10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </button>
+  <div class="drop-down-2__box">
+    <label>
+      <input type="radio" name="Сенсорный экран" value="Да">
+      <span class="drop-down-2__castom"></span>
+      Да
+    </label>
+    <label>
+      <input type="radio" name="Сенсорный экран" value="Нет">
+      <span class="drop-down-2__castom"></span>
+      Нет
+    </label>
+  </div>
+</div>
+      </li>
+      <li>
+        <div class="drop-down-2 drop-down-4">
+  <button class="drop-down-2__btn btn-reset">
+    <span>Считыватель карт</span>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7 10L12.0008 14.58L17 10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </button>
+  <div class="drop-down-2__box">
+    <label>
+      <input type="radio" name="Считыватель карт" value="NFC">
+      <span class="drop-down-2__castom"></span>
+      NFC
+    </label>
+    <label>
+      <input type="radio" name="Считыватель карт" value="Чип">
+      <span class="drop-down-2__castom"></span>
+      Чип
+    </label>
+    <label>
+      <input type="radio" name="Считыватель карт" value="Магнитная полоса">
+      <span class="drop-down-2__castom"></span>
+      Магнитная полоса
+    </label>
+  </div>
+</div>
+      </li>
+      <li>
+        <div class="drop-down-2 drop-down-3">
+  <button class="drop-down-2__btn btn-reset">
+    <span>Наличие принтера</span>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7 10L12.0008 14.58L17 10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </button>
+  <div class="drop-down-2__box">
+    <label>
+      <input type="radio" name="Наличие принтера" value="Да">
+      <span class="drop-down-2__castom"></span>
+      Да
+    </label>
+    <label>
+      <input type="radio" name="Наличие принтера" value="Нет">
+      <span class="drop-down-2__castom"></span>
+      Нет
+    </label>
+  </div>
+</div>
+      </li>
+      <li>
+        <div class="drop-down-2 drop-down-3">
+  <button class="drop-down-2__btn btn-reset">
+    <span>Кассовое решение</span>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7 10L12.0008 14.58L17 10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </button>
+  <div class="drop-down-2__box">
+    <label>
+      <input type="radio" name="Кассовое решение" value="Да">
+      <span class="drop-down-2__castom"></span>
+      Да
+    </label>
+    <label>
+      <input type="radio" name="Кассовое решение" value="Нет">
+      <span class="drop-down-2__castom"></span>
+      Нет
+    </label>
+  </div>
+</div>
+      </li>
+      <li>
+        <div class="drop-down-2 drop-down-5">
+          <button class="drop-down-2__btn btn-reset">
+            <span>Интеграция с Кассовым ПО</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 10L12.0008 14.58L17 10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div class="drop-down-2__box">
+            <label>
+              <input type="checkbox" name="Интеграция с Кассовым ПО" value="1С">
+              <span class="drop-down-2__castom"></span>
+              1С
+            </label>
+            <label>
+              <input type="checkbox" name="Интеграция с Кассовым ПО" value="Мой Склад">
+              <span class="drop-down-2__castom"></span>
+              Мой Склад
+            </label>
+            <label>
+              <input type="checkbox" name="Интеграция с Кассовым ПО" value="Эвотор">
+              <span class="drop-down-2__castom"></span>
+              Эвотор
+            </label>
+            <label>
+              <input type="checkbox" name="Интеграция с Кассовым ПО" value="Атол">
+              <span class="drop-down-2__castom"></span>
+              Атол
+            </label>
+            <label>
+              <input type="checkbox" name="Интеграция с Кассовым ПО" value="Дримкас">
+              <span class="drop-down-2__castom"></span>
+              Дримкас
+            </label>
+            <label>
+              <input type="checkbox" name="Интеграция с Кассовым ПО" value="DataMobile">
+              <span class="drop-down-2__castom"></span>
+              DataMobile
+            </label>
+            <label>
+              <input type="checkbox" name="Интеграция с Кассовым ПО" value="iReca">
+              <span class="drop-down-2__castom"></span>
+              iReca
+            </label>
+            <label>
+              <input type="checkbox" name="Интеграция с Кассовым ПО" value="Бифит">
+              <span class="drop-down-2__castom"></span>
+              Бифит
+            </label>
+            <label>
+              <input type="checkbox" name="Интеграция с Кассовым ПО" value="iLexx">
+              <span class="drop-down-2__castom"></span>
+              iLexx
+            </label>
+            <label>
+              <input type="checkbox" name="Интеграция с Кассовым ПО" value="LifePOS">
+              <span class="drop-down-2__castom"></span>
+              LifePOS
+            </label>
+          </div>
+        </div>
+      </li>
     </ul>
     <div class="filter__btn-group">
       <button class="filter__submit btn-reset">
@@ -187,6 +483,7 @@
             <div class="catalog-section-1__top-line">
               <div class="catalog-section-1__box-drop">
                 <p>Упорядочить по:</p>
+                <span class="catalog-section-1__span-hidden">По</span>
                 <div class="drop-down-1">
   <button class="drop-down-1__btn btn-reset" id="openDrop2">
     <span>умолчанию</span>
@@ -201,12 +498,22 @@
   </ul>
 </div>
               </div>
+              <button class="initFilter btn-reset" id="filter">
+                <svg width="12" height="9" viewBox="0 0 12 9">
+                  <use xlink:href="img/sprite.svg#filter"></use>
+                </svg>
+                <span class="initFilter__close">
+                  <span></span>
+                  <span></span>
+                </span>
+                <span>Фильтры</span>
+              </button>
             </div>
             <ul class="catalog-section-1__list-cards list-reset">
               <li>
                 <div class="card4">
   <div class="card4__img-box">
-    <img src="img/main/section-5/1.png" alt="img">
+    <picture><source srcset="img/main/section-5/1.webp" type="image/webp"><img src="img/main/section-5/1.png" alt="img"></picture>
   </div>
   <div class="card4__info">
     <a class="card4__link" href="#">
@@ -227,7 +534,7 @@
               <li>
                 <div class="card4">
   <div class="card4__img-box">
-    <img src="img/main/section-5/2.png" alt="img">
+    <picture><source srcset="img/main/section-5/2.webp" type="image/webp"><img src="img/main/section-5/2.png" alt="img"></picture>
   </div>
   <div class="card4__info">
     <a class="card4__link" href="#">
@@ -248,7 +555,7 @@
               <li>
                 <div class="card4">
   <div class="card4__img-box">
-    <img src="img/main/section-5/3.png" alt="img">
+    <picture><source srcset="img/main/section-5/3.webp" type="image/webp"><img src="img/main/section-5/3.png" alt="img"></picture>
   </div>
   <div class="card4__info">
     <a class="card4__link" href="#">
@@ -269,7 +576,7 @@
               <li>
                 <div class="card4">
   <div class="card4__img-box">
-    <img src="img/main/section-5/2.png" alt="img">
+    <picture><source srcset="img/main/section-5/2.webp" type="image/webp"><img src="img/main/section-5/2.png" alt="img"></picture>
   </div>
   <div class="card4__info">
     <a class="card4__link" href="#">
@@ -290,7 +597,7 @@
               <li>
                 <div class="card4">
   <div class="card4__img-box">
-    <img src="img/main/section-5/2.png" alt="img">
+    <picture><source srcset="img/main/section-5/2.webp" type="image/webp"><img src="img/main/section-5/2.png" alt="img"></picture>
   </div>
   <div class="card4__info">
     <a class="card4__link" href="#">
@@ -311,7 +618,7 @@
               <li>
                 <div class="card4">
   <div class="card4__img-box">
-    <img src="img/main/section-5/1.png" alt="img">
+    <picture><source srcset="img/main/section-5/1.webp" type="image/webp"><img src="img/main/section-5/1.png" alt="img"></picture>
   </div>
   <div class="card4__info">
     <a class="card4__link" href="#">
@@ -332,7 +639,7 @@
               <li>
                 <div class="card4">
   <div class="card4__img-box">
-    <img src="img/main/section-5/1.png" alt="img">
+    <picture><source srcset="img/main/section-5/1.webp" type="image/webp"><img src="img/main/section-5/1.png" alt="img"></picture>
   </div>
   <div class="card4__info">
     <a class="card4__link" href="#">
@@ -353,7 +660,7 @@
               <li>
                 <div class="card4">
   <div class="card4__img-box">
-    <img src="img/main/section-5/2.png" alt="img">
+    <picture><source srcset="img/main/section-5/2.webp" type="image/webp"><img src="img/main/section-5/2.png" alt="img"></picture>
   </div>
   <div class="card4__info">
     <a class="card4__link" href="#">
@@ -374,7 +681,7 @@
               <li>
                 <div class="card4">
   <div class="card4__img-box">
-    <img src="img/main/section-5/2.png" alt="img">
+    <picture><source srcset="img/main/section-5/2.webp" type="image/webp"><img src="img/main/section-5/2.png" alt="img"></picture>
   </div>
   <div class="card4__info">
     <a class="card4__link" href="#">
@@ -395,7 +702,7 @@
               <li>
                 <div class="card4">
   <div class="card4__img-box">
-    <img src="img/main/section-5/2.png" alt="img">
+    <picture><source srcset="img/main/section-5/2.webp" type="image/webp"><img src="img/main/section-5/2.png" alt="img"></picture>
   </div>
   <div class="card4__info">
     <a class="card4__link" href="#">
@@ -416,7 +723,7 @@
               <li>
                 <div class="card4">
   <div class="card4__img-box">
-    <img src="img/main/section-5/2.png" alt="img">
+    <picture><source srcset="img/main/section-5/2.webp" type="image/webp"><img src="img/main/section-5/2.png" alt="img"></picture>
   </div>
   <div class="card4__info">
     <a class="card4__link" href="#">
@@ -437,7 +744,7 @@
               <li>
                 <div class="card4">
   <div class="card4__img-box">
-    <img src="img/main/section-5/2.png" alt="img">
+    <picture><source srcset="img/main/section-5/2.webp" type="image/webp"><img src="img/main/section-5/2.png" alt="img"></picture>
   </div>
   <div class="card4__info">
     <a class="card4__link" href="#">

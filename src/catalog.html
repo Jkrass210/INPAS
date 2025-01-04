@@ -18,8 +18,19 @@
             <div class="catalog-section-1__top-line">
               <div class="catalog-section-1__box-drop">
                 <p>Упорядочить по:</p>
+                <span class="catalog-section-1__span-hidden">По</span>
                 @@include('html/components/drop-down-1.html',{"text1":"умолчанию","text2":"убыванию","text3":"возрастанию"})
               </div>
+              <button class="initFilter btn-reset" id="filter">
+                <svg width="12" height="9" viewBox="0 0 12 9">
+                  <use xlink:href="img/sprite.svg#filter"></use>
+                </svg>
+                <span class="initFilter__close">
+                  <span></span>
+                  <span></span>
+                </span>
+                <span>Фильтры</span>
+              </button>
             </div>
             <ul class="catalog-section-1__list-cards list-reset">
               <li>

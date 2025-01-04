@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>О компании</title>
-  <link href="css/normalize.min.css" rel="stylesheet">
-  <link href="css/swiper-bundle.min.css" rel="stylesheet">
-  <!--<link rel="stylesheet" href="css/owl.carousel.min.css">-->
-  <!--<link rel="stylesheet" href="css/owl.theme.default.min.css">-->
-  <link href="css/style.min.css" rel="stylesheet">
+  <link href="css/normalize.min.css?_v=20250103172446" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css?_v=20250103172446" rel="stylesheet">
+  <!--<link rel="stylesheet" href="css/owl.carousel.min.css?_v=20250103172446">-->
+  <!--<link rel="stylesheet" href="css/owl.theme.default.min.css?_v=20250103172446">-->
+  <link href="css/style.min.css?_v=20250103172446" rel="stylesheet">
 
-  <script src="js/swiper-bundle.min.js" defer></script>
-  <!--<script src="js/jquery-3.6.0.min.js" defer></script>-->
-  <!--<script src="js/owl.carousel.min.js" defer></script>-->
-  <script src="js/fslightbox-min.js" defer></script>
-  <script type="module" src="js/main-min.js"></script>
+  <script src="js/swiper-bundle.min.js?_v=20250103172446" defer></script>
+  <!--<script src="js/jquery-3.6.0.min.js?_v=20250103172446" defer></script>-->
+  <!--<script src="js/owl.carousel.min.js?_v=20250103172446" defer></script>-->
+  <script src="js/fslightbox-min.js?_v=20250103172446" defer></script>
+  <script type="module" src="js/main-min.js?_v=20250103172446"></script>
 </head>
 <body>
   <header class="header default">
@@ -39,9 +39,31 @@
               </a>
             </li>
             <li>
-              <a href="#">
-                О нас
-              </a>
+              <div class="about-company-drop-down">
+  <button class="about-company-drop-down__btn btn-reset" id="openAboutCompany">
+    <span>О нас</span>
+    <svg width="10" height="6" viewBox="0 0 10 6">
+      <use xlink:href="img/sprite.svg#newArrow"></use>
+    </svg>
+  </button>
+  <ul class="about-company-drop-down__list list-reset" data-drop-id="openAboutCompany">
+    <li>
+      <a class="about-company-drop-down__link" href="#">
+        О компании
+      </a>
+    </li>
+    <li>
+      <a class="about-company-drop-down__link" href="#">
+        Банки-эвайеры
+      </a>
+    </li>
+    <li>
+      <a class="about-company-drop-down__link" href="#">
+        Контакты
+      </a>
+    </li>
+  </ul>
+</div>
             </li>
           </ul>
         </nav>
@@ -53,23 +75,60 @@
         <use xlink:href="img/sprite.svg#drop1"></use>
       </svg>
     </button>
-    <span class="drop-down1__info">3.2%</span>
+    <span class="drop-down1__info">0,0%</span>
   </div>
   <ul class="drop-down1__list list-reset" data-drop-id="openDrop1">
     <li>
-      <a href="#">
-        dfhdhdhdrrh
-      </a>
+      <span>Вендинг самообслуживание</span>
+      <span class="hidden">от 1,9%</span>
     </li>
     <li>
-      <a href="#">
-        dfhdhdhdrrh
-      </a>
+      <span>Рестораны быстрого обслуживания</span>
+      <span class="hidden">от 1,6%</span>
     </li>
     <li>
-      <a href="#">
-        dfhdhdhdrrh
-      </a>
+      <span>Паркинги</span>
+      <span class="hidden">от 2,1%</span>
+    </li>
+    <li>
+      <span>Супермаркеты и бакалейные магазины</span>
+      <span class="hidden">от 1,8%</span>
+    </li>
+    <li>
+      <span>АЗС</span>
+      <span class="hidden">от 1,8%</span>
+    </li>
+    <li>
+      <span>Розничная торговля</span>
+      <span class="hidden">от 2,2%</span>
+    </li>
+    <li>
+      <span>Медицинские услуги, аптеки</span>
+      <span class="hidden">от 1,7%</span>
+    </li>
+    <li>
+      <span>Cалоны красоты, парикмахерская, массажный салон, продажа косметики</span>
+      <span class="hidden">от 2,2%</span>
+    </li>
+    <li>
+      <span>Цветы и флористика</span>
+      <span class="hidden">от 2,2%</span>
+    </li>
+    <li>
+      <span>Гостиничный бизнес, отели, хостел</span>
+      <span class="hidden">от 2,2%</span>
+    </li>
+    <li>
+      <span>Станции тех обслуживания, ремонт авто; продажа автозапчастей</span>
+      <span class="hidden">от 2,2%</span>
+    </li>
+    <li>
+      <span>Ветеринарные услуги зоомагазины</span>
+      <span class="hidden">от 2,2%</span>
+    </li>
+    <li>
+      <span>Прочие категории</span>
+      <span class="hidden">от 1,99%</span>
     </li>
   </ul>
 </div>
@@ -153,7 +212,7 @@
             </ul>
           </div>
           <div class="about-company-section-1__right">
-            <img class="about-company-section-1__img" src="img/about-company/1-or.jpg" alt="img">
+            <picture><source srcset="img/about-company/1-or.webp" type="image/webp"><img class="about-company-section-1__img" src="img/about-company/1-or.jpg" alt="img"></picture>
             <div class="about-company-section-1__play">
               <div class="play">
   <a href="#" class="play__link">
@@ -213,7 +272,7 @@
 </button>
   </div>
   <div class="box-freedom-choice__right">
-    <img src="img/box-freedom-choice/1.jpg" alt="img">
+    <picture><source srcset="img/box-freedom-choice/1.webp" type="image/webp"><img src="img/box-freedom-choice/1.jpg" alt="img"></picture>
   </div>
 </div>
         </div>
@@ -352,11 +411,137 @@
     </p>
   </div>
   <div class="box-reliable-business-partner__right">
-    <img src="img/box-reliable-business-partner/1.jpg" alt="img">
+    <picture><source srcset="img/box-reliable-business-partner/1.webp" type="image/webp"><img src="img/box-reliable-business-partner/1.jpg" alt="img"></picture>
   </div>
 </div>
       </div>
     </section>
+    <section class="box-blog section">
+  <div class="box-blog__container container">
+    <div class="box-blog__content">
+      <div class="about-company-section-4__top">
+        <h2 class="box-blog__title title">
+          Блог
+        </h2>
+        <div class="about-company-section-4__group-btn">
+          <button class="box-swiper__btn swiper-8__swiper-button-next btn-reset">
+            <svg width="15" height="28" viewBox="0 0 15 28">
+              <use xlink:href="img/sprite.svg#btnSwiper31"></use>
+            </svg>
+          </button>
+          <button class="box-swiper__btn swiper-8__swiper-button-prev btn-reset">
+            <svg width="15" height="28" viewBox="0 0 15 28">
+              <use xlink:href="img/sprite.svg#btnSwiper32"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="box-blog__swiper" id="swiper-8">
+        <ul class="box-blog__list list-reset">
+          <li>
+            <div class="card10">
+  <div class="card10__img">
+    <picture><source srcset="img/blog/1.webp" type="image/webp"><img src="img/blog/1.jpg" alt="img"></picture>
+  </div>
+  <div class="card10__info">
+    <div class="card10__wrapp-desc">
+      <h3 class="card10__title">
+        Особенности фискализации для вендинга и аппаратов самообслуживания
+      </h3>
+      <p class="card10__desc">
+        Что нужно знать, чтобы выбрать и подключить онлайн-кассу для вендинга.
+      </p>
+    </div>
+    <a href="#" class="card10__btn card4__btn">
+      Читать
+    </a>
+  </div>
+</div>
+          </li>
+          <li>
+            <div class="card10">
+  <div class="card10__img">
+    <picture><source srcset="img/blog/2.webp" type="image/webp"><img src="img/blog/2.jpg" alt="img"></picture>
+  </div>
+  <div class="card10__info">
+    <div class="card10__wrapp-desc">
+      <h3 class="card10__title">
+        Биометрия по лицу: мировая история развития, сферы применения и способ оплаты
+      </h3>
+      <p class="card10__desc">
+        В XXI веке биометрическая аутентификация, когда для удостоверения личности людей используются их физические характеристики (например, отпечатки пальцев, сетчатка глаза, лицо), становится неотъемлемой частью повседневной жизни.
+      </p>
+    </div>
+    <a href="#" class="card10__btn card4__btn">
+      Читать
+    </a>
+  </div>
+</div>
+          </li>
+          <li>
+            <div class="card10">
+  <div class="card10__img">
+    <picture><source srcset="img/blog/3.webp" type="image/webp"><img src="img/blog/3.jpg" alt="img"></picture>
+  </div>
+  <div class="card10__info">
+    <div class="card10__wrapp-desc">
+      <h3 class="card10__title">
+        Как повысить клиентский сервис при оплате во время доставки?
+      </h3>
+      <p class="card10__desc">
+        Сегодня покупательский опыт стремительно разворачивается в сторону онлайн-потребления, вследствие чего растет объем курьерских доставок. Насколько ожиданиям своих клиентов отвечают ритейлеры и как эффективно решить вопрос с оплатой в момент получения покупки, обсудим в этой статье.
+      </p>
+    </div>
+    <a href="#" class="card10__btn card4__btn">
+      Читать
+    </a>
+  </div>
+</div>
+          </li>
+          <li>
+            <div class="watch-rest">
+  <a href="#" class="watch-rest__link">
+    <svg width="88" height="88" viewBox="0 0 88 88">
+      <use xlink:href="img/sprite.svg#watchRest"></use>
+    </svg>
+    <span>
+      Смотреть остальное
+    </span>
+  </a>
+</div>
+          </li>
+        </ul>
+      </div>
+      <div class="box-blog__mobil-hidden"></div>
+    </div>
+  </div>
+</section>
+    <section class="box-contact-us-section section">
+  <div class="box-contact-us-section__container container">
+    <div class="box-contact-us-section__content">
+      <div class="box-contact-us-section__left">
+        <picture><source srcset="img/box-contact-us-section/1.webp" type="image/webp"><img src="img/box-contact-us-section/1.png" alt="img"></picture>
+      </div>
+      <div class="box-contact-us-section__right">
+        <form class="box-contact-us-section__form form" action="#" method="post">
+          <h4>Связаться с нами</h4>
+          <p class="form__desc-top">
+            Наша команда свяжется с вами в ближайшее время
+          </p>
+          <input class="input1"  id="name" name="name" type="text" placeholder="Имя">
+          <input class="input1"  id="email" name="email" type="email" placeholder="Email">
+          <input class="input1"  id="phone" name="phone" type="text" placeholder="+7 (999) 999-99-99">
+          <button class="btn1 btn-reset">
+  Отправить заявку
+</button>
+          <p class="form__desc-bottom">
+            Нажимая кнопку «Отправить заявку», вы соглашаетесь с политикой конфиденциальности и пользовательскимсоглашением
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
   </main>
   <footer class="footer default">
   <div class="footer__container container">

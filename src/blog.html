@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/components/head.html',{"title":"Блог"})
+<body>
+  @@include('html/boxs/header-default.html')
+  <main class="main">
+    @@include('html/boxs/path.html',{"text":"О компании","text1":"Блог"})
+    <section class="blog-section-1 section">
+      <div class="blog-section-1__container container">
+        <div class="blog-section-1__content">
+          <h1 class="blog-section-1__title title-h1">
+            <span>Блог</span>
+          </h1>
+          @@include('html/boxs/box-blog-top-line.html')
+        </div>
+      </div>
+    </section>
+  </main>
+  @@include('html/boxs/footer-default.html')
+</body>
+</html>
