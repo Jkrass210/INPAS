@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/components/head.html',{"title":"Контакты"})
+<body>
+  @@include('html/boxs/header-default.html')
+  <main class="main">
+    @@include('html/boxs/path-1.html',{"text1":"Контакты"})
+    <section class="contacts-section-1 section">
+      <div class="contacts-section-1__container container">
+        <h1 class="contacts-section-1__title title-h1">
+          Контакты
+        </h1>
+        <div class="contacts-section-1__content">
+          <div class="contacts-section-1__address-box">
+            <h2 class="contacts-section-1__caption title">
+              Центр клиентского обслуживания
+            </h2>
+            <address class="contacts-section-1__address">
+              <p>127521, г. Москва, ул. Октябрьская, д. 72.</p>
+              <ul class="list-reset">
+                <li>Тел.:<a href="tel:+78007005324">8 (800) 700 53 24</a></li>
+                <li>Тел.:<a href="tel:+74957213621">8 (495) 721 36 21</a></li>
+                <li><a href="mailto:psp@inpas.ru">psp@inpas.ru</a></li>
+              </ul>
+            </address>
+            <div class="contacts-section-1__map" id="map"></div>
+          </div>
+          <div class="contacts-section-1__address-box">
+            <h2 class="contacts-section-1__caption title">
+              Главный офис
+            </h2>
+            <address class="contacts-section-1__address">
+              <p>115419, г. Москва, 2й Верхний Михайловский проезд, д. 9, стр. 2.</p>
+            </address>
+            <div class="contacts-section-1__map" id="map-1"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  @@include('html/boxs/footer-default.html')
+</body>
+</html>

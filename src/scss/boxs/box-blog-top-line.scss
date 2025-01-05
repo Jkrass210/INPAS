@@ -39,3 +39,14 @@
     }
   }
 }
+
+
+@media (max-width: 650px) {
+  .box-blog-top-line {
+    margin-bottom: 30px;
+    &__link {
+      font-size: 15px;
+      padding: 18px;
+    }
+  }
+}

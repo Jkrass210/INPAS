@@ -62,12 +62,13 @@ body {
 }
 
 :root {
-  --font-family: "TTFirs-Bold", sans-serif;
-  --second-family: "OpenSans", sans-serif;
+  --font-family: "TT-Firs-Neue", sans-serif;
+  --second-family: "TT-Firs-Neue", sans-serif;
   --third-family: "Manrope", sans-serif;
-  --font3: "Inter", sans-serif;
+  --font3: "TTFirs-Bold", sans-serif;
   --font4: "TT-Firs-Neue", sans-serif;
-  --font5: "Kaspersky-Sans", sans-serif;
+  --font5: "Inter", sans-serif;
+  --font6: "Gilroy", sans-serif;
 }
 
 :root {
@@ -96,6 +97,7 @@ body {
   --color-18: rgba(255, 255, 255, 0.3);
   --color-19: rgba(255, 255, 255, 0.5);
   --color-20: #d1d1d1;
+  --color-21: #131e4e;
 }
 
 .title {

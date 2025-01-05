@@ -1,0 +1,30 @@
+.tariffs-table {
+  border-radius: 16px;
+  outline: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-family: var(--font4);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  text-align: center;
+  color: var(--color-text-white);
+  thead {
+    tr:first-child{
+      td {
+        background-color: var(--colof-9);
+      }
+    }
+  }
+  th, td {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px;
+  }
+}
+@media (max-width: 1210px) {
+  .tariffs-table {
+    font-size: 12px;
+  }
+}

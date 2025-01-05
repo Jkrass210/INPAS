@@ -1,0 +1,40 @@
+.blog-section-1 {
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__list {
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 22px;
+  }
+}
+
+@media (max-width: 1210px) {
+  .blog-section-1 {
+    &__list {
+      gap: 15px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .blog-section-1 {
+    &__list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .blog-section-1 {
+    &__title {
+      margin-bottom: 20px;
+    }
+    &__list {
+      margin-bottom: 30px;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
+}
