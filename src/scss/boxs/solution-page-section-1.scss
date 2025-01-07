@@ -1,0 +1,17 @@
+.solution-page-section-1 {
+  .trade-acquiring-section-1__left {
+    max-width: none;
+    flex: 1;
+    min-width: auto;
+  }
+  .trade-acquiring-section-1__right {
+    max-width: 590px;
+  }
+}
+@media (max-width: 900px) {
+  .solution-page-section-1 {
+    .trade-acquiring-section-1__right {
+      max-width: none;
+    }
+  }
+}

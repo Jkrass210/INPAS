@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Системы самообслуживания</title>
-  <link href="css/normalize.min.css?_v=20250105182812" rel="stylesheet">
-  <link href="css/swiper-bundle.min.css?_v=20250105182812" rel="stylesheet">
-  <!--<link rel="stylesheet" href="css/owl.carousel.min.css?_v=20250105182812">-->
-  <!--<link rel="stylesheet" href="css/owl.theme.default.min.css?_v=20250105182812">-->
-  <link href="css/style.min.css?_v=20250105182812" rel="stylesheet">
+  <link href="css/normalize.min.css?_v=20250107132757" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css?_v=20250107132757" rel="stylesheet">
+  <!--<link rel="stylesheet" href="css/owl.carousel.min.css?_v=20250107132757">-->
+  <!--<link rel="stylesheet" href="css/owl.theme.default.min.css?_v=20250107132757">-->
+  <link href="css/style.min.css?_v=20250107132757" rel="stylesheet">
 
-  <script src="js/swiper-bundle.min.js?_v=20250105182812" defer></script>
-  <!--<script src="js/jquery-3.6.0.min.js?_v=20250105182812" defer></script>-->
-  <!--<script src="js/owl.carousel.min.js?_v=20250105182812" defer></script>-->
-  <script src="js/fslightbox-min.js?_v=20250105182812" defer></script>
-  <script type="module" src="js/main-min.js?_v=20250105182812"></script>
+  <script src="js/swiper-bundle.min.js?_v=20250107132757" defer></script>
+  <!--<script src="js/jquery-3.6.0.min.js?_v=20250107132757" defer></script>-->
+  <!--<script src="js/owl.carousel.min.js?_v=20250107132757" defer></script>-->
+  <script src="js/fslightbox-min.js?_v=20250107132757" defer></script>
+  <script type="module" src="js/main-min.js?_v=20250107132757"></script>
 </head>
 <body>
   <header class="header default">
@@ -174,6 +174,97 @@
       </div>
     </div>
   </div>
+  <script>
+    function openDrop(btn, itemSelector, init = true, updateButtonText = false) {
+      const buttonId = btn.id;
+      const drop = document.querySelector(`[data-drop-id="${buttonId}"]`);
+      const infoSpan = btn.closest('.drop-down1__wrapp')?.querySelector('.drop-down1__info');
+
+      function offDrop() {
+        btn.classList.remove("active");
+        drop.classList.remove("active");
+      }
+
+      function onDrop() {
+        btn.classList.add("active");
+        drop.classList.add("active");
+      }
+
+      if (drop.classList.contains("active")) {
+        offDrop();
+      } else {
+        onDrop();
+      }
+
+      const handleClickOutside = (event) => {
+        if (!btn.contains(event.target) && !drop.contains(event.target)) {
+          offDrop();
+          removeListeners();
+        }
+      };
+
+      const handleEscapeKey = (event) => {
+        if (event.key === 'Escape') {
+          offDrop();
+          removeListeners();
+        }
+      };
+
+      const handleScroll = () => {
+        offDrop();
+        removeListeners();
+      };
+
+      const addListeners = () => {
+        document.addEventListener('click', handleClickOutside);
+        document.addEventListener('keydown', handleEscapeKey);
+        document.addEventListener('scroll', handleScroll, { passive: true });
+      };
+
+      const removeListeners = () => {
+        document.removeEventListener('click', handleClickOutside);
+        document.removeEventListener('keydown', handleEscapeKey);
+        document.removeEventListener('scroll', handleScroll);
+      };
+
+      addListeners();
+
+      if (init) {
+        const span = btn.querySelector('span');
+
+        drop.addEventListener('click', (event) => {
+          const clickedItem = event.target.closest(itemSelector);
+          if (!clickedItem) return;
+
+          if (updateButtonText) {
+            const firstSpan = clickedItem.querySelector('span:not(.hidden)');
+            const hiddenSpan = clickedItem.querySelector('.hidden');
+
+            if (firstSpan && span) {
+              span.textContent = firstSpan.textContent;
+            }
+            if (hiddenSpan && infoSpan) {
+              infoSpan.textContent = hiddenSpan.textContent;
+            }
+          }
+
+          drop.querySelectorAll(itemSelector).forEach(item => {
+            item.classList.remove('active');
+          });
+          clickedItem.classList.add('active');
+
+          offDrop();
+        });
+      }
+    }
+
+    if(document.querySelector('#openDrop1')){
+      const btnDrop1 = document.querySelector('#openDrop1');
+      btnDrop1.addEventListener('click', () => {
+        openDrop(btnDrop1, "li", true, true)
+      })
+    }
+  </script>
 </header>
   <main class="main">
     <div class="path">
@@ -188,11 +279,347 @@
         </ul>
     </div>
 </div>
-    <section class="section partners-section-1">
-      <div class="partners-section-1__container container">
-        <picture><source srcset="img/self-service-systems/1.webp" type="image/webp"><img src="img/self-service-systems/1.png" alt="img"></picture>
+    <section class="solution-page-section-1 section">
+      <div class="solution-page-section-1__container container">
+        <div class="trade-acquiring-section-1__content">
+          <div class="trade-acquiring-section-1__left">
+            <h1 class="trade-acquiring-section-1__title title-h1">
+              Системы самообслуживания
+            </h1>
+            <p class="trade-acquiring-section-1__desc">
+              Сервис «ПРИМИ КАРТУ!» приглашает к сотрудничеству компании, занимающихся автоматизацией и обслуживанием торгово-сервисных предприятий.
+            </p>
+          </div>
+          <div class="trade-acquiring-section-1__right">
+            <picture><source srcset="img/trade-acquiring/1.webp" type="image/webp"><img src="img/trade-acquiring/1.jpg" alt="img"></picture>
+          </div>
+        </div>
       </div>
     </section>
+    <section class="box-swiper-1 section">
+  <div class="box-swiper-1__container container">
+    <div class="box-swiper-1__top-line">
+      <h2 class="box-swiper-1__title title">
+        Торговый Эквайринг
+      </h2>
+      <div class="box-swiper__group-btn">
+        <button class="box-swiper__btn box-swiper-1__swiper-button-next btn-reset">
+          <svg width="15" height="28" viewBox="0 0 15 28">
+            <use xlink:href="img/sprite.svg#btnSwiper31"></use>
+          </svg>
+        </button>
+        <button class="box-swiper__btn box-swiper-1__swiper-button-prev btn-reset">
+          <svg width="15" height="28" viewBox="0 0 15 28">
+            <use xlink:href="img/sprite.svg#btnSwiper32"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="box-swiper-1__swiper swiper">
+      <ul class="box-swiper-1__swiper-wrapper list-reset swiper-wrapper">
+        <li class="box-swiper-1__swiper-slide swiper-slide">
+          <div class="card4">
+  <div class="card4__img-box">
+    <picture><source srcset="img/main/section-5/1.webp" type="image/webp"><img src="img/main/section-5/1.png" alt="img"></picture>
+  </div>
+  <div class="card4__info">
+    <a class="card4__link" href="#">
+      A50 (переносной мини-POS)
+    </a>
+    <p class="card4__desc">
+      Подключаем без визита в банк за 3-5 дней, от вас нужны только документы
+    </p>
+    <p class="card4__price">
+      16 670 ₽
+    </p>
+    <a class="card4__btn" href="#">
+      Купить
+    </a>
+  </div>
+</div>
+        </li>
+        <li class="box-swiper-1__swiper-slide swiper-slide">
+          <div class="card4">
+  <div class="card4__img-box">
+    <picture><source srcset="img/main/section-5/2.webp" type="image/webp"><img src="img/main/section-5/2.png" alt="img"></picture>
+  </div>
+  <div class="card4__info">
+    <a class="card4__link" href="#">
+      S920 (переносной)
+    </a>
+    <p class="card4__desc">
+      Подключаем без визита в банк за 3-5 дней, от вас нужны только документы
+    </p>
+    <p class="card4__price">
+      16 670 ₽
+    </p>
+    <a class="card4__btn" href="#">
+      Купить
+    </a>
+  </div>
+</div>
+        </li>
+        <li class="box-swiper-1__swiper-slide swiper-slide">
+          <div class="card4">
+  <div class="card4__img-box">
+    <picture><source srcset="img/main/section-5/3.webp" type="image/webp"><img src="img/main/section-5/3.png" alt="img"></picture>
+  </div>
+  <div class="card4__info">
+    <a class="card4__link" href="#">
+      D210E (переносной)
+    </a>
+    <p class="card4__desc">
+      Подключаем без визита в банк за 3-5 дней, от вас нужны только документы
+    </p>
+    <p class="card4__price">
+      16 670 ₽
+    </p>
+    <a class="card4__btn" href="#">
+      Купить
+    </a>
+  </div>
+</div>
+        </li>
+        <li class="box-swiper-1__swiper-slide swiper-slide">
+          <div class="card4">
+  <div class="card4__img-box">
+    <picture><source srcset="img/main/section-5/2.webp" type="image/webp"><img src="img/main/section-5/2.png" alt="img"></picture>
+  </div>
+  <div class="card4__info">
+    <a class="card4__link" href="#">
+      S920 (переносной)
+    </a>
+    <p class="card4__desc">
+      Подключаем без визита в банк за 3-5 дней, от вас нужны только документы
+    </p>
+    <p class="card4__price">
+      16 670 ₽
+    </p>
+    <a class="card4__btn" href="#">
+      Купить
+    </a>
+  </div>
+</div>
+        </li>
+        <li class="box-swiper-1__swiper-slide swiper-slide">
+          <div class="card4">
+  <div class="card4__img-box">
+    <picture><source srcset="img/main/section-5/2.webp" type="image/webp"><img src="img/main/section-5/2.png" alt="img"></picture>
+  </div>
+  <div class="card4__info">
+    <a class="card4__link" href="#">
+      S920 (переносной)
+    </a>
+    <p class="card4__desc">
+      Подключаем без визита в банк за 3-5 дней, от вас нужны только документы
+    </p>
+    <p class="card4__price">
+      16 670 ₽
+    </p>
+    <a class="card4__btn" href="#">
+      Купить
+    </a>
+  </div>
+</div>
+        </li>
+        <li class="box-swiper-1__swiper-slide swiper-slide">
+          <div class="card4">
+  <div class="card4__img-box">
+    <picture><source srcset="img/main/section-5/2.webp" type="image/webp"><img src="img/main/section-5/2.png" alt="img"></picture>
+  </div>
+  <div class="card4__info">
+    <a class="card4__link" href="#">
+      S920 (переносной)
+    </a>
+    <p class="card4__desc">
+      Подключаем без визита в банк за 3-5 дней, от вас нужны только документы
+    </p>
+    <p class="card4__price">
+      16 670 ₽
+    </p>
+    <a class="card4__btn" href="#">
+      Купить
+    </a>
+  </div>
+</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+    <section class="box-swiper-1 elem-4 section">
+  <div class="box-swiper-1__container container">
+    <div class="box-swiper-1__top-line">
+      <h2 class="box-swiper-1__title title">
+        Кассовые решения
+      </h2>
+      <div class="box-swiper__group-btn">
+        <button class="box-swiper__btn box-swiper-1__swiper-button-next btn-reset">
+          <svg width="15" height="28" viewBox="0 0 15 28">
+            <use xlink:href="img/sprite.svg#btnSwiper31"></use>
+          </svg>
+        </button>
+        <button class="box-swiper__btn box-swiper-1__swiper-button-prev btn-reset">
+          <svg width="15" height="28" viewBox="0 0 15 28">
+            <use xlink:href="img/sprite.svg#btnSwiper32"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="box-swiper-1__swiper swiper">
+      <ul class="box-swiper-1__swiper-wrapper list-reset swiper-wrapper">
+        <li class="box-swiper-1__swiper-slide swiper-slide">
+          <div class="card4">
+  <div class="card4__img-box">
+    <picture><source srcset="img/main/section-5/1.webp" type="image/webp"><img src="img/main/section-5/1.png" alt="img"></picture>
+  </div>
+  <div class="card4__info">
+    <a class="card4__link" href="#">
+      A50 (переносной мини-POS)
+    </a>
+    <p class="card4__desc">
+      Подключаем без визита в банк за 3-5 дней, от вас нужны только документы
+    </p>
+    <p class="card4__price">
+      16 670 ₽
+    </p>
+    <a class="card4__btn" href="#">
+      Купить
+    </a>
+  </div>
+</div>
+        </li>
+        <li class="box-swiper-1__swiper-slide swiper-slide">
+          <div class="card4">
+  <div class="card4__img-box">
+    <picture><source srcset="img/main/section-5/2.webp" type="image/webp"><img src="img/main/section-5/2.png" alt="img"></picture>
+  </div>
+  <div class="card4__info">
+    <a class="card4__link" href="#">
+      S920 (переносной)
+    </a>
+    <p class="card4__desc">
+      Подключаем без визита в банк за 3-5 дней, от вас нужны только документы
+    </p>
+    <p class="card4__price">
+      16 670 ₽
+    </p>
+    <a class="card4__btn" href="#">
+      Купить
+    </a>
+  </div>
+</div>
+        </li>
+        <li class="box-swiper-1__swiper-slide swiper-slide">
+          <div class="card4">
+  <div class="card4__img-box">
+    <picture><source srcset="img/main/section-5/2.webp" type="image/webp"><img src="img/main/section-5/2.png" alt="img"></picture>
+  </div>
+  <div class="card4__info">
+    <a class="card4__link" href="#">
+      S920 (переносной)
+    </a>
+    <p class="card4__desc">
+      Подключаем без визита в банк за 3-5 дней, от вас нужны только документы
+    </p>
+    <p class="card4__price">
+      16 670 ₽
+    </p>
+    <a class="card4__btn" href="#">
+      Купить
+    </a>
+  </div>
+</div>
+        </li>
+        <li class="box-swiper-1__swiper-slide swiper-slide">
+          <div class="watch-rest">
+  <a href="#" class="watch-rest__link">
+    <svg width="88" height="88" viewBox="0 0 88 88">
+      <use xlink:href="img/sprite.svg#watchRest"></use>
+    </svg>
+    <span>
+      Каталог
+    </span>
+  </a>
+</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+    <section class="service-support-section-4 section">
+  <div class="service-support-section-4__container container">
+    <div class="service-support-section-4__content">
+      <h2 class="service-support-section-4__title title">
+        Сервисные пакеты
+      </h2>
+      <ul class="service-support-section-4__list list-reset">
+        <li>
+          <div class="card9">
+  <a href="#" class="card9__link">
+    <span class="card9__title">
+      Базовый
+    </span>
+    <span class="card9__desc">
+      Сервис «ПРИМИ КАРТУ!» приглашает к сотрудничеству компании, занимающихся автоматизацией
+    </span>
+  </a>
+</div>
+        </li>
+        <li>
+          <div class="card9">
+  <a href="#" class="card9__link">
+    <span class="card9__title">
+      Стандарт
+    </span>
+    <span class="card9__desc">
+      Сервис «ПРИМИ КАРТУ!» приглашает к сотрудничеству компании, занимающихся автоматизацией
+    </span>
+  </a>
+</div>
+        </li>
+        <li>
+          <div class="card9">
+  <a href="#" class="card9__link">
+    <span class="card9__title">
+      Премиум
+    </span>
+    <span class="card9__desc">
+      Сервис «ПРИМИ КАРТУ!» приглашает к сотрудничеству компании, занимающихся автоматизацией
+    </span>
+  </a>
+</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+    <section class="box-contact-us-section section">
+  <div class="box-contact-us-section__container container">
+    <div class="box-contact-us-section__content">
+      <div class="box-contact-us-section__left">
+        <picture><source srcset="img/box-contact-us-section/1.webp" type="image/webp"><img src="img/box-contact-us-section/1.png" alt="img"></picture>
+      </div>
+      <div class="box-contact-us-section__right">
+        <form class="box-contact-us-section__form form" action="#" method="post">
+          <h4>Связаться с нами</h4>
+          <p class="form__desc-top">
+            Наша команда свяжется с вами в ближайшее время
+          </p>
+          <input class="input1"  id="name" name="name" type="text" placeholder="Имя">
+          <input class="input1"  id="email" name="email" type="email" placeholder="Email">
+          <input class="input1"  id="phone" name="phone" type="text" placeholder="+7 (999) 999-99-99">
+          <button class="btn1 btn-reset">
+  Отправить заявку
+</button>
+          <p class="form__desc-bottom">
+            Нажимая кнопку «Отправить заявку», вы соглашаетесь с политикой конфиденциальности и пользовательскимсоглашением
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
   </main>
   <footer class="footer default">
   <div class="footer__container container">

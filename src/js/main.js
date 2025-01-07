@@ -9,6 +9,7 @@ import { initTabs } from './module/initTabs.js';
 import { testWebP } from './module/testWebP.js'
 import { playVideo } from './module/playVideo.js';
 import { initCatalogTabs1 } from './module/initCatalogTabs1.js';
+import { handleSwiperControls } from './module/handleSwiperControls.js';
 
 testWebP(function (support) {
   if (support == true) {
@@ -33,17 +34,10 @@ if(document.querySelector('#openAboutCompany')){
   })
 }
 
-if(document.querySelector('#openDrop1')){
-  const btnDrop1 = document.querySelector('#openDrop1');
-  btnDrop1.addEventListener('click', () => {
-    openDrop(btnDrop1, "li", true, true)
-  })
-}
-
 if(document.querySelector('#openDrop2')){
   const btnDrop1 = document.querySelector('#openDrop2');
   btnDrop1.addEventListener('click', () => {
-    openDrop(btnDrop1, ".drop-down-1__item", true)
+    openDrop(btnDrop1, ".drop-down-1__item", true, true)
   })
 }
 
@@ -145,6 +139,14 @@ if (document.querySelector(".box-swiper__link") && document.querySelector(".box-
   const btn = document.querySelector(".box-swiper__link");
   const topSection = document.querySelector(".box-swiper__top-line");
   const mobileHidden = document.querySelector(".box-swiper__mobail-hidden");
+  handleResize(mobileHidden, btn, topSection, 650)
+  window.addEventListener("resize", () => handleResize(mobileHidden, btn, topSection, 650));
+}
+
+if (document.querySelector(".service-support-section-3__link") && document.querySelector(".service-support-section-3__top-line") && document.querySelector(".service-support-section-3__mobil-hidden")) {
+  const btn = document.querySelector(".service-support-section-3__link");
+  const topSection = document.querySelector(".service-support-section-3__top-line");
+  const mobileHidden = document.querySelector(".service-support-section-3__mobil-hidden");
   handleResize(mobileHidden, btn, topSection, 650)
   window.addEventListener("resize", () => handleResize(mobileHidden, btn, topSection, 650));
 }
@@ -347,5 +349,37 @@ if (document.querySelector('.initFilter') && document.querySelector('.catalog-se
     closeOnLinkClick: true,
     linkSelector: 'a',
     addStopScroll: true,
+  });
+}
+
+if(document.querySelectorAll('.box-swiper-1__swiper')){
+  document.querySelectorAll('.box-swiper-1__swiper').forEach((swiperContainer) => {
+    new Swiper(swiperContainer, {
+      slidesPerView: 2, // Показывать 4 слайда
+      spaceBetween: 10, // Отступ между слайдами 20px
+      navigation: {
+        nextEl: swiperContainer.closest('.box-swiper-1__container').querySelector('.box-swiper-1__swiper-button-prev'),
+        prevEl: swiperContainer.closest('.box-swiper-1__container').querySelector('.box-swiper-1__swiper-button-next'),
+      },
+      breakpoints: {
+        // Настройка для адаптивности
+        650: {
+          slidesPerView: 3,
+          spaceBetween: 15,
+        },
+        1030: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+      },
+    });
+  });
+}
+
+if(document.querySelectorAll(".box-swiper-1__swiper-slide")){
+  handleSwiperControls({
+    swiperSlideClass: 'box-swiper-1__swiper-slide',
+    buttonsGroupClass: 'box-swiper__group-btn',
+    breakpoint: 1030
   });
 }

@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Сервисная поддержка</title>
-  <link href="css/normalize.min.css?_v=20250105182812" rel="stylesheet">
-  <link href="css/swiper-bundle.min.css?_v=20250105182812" rel="stylesheet">
-  <!--<link rel="stylesheet" href="css/owl.carousel.min.css?_v=20250105182812">-->
-  <!--<link rel="stylesheet" href="css/owl.theme.default.min.css?_v=20250105182812">-->
-  <link href="css/style.min.css?_v=20250105182812" rel="stylesheet">
+  <link href="css/normalize.min.css?_v=20250107132757" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css?_v=20250107132757" rel="stylesheet">
+  <!--<link rel="stylesheet" href="css/owl.carousel.min.css?_v=20250107132757">-->
+  <!--<link rel="stylesheet" href="css/owl.theme.default.min.css?_v=20250107132757">-->
+  <link href="css/style.min.css?_v=20250107132757" rel="stylesheet">
 
-  <script src="js/swiper-bundle.min.js?_v=20250105182812" defer></script>
-  <!--<script src="js/jquery-3.6.0.min.js?_v=20250105182812" defer></script>-->
-  <!--<script src="js/owl.carousel.min.js?_v=20250105182812" defer></script>-->
-  <script src="js/fslightbox-min.js?_v=20250105182812" defer></script>
-  <script type="module" src="js/main-min.js?_v=20250105182812"></script>
+  <script src="js/swiper-bundle.min.js?_v=20250107132757" defer></script>
+  <!--<script src="js/jquery-3.6.0.min.js?_v=20250107132757" defer></script>-->
+  <!--<script src="js/owl.carousel.min.js?_v=20250107132757" defer></script>-->
+  <script src="js/fslightbox-min.js?_v=20250107132757" defer></script>
+  <script type="module" src="js/main-min.js?_v=20250107132757"></script>
 </head>
 <body>
   <header class="header default">
@@ -174,6 +174,97 @@
       </div>
     </div>
   </div>
+  <script>
+    function openDrop(btn, itemSelector, init = true, updateButtonText = false) {
+      const buttonId = btn.id;
+      const drop = document.querySelector(`[data-drop-id="${buttonId}"]`);
+      const infoSpan = btn.closest('.drop-down1__wrapp')?.querySelector('.drop-down1__info');
+
+      function offDrop() {
+        btn.classList.remove("active");
+        drop.classList.remove("active");
+      }
+
+      function onDrop() {
+        btn.classList.add("active");
+        drop.classList.add("active");
+      }
+
+      if (drop.classList.contains("active")) {
+        offDrop();
+      } else {
+        onDrop();
+      }
+
+      const handleClickOutside = (event) => {
+        if (!btn.contains(event.target) && !drop.contains(event.target)) {
+          offDrop();
+          removeListeners();
+        }
+      };
+
+      const handleEscapeKey = (event) => {
+        if (event.key === 'Escape') {
+          offDrop();
+          removeListeners();
+        }
+      };
+
+      const handleScroll = () => {
+        offDrop();
+        removeListeners();
+      };
+
+      const addListeners = () => {
+        document.addEventListener('click', handleClickOutside);
+        document.addEventListener('keydown', handleEscapeKey);
+        document.addEventListener('scroll', handleScroll, { passive: true });
+      };
+
+      const removeListeners = () => {
+        document.removeEventListener('click', handleClickOutside);
+        document.removeEventListener('keydown', handleEscapeKey);
+        document.removeEventListener('scroll', handleScroll);
+      };
+
+      addListeners();
+
+      if (init) {
+        const span = btn.querySelector('span');
+
+        drop.addEventListener('click', (event) => {
+          const clickedItem = event.target.closest(itemSelector);
+          if (!clickedItem) return;
+
+          if (updateButtonText) {
+            const firstSpan = clickedItem.querySelector('span:not(.hidden)');
+            const hiddenSpan = clickedItem.querySelector('.hidden');
+
+            if (firstSpan && span) {
+              span.textContent = firstSpan.textContent;
+            }
+            if (hiddenSpan && infoSpan) {
+              infoSpan.textContent = hiddenSpan.textContent;
+            }
+          }
+
+          drop.querySelectorAll(itemSelector).forEach(item => {
+            item.classList.remove('active');
+          });
+          clickedItem.classList.add('active');
+
+          offDrop();
+        });
+      }
+    }
+
+    if(document.querySelector('#openDrop1')){
+      const btnDrop1 = document.querySelector('#openDrop1');
+      btnDrop1.addEventListener('click', () => {
+        openDrop(btnDrop1, "li", true, true)
+      })
+    }
+  </script>
 </header>
   <main class="main">
     <div class="path">
@@ -190,7 +281,7 @@
 </div>
     <section class="service-support-section-1 section">
       <div class="service-support-section-1__container container">
-        <div class="service-support-section-1__container">
+        <div class="service-support-section-1__content">
           <div class="service-support-section-1__left">
             <h1 class="service-support-section-1__title title-h1">
               Сервисная поддержка
@@ -279,56 +370,57 @@
       </div>
     </section>
     <section class="service-support-section-3 section">
-      <div class="service-support-section-3__container container">
-        <div class="service-support-section-3__content">
-          <div class="service-support-section-3__top-line">
-            <h2 class="service-support-section-3__title title">
-              Видеоучебник
-            </h2>
-            <a href="#" class="service-support-section-3__link btn-group__btn-2">
-              Все видео
-            </a>
-          </div>
-          <div class="service-support-section-3__box-video">
-            <ul class="service-support-section-3__list list-reset">
-              <li>
-                <video poster="img/video/1.jpg">
-                  <source src="video/video.mp4" type="video/mp4">
-                  <source src="video/video1.webm" type="video/webm">
-                  Your browser does not support the video tag.
-                </video>
-                <button class="btn-video-play btn-reset">
-  <svg width="40" height="45" viewBox="0 0 40 45">
-    <use xlink:href="img/sprite.svg#play"></use>
-  </svg>
-</button>
-              </li>
-              <li>
-                <video poster="img/video/2.jpg">
-                  <source src="video/video.mp4" type="video/mp4">
-                  <source src="video/video1.webm" type="video/webm">
-                  Your browser does not support the video tag.
-                </video>
-                <button class="btn-video-play btn-reset">
-  <svg width="40" height="45" viewBox="0 0 40 45">
-    <use xlink:href="img/sprite.svg#play"></use>
-  </svg>
-</button>
-              </li>
-            </ul>
-          </div>
-        </div>
+  <div class="service-support-section-3__container container">
+    <div class="service-support-section-3__content">
+      <div class="service-support-section-3__top-line">
+        <h2 class="service-support-section-3__title title">
+          Видеоучебник
+        </h2>
+        <a href="#" class="service-support-section-3__link btn-group__btn-2">
+          Все видео
+        </a>
       </div>
-    </section>
+      <div class="service-support-section-3__box-video">
+        <ul class="service-support-section-3__list list-reset">
+          <li>
+            <video poster="img/video/1.jpg">
+              <source src="video/video.mp4" type="video/mp4">
+              <source src="video/video1.webm" type="video/webm">
+              Your browser does not support the video tag.
+            </video>
+            <button class="btn-video-play btn-reset">
+  <svg width="40" height="45" viewBox="0 0 40 45">
+    <use xlink:href="img/sprite.svg#play"></use>
+  </svg>
+</button>
+          </li>
+          <li>
+            <video poster="img/video/2.jpg">
+              <source src="video/video.mp4" type="video/mp4">
+              <source src="video/video1.webm" type="video/webm">
+              Your browser does not support the video tag.
+            </video>
+            <button class="btn-video-play btn-reset">
+  <svg width="40" height="45" viewBox="0 0 40 45">
+    <use xlink:href="img/sprite.svg#play"></use>
+  </svg>
+</button>
+          </li>
+        </ul>
+      </div>
+      <div class="service-support-section-3__mobil-hidden"></div>
+    </div>
+  </div>
+</section>
     <section class="service-support-section-4 section">
-      <div class="service-support-section-4__container container">
-        <div class="service-support-section-4__content">
-          <h2 class="service-support-section-4__title title">
-            Сервисные пакеты
-          </h2>
-          <ul class="service-support-section-4__list list-reset">
-            <li>
-              <div class="card9">
+  <div class="service-support-section-4__container container">
+    <div class="service-support-section-4__content">
+      <h2 class="service-support-section-4__title title">
+        Сервисные пакеты
+      </h2>
+      <ul class="service-support-section-4__list list-reset">
+        <li>
+          <div class="card9">
   <a href="#" class="card9__link">
     <span class="card9__title">
       Базовый
@@ -338,9 +430,9 @@
     </span>
   </a>
 </div>
-            </li>
-            <li>
-              <div class="card9">
+        </li>
+        <li>
+          <div class="card9">
   <a href="#" class="card9__link">
     <span class="card9__title">
       Стандарт
@@ -350,9 +442,9 @@
     </span>
   </a>
 </div>
-            </li>
-            <li>
-              <div class="card9">
+        </li>
+        <li>
+          <div class="card9">
   <a href="#" class="card9__link">
     <span class="card9__title">
       Премиум
@@ -362,11 +454,11 @@
     </span>
   </a>
 </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
     <section class="box-contact-us-section section">
   <div class="box-contact-us-section__container container">
     <div class="box-contact-us-section__content">

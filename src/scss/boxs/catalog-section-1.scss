@@ -164,6 +164,7 @@
     &__list-cards {
       gap: 10px;
       .card4 {
+        border-radius: 10px;
         &__info {
           padding: 12px;
         }
@@ -205,7 +206,7 @@
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 512px) {
   .catalog-section-1 {
     &__aside {
       height: calc(100vh - 243px);

@@ -146,4 +146,8 @@
   <symbol id="further2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M1 8.75C0.585786 8.75 0.25 8.41421 0.25 8C0.25 7.58579 0.585786 7.25 1 7.25L1 8.75ZM14.5303 7.46967C14.8232 7.76256 14.8232 8.23744 14.5303 8.53033L9.75736 13.3033C9.46447 13.5962 8.98959 13.5962 8.6967 13.3033C8.40381 13.0104 8.40381 12.5355 8.6967 12.2426L12.9393 8L8.6967 3.75736C8.40381 3.46447 8.40381 2.98959 8.6967 2.6967C8.98959 2.40381 9.46447 2.40381 9.75736 2.6967L14.5303 7.46967ZM1 7.25L14 7.25V8.75L1 8.75L1 7.25Z" fill="white" />
   </symbol>
+
+  <symbol id="arr20" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9 1L2 8L9 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+  </symbol>
 </svg>
