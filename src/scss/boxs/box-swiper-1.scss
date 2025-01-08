@@ -12,6 +12,11 @@
   &__title {
     margin-bottom: 0;
   }
+  &__group-btn {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
   &__swiper-slide {
     box-sizing: border-box;
     height: auto;
@@ -41,7 +46,7 @@
       margin-bottom: 0;
       font-size: 32px;
     }
-    .box-swiper__group-btn {
+    &__group-btn {
       gap: 30px;
     }
     .box-swiper__btn {

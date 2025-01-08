@@ -379,7 +379,45 @@ if(document.querySelectorAll('.box-swiper-1__swiper')){
 if(document.querySelectorAll(".box-swiper-1__swiper-slide")){
   handleSwiperControls({
     swiperSlideClass: 'box-swiper-1__swiper-slide',
-    buttonsGroupClass: 'box-swiper__group-btn',
+    buttonsGroupClass: 'box-swiper-1__group-btn',
     breakpoint: 1030
+  });
+}
+
+if(document.querySelectorAll('.box-reviews__swiper')){
+  document.querySelectorAll('.box-reviews__swiper').forEach((swiperElement) => {
+    new Swiper(swiperElement, {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      grid: {
+        rows: 3,
+        fill: 'row',
+      },
+      spaceBetween: 20,
+      navigation: {
+        nextEl: swiperElement.closest('.box-reviews').querySelector('.box-reviews__swiper-button-prev'),
+        prevEl: swiperElement.closest('.box-reviews').querySelector('.box-reviews__swiper-button-next'),
+      },
+      breakpoints: {
+        650: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          grid: {
+            rows: 2,
+            fill: 'row',
+          },
+          spaceBetween: 20,
+        },
+        1030: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+          grid: {
+            rows: 1,
+            fill: 'row',
+          },
+          spaceBetween: 20,
+        },
+      },
+    });
   });
 }

@@ -1,0 +1,21 @@
+.box-reviews {
+  &__group-btn {
+    display: flex;
+    gap: 40px;
+  }
+  &__swiper-slide {
+    box-sizing: border-box;
+    height: auto !important;
+  }
+}
+@media (max-width: 900px) {
+  .box-reviews {
+    &__group-btn{
+      gap: 32px;
+    }
+    .box-swiper__btn {
+      width: 11px;
+      height: 20px;
+    }
+  }
+}
