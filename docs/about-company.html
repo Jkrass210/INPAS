@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>О компании</title>
-  <link href="css/normalize.min.css?_v=20250109120020" rel="stylesheet">
-  <link href="css/swiper-bundle.min.css?_v=20250109120020" rel="stylesheet">
-  <!--<link rel="stylesheet" href="css/owl.carousel.min.css?_v=20250109120020">-->
-  <!--<link rel="stylesheet" href="css/owl.theme.default.min.css?_v=20250109120020">-->
-  <link href="css/style.min.css?_v=20250109120020" rel="stylesheet">
+  <link href="css/normalize.min.css?_v=20250109172905" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css?_v=20250109172905" rel="stylesheet">
+  <!--<link rel="stylesheet" href="css/owl.carousel.min.css?_v=20250109172905">-->
+  <!--<link rel="stylesheet" href="css/owl.theme.default.min.css?_v=20250109172905">-->
+  <link href="css/style.min.css?_v=20250109172905" rel="stylesheet">
 
-  <script src="js/swiper-bundle.min.js?_v=20250109120020" defer></script>
-  <!--<script src="js/jquery-3.6.0.min.js?_v=20250109120020" defer></script>-->
-  <!--<script src="js/owl.carousel.min.js?_v=20250109120020" defer></script>-->
-  <script src="js/fslightbox-min.js?_v=20250109120020" defer></script>
-  <script type="module" src="js/main-min.js?_v=20250109120020"></script>
+  <script src="js/swiper-bundle.min.js?_v=20250109172905" defer></script>
+  <!--<script src="js/jquery-3.6.0.min.js?_v=20250109172905" defer></script>-->
+  <!--<script src="js/owl.carousel.min.js?_v=20250109172905" defer></script>-->
+  <script src="js/fslightbox-min.js?_v=20250109172905" defer></script>
+  <script type="module" src="js/main-min.js?_v=20250109172905"></script>
 </head>
 <body>
   <header class="header default">
@@ -139,7 +139,7 @@
     </svg>
   </button>
   <form class="search__form" data-drop-id="openSearch">
-    <input class="search__input" type="text" name="search" id="searchInput">
+    <input class="search__input" type="text" name="search" id="searchInput" placeholder="Мини-POS нового поколения">
     <button class="search__btn-sabmit btn-reset">
       <svg width="16" height="16" viewBox="0 0 16 16">
         <use xlink:href="img/sprite.svg#search"></use>
@@ -306,7 +306,7 @@
             <picture><source srcset="img/about-company/1-or.webp" type="image/webp"><img class="about-company-section-1__img" src="img/about-company/1-or.jpg" alt="img"></picture>
             <div class="about-company-section-1__play">
               <div class="play">
-  <a href="#" class="play__link">
+  <a data-fslightbox="gallery" href="video/video.mp4" class="play__link">
     <img src="img/about-company/№1.svg" alt="img">
     <span>
       <svg width="40" height="45" viewBox="0 0 40 45">
@@ -776,12 +776,43 @@
     </div>
   </div>
 </footer>
-  <div class="modal">
+  <div class="modal modal-1">
   <div class="modal-feedback active">
     <form class="box-contact-us-section__form form" action="#" method="post">
       <h4>Обратная связь</h4>
       <p class="form__desc-top">
         Наша команда свяжется с вами в ближайшее время
+      </p>
+      <input class="input1"  id="name" name="name" type="text" placeholder="Имя">
+      <input class="input1"  id="email" name="email" type="email" placeholder="Email">
+      <input class="input1"  id="phone" name="phone" type="text" placeholder="+7 (999) 999-99-99">
+      <button class="btn1 btn-reset">
+  Отправить
+</button>
+      <p class="form__desc-bottom">
+        Нажимая кнопку «Отправить заявку», вы соглашаетесь с <a href="#">политикой конфиденциальности</a> и пользовательскимсоглашением
+      </p>
+    </form>
+  </div>
+  <div class="modal-contact-you">
+    <button class="btn-close btn-reset">
+  <span></span>
+  <span></span>
+</button>
+    <div class="modal-contact-you__box-img">
+      <picture><source srcset="img/modal/1.webp" type="image/webp"><img src="img/modal/1.jpg" alt="img"></picture>
+    </div>
+    <div class="modal-contact-you__wrapp">
+      <p>Наши сотрудники свяжутся с Вами с минуты на минуту.</p>
+    </div>
+  </div>
+</div>
+  <div class="modal modal-2">
+  <div class="modal-feedback order active">
+    <form class="box-contact-us-section__form form" action="#" method="post">
+      <h4>Заказать</h4>
+      <p class="form__desc-top name">
+        A50 (переносной мини-POS)
       </p>
       <input class="input1"  id="name" name="name" type="text" placeholder="Имя">
       <input class="input1"  id="email" name="email" type="email" placeholder="Email">

@@ -9,6 +9,35 @@
       gap: 35px;
     }
   }
+  &__title-btn {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  &__btn-all {
+    min-width: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 14px;
+    border-radius: 15px;
+    border: 2px solid var(--colof-red);
+    font-family: var(--font4);
+    font-weight: 500;
+    font-size: 20px;
+    outline: 1px solid var(--color-body);
+    color: var(--color-text-white);
+    transition: outline-color 0.4s ease-in-out;
+
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+
+    &:focus-visible,&:hover,&:active {
+      outline-color: var(--colof-red);
+    }
+  }
   &__title {
     margin-bottom: 0;
   }
@@ -36,6 +65,23 @@
     &__price {
       margin-bottom: 17px;
       font-size: 22px;
+    }
+  }
+  &__mobil-hidden {
+    display: none;
+  }
+}
+@media (max-width: 1030px) {
+  .box-swiper-1 {
+    &__mobil-hidden {
+      padding-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__btn-all {
+      max-width: 300px;
+      width: 100%;
     }
   }
 }
@@ -80,6 +126,9 @@
     &__title {
       margin-bottom: 0;
       font-size: 18px;
+    }
+    &__btn-all {
+      font-size: 16px;
     }
   }
 }

@@ -152,6 +152,21 @@ if (document.querySelector(".service-support-section-3__link") && document.query
   window.addEventListener("resize", () => handleResize(mobileHidden, btn, topSection, 650));
 }
 
+if (document.querySelectorAll(".box-swiper-1>.box-swiper-1__btn-all") && document.querySelectorAll(".box-swiper-1__title-btn")){
+  const boxs = document.querySelectorAll(".box-swiper-1");
+
+  boxs.forEach(box => {
+    const btn = box.querySelector(".box-swiper-1__btn-all");
+    const topSection = box.querySelector(".box-swiper-1__title-btn");
+    const mobileHidden = box.querySelector(".box-swiper-1__mobil-hidden");
+  
+    if (btn && topSection && mobileHidden) {
+      handleResize(mobileHidden, btn, topSection, 1030);
+      window.addEventListener("resize", () => handleResize(mobileHidden, btn, topSection, 1030));
+    }
+  });  
+}
+
 if (document.querySelector('#swiper-5') && document.querySelector('#swiper-5 > .swiper-wrapper') && document.querySelectorAll('#swiper-5 > .swiper-slide') && document.querySelector('#swiper-6') && document.querySelector('#swiper-6 > .swiper-wrapper') && document.querySelectorAll('#swiper-6 > .swiper-slide')) {
   const swiper6 = new Swiper("#swiper-6", {
     spaceBetween: 10,
@@ -356,14 +371,13 @@ if (document.querySelector('.initFilter') && document.querySelector('.catalog-se
 if(document.querySelectorAll('.box-swiper-1__swiper')){
   document.querySelectorAll('.box-swiper-1__swiper').forEach((swiperContainer) => {
     new Swiper(swiperContainer, {
-      slidesPerView: 2, // Показывать 4 слайда
-      spaceBetween: 10, // Отступ между слайдами 20px
+      slidesPerView: 2,
+      spaceBetween: 10,
       navigation: {
         nextEl: swiperContainer.closest('.box-swiper-1__container').querySelector('.box-swiper-1__swiper-button-prev'),
         prevEl: swiperContainer.closest('.box-swiper-1__container').querySelector('.box-swiper-1__swiper-button-next'),
       },
       breakpoints: {
-        // Настройка для адаптивности
         650: {
           slidesPerView: 3,
           spaceBetween: 15,
@@ -380,8 +394,7 @@ if(document.querySelectorAll('.box-swiper-1__swiper')){
 if(document.querySelectorAll(".box-swiper-1__swiper-slide")){
   handleSwiperControls({
     swiperSlideClass: 'box-swiper-1__swiper-slide',
-    buttonsGroupClass: 'box-swiper-1__group-btn',
-    breakpoint: 1030
+    buttonsGroupClass: 'box-swiper-1__group-btn'
   });
 }
 
@@ -423,10 +436,20 @@ if(document.querySelectorAll('.box-reviews__swiper')){
   });
 }
 
-if(document.querySelectorAll('.open-modal-1') && document.querySelector('.modal')){
+if(document.querySelectorAll('.open-modal-1') && document.querySelector('.modal-1')){
   setupModal({
     openButtonClass: ".open-modal-1",
-    modalClass: ".modal",
+    modalClass: ".modal-1",
+    closeButtonClass: ".btn-close",
+    stopScrollClass: "stop-scroll",
+    activeClass: "active",
+  });
+}
+
+if(document.querySelectorAll('.open-modal-2') && document.querySelector('.modal-2')){
+  setupModal({
+    openButtonClass: ".open-modal-2",
+    modalClass: ".modal-2",
     closeButtonClass: ".btn-close",
     stopScrollClass: "stop-scroll",
     activeClass: "active",

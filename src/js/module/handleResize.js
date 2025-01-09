@@ -9,5 +9,3 @@ export function handleResize(mobileHidden, btn, topSection, size) {
         }
     }
 };
-
-

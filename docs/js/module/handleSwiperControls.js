@@ -1,31 +1,29 @@
-export function handleSwiperControls({
+export function handleSwiperControls({ 
   swiperSlideClass,
-  buttonsGroupClass,
-  breakpoint = 900
+  buttonsGroupClass
 }) {
   const blocks = document.querySelectorAll(`.${buttonsGroupClass}`);
 
   function updateButtonsVisibility() {
+    const windowWidth = window.innerWidth;
+
     blocks.forEach(block => {
       const swiperContainer = block.closest('.section');
-      const slides = swiperContainer.querySelectorAll(`.${swiperSlideClass}`);
-      const windowWidth = window.innerWidth;
+      const slidesCount = swiperContainer.querySelectorAll(`.${swiperSlideClass}`).length;
 
-      if (slides.length <= 4) {
-        if (windowWidth <= breakpoint) {
-          block.style.display = 'flex';
-        } else {
-          block.style.display = 'none';
-        }
+      // Если слайдов больше 4, ничего не делать
+      if (slidesCount > 4) return;
+
+      if (slidesCount === 4 && windowWidth <= 1030) {
+        block.style.display = 'flex';
+      } else if (slidesCount === 3 && windowWidth <= 650) {
+        block.style.display = 'flex';
       } else {
-        block.style.display = '';
+        block.style.display = 'none';
       }
     });
   }
 
   updateButtonsVisibility();
-
   window.addEventListener('resize', updateButtonsVisibility);
 }
-
-
