@@ -1,0 +1,26 @@
+<div class="modal">
+  <div class="modal-feedback active">
+    <form class="box-contact-us-section__form form" action="#" method="post">
+      <h4>Обратная связь</h4>
+      <p class="form__desc-top">
+        Наша команда свяжется с вами в ближайшее время
+      </p>
+      @@include('../components/input1.html',{"id":"name","name":"name","type":"text","placeholder":"Имя"})
+      @@include('../components/input1.html',{"id":"email","name":"email","type":"email","placeholder":"Email"})
+      @@include('../components/input1.html',{"id":"phone","name":"phone","type":"text","placeholder":"+7 (999) 999-99-99"})
+      @@include('../components/btn1.html',{"text":"Отправить"})
+      <p class="form__desc-bottom">
+        Нажимая кнопку «Отправить заявку», вы соглашаетесь с <a href="#">политикой конфиденциальности</a> и пользовательскимсоглашением
+      </p>
+    </form>
+  </div>
+  <div class="modal-contact-you">
+    @@include('../components/btn-close.html')
+    <div class="modal-contact-you__box-img">
+      <img src="img/modal/1.jpg" alt="img">
+    </div>
+    <div class="modal-contact-you__wrapp">
+      <p>Наши сотрудники свяжутся с Вами с минуты на минуту.</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+.modal-feedback {
+  display: none;
+  max-width: 530px;
+  padding: 58px 58px 51px;
+  border-radius: 33px;
+  background-color: var(--yfvfy);
+  height: auto;
+
+  &.active {
+    display: block;
+  }
+
+ .form {
+  align-items: center;
+  .form__desc-bottom {
+    text-align: center;
+  }
+  button {
+    max-width: 100%;
+  }
+ }
+}
+@media (max-width: 900px) {
+  .modal-feedback {
+    padding: 20px;
+}
+@media (max-width: 512px) {
+  .modal-feedback {
+      .form {
+        .form__desc-bottom {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}

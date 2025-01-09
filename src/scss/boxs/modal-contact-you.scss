@@ -1,0 +1,49 @@
+.modal-contact-you {
+  display: none;
+  max-width: 530px;
+  position: relative;
+  border-radius: 33px;
+  overflow: hidden;
+  background-color: var(--yfvfy);
+  padding-bottom: 35px;
+  text-align: center;
+  &.active {
+    display: block;
+  }
+  &__box-img {
+    border-radius: 33px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    img {
+      border-radius: 33px;
+    }
+  }
+  &__wrapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    p{
+      max-width: 410px;
+      font-family: var(--font4);
+      font-weight: 500;
+      font-size: 24px;
+      text-align: center;
+      color: var(--color-text-black);
+    }
+  }
+}
+@media (max-width: 900px) {
+  .modal-contact-you {
+    max-width: 450px;
+    padding-bottom: 15px;
+    &__box-img {
+      margin-bottom: 10px;
+    }
+    &__wrapp {
+      p{
+        font-size: 16px;
+      }
+    }
+  }
+}

@@ -1978,6 +1978,22 @@ body {
   color: var(--color-text-black);
 }
 
+.box-contact-us-section__form .form__desc-bottom a {
+  -webkit-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+}
+
+.box-contact-us-section__form .form__desc-bottom a:focus,
+.box-contact-us-section__form .form__desc-bottom a:focus-visible {
+  outline: none;
+}
+
+.box-contact-us-section__form .form__desc-bottom a:focus-visible,
+.box-contact-us-section__form .form__desc-bottom a:hover,
+.box-contact-us-section__form .form__desc-bottom a:active {
+  color: var(--color-6);
+}
+
 .input1 {
   padding: 20px;
   border: 1px solid transparent;
@@ -5004,6 +5020,145 @@ body {
   max-width: 290px;
 }
 
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: rgba(2, 6, 33, 0.75);
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal-feedback {
+  display: none;
+  max-width: 530px;
+  padding: 58px 58px 51px;
+  border-radius: 33px;
+  background-color: var(--yfvfy);
+  height: auto;
+}
+
+.modal-feedback.active {
+  display: block;
+}
+
+.modal-feedback .form {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-feedback .form .form__desc-bottom {
+  text-align: center;
+}
+
+.modal-feedback .form button {
+  max-width: 100%;
+}
+
+.modal-contact-you {
+  display: none;
+  max-width: 530px;
+  position: relative;
+  border-radius: 33px;
+  overflow: hidden;
+  background-color: var(--yfvfy);
+  padding-bottom: 35px;
+  text-align: center;
+}
+
+.modal-contact-you.active {
+  display: block;
+}
+
+.modal-contact-you__box-img {
+  border-radius: 33px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.modal-contact-you__box-img img {
+  border-radius: 33px;
+}
+
+.modal-contact-you__wrapp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 10px;
+}
+
+.modal-contact-you__wrapp p {
+  max-width: 410px;
+  font-family: var(--font4);
+  font-weight: 500;
+  font-size: 24px;
+  text-align: center;
+  color: var(--color-text-black);
+}
+
+.btn-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+}
+
+.btn-close:focus,
+.btn-close:focus-visible {
+  outline: none;
+}
+
+.btn-close:focus-visible span,
+.btn-close:hover span,
+.btn-close:active span {
+  background-color: var(--yfvfy);
+}
+
+.btn-close span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-text-white);
+  -webkit-transition: background-color 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.btn-close span:first-child {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.btn-close span:last-child {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
 .footer {
   padding-top: 75px;
   padding-bottom: 45px;
@@ -6107,6 +6262,35 @@ body {
     max-width: 600px;
   }
 
+  .modal {
+    padding: 0 10px;
+  }
+
+  .modal-feedback {
+    padding: 20px;
+  }
+
+  .modal-contact-you {
+    max-width: 450px;
+    padding-bottom: 15px;
+  }
+
+  .modal-contact-you__box-img {
+    margin-bottom: 10px;
+  }
+
+  .modal-contact-you__wrapp p {
+    font-size: 16px;
+  }
+
+  .btn-close {
+    top: 10px;
+    right: 20px;
+    width: 15px;
+    min-width: 15px;
+    height: 15px;
+  }
+
   .footer {
     padding-top: 50px;
     border-top: 1px solid rgba(255, 255, 255, 0.16);
@@ -6136,6 +6320,12 @@ body {
 
   .footer__box-right {
     width: 100%;
+  }
+}
+
+@media (max-width: 900px) and (max-width: 512px) {
+  .modal-feedback .form .form__desc-bottom {
+    font-size: 10px;
   }
 }
 

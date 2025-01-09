@@ -10,6 +10,7 @@ import { testWebP } from './module/testWebP.js'
 import { playVideo } from './module/playVideo.js';
 import { initCatalogTabs1 } from './module/initCatalogTabs1.js';
 import { handleSwiperControls } from './module/handleSwiperControls.js';
+import { setupModal } from "./module/setupModal.js";
 
 testWebP(function (support) {
   if (support == true) {
@@ -419,5 +420,15 @@ if(document.querySelectorAll('.box-reviews__swiper')){
         },
       },
     });
+  });
+}
+
+if(document.querySelectorAll('.open-modal-1') && document.querySelector('.modal')){
+  setupModal({
+    openButtonClass: ".open-modal-1",
+    modalClass: ".modal",
+    closeButtonClass: ".btn-close",
+    stopScrollClass: "stop-scroll",
+    activeClass: "active",
   });
 }
