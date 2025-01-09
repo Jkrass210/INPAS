@@ -59,20 +59,17 @@ export function openDrop(btn, itemSelector, init = true, updateButtonText = fals
       const clickedItem = event.target.closest(itemSelector);
       if (!clickedItem) return;
 
-      // Логика обновления текста кнопки и info, если активирована
       if (updateButtonText) {
         const firstSpan = clickedItem.querySelector('span:not(.hidden)');
         const hiddenSpan = clickedItem.querySelector('.hidden');
 
         if (firstSpan && span) {
-          span.textContent = firstSpan.textContent; // Обновляем текст кнопки
+          span.textContent = firstSpan.textContent;
         }
         if (hiddenSpan && infoSpan) {
-          infoSpan.textContent = hiddenSpan.textContent; // Обновляем текст info
+          infoSpan.textContent = hiddenSpan.textContent;
         }
       }
-
-      // Обновляем классы активности
       drop.querySelectorAll(itemSelector).forEach(item => {
         item.classList.remove('active');
       });

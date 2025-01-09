@@ -47,7 +47,6 @@ export function initQuiz({
     }
   });
 
-  // Инициализация квиза
   showQuestion(currentQuestionIndex);
 }
 

@@ -11,7 +11,6 @@ export function handleSwiperControls({
       const swiperContainer = block.closest('.section');
       const slidesCount = swiperContainer.querySelectorAll(`.${swiperSlideClass}`).length;
 
-      // Если слайдов больше 4, ничего не делать
       if (slidesCount > 4) return;
 
       if (slidesCount === 4 && windowWidth <= 1030) {

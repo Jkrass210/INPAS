@@ -3,12 +3,11 @@ export function toggleActiveClass({
   targetClass,
   closeOnLinkClick = false,
   linkSelector = 'a',
-  addStopScroll = false, // Новый параметр
+  addStopScroll = false,
 }) {
   const button = document.querySelector(`.${buttonClass}`);
   const target = document.querySelector(`.${targetClass}`);
-  const body = document.body; // Ссылка на body
-
+  const body = document.body;
   if (!button || !target) {
     console.error('Элементы с указанными классами не найдены.');
     return;

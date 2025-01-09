@@ -18,7 +18,6 @@ export function setupModal({
     modal.classList.remove(activeClass);
     body.classList.remove(stopScrollClass);
 
-    // Очистка инпутов
     const inputs = modal.querySelectorAll("input");
     inputs.forEach(input => (input.value = ""));
   };
@@ -28,28 +27,24 @@ export function setupModal({
     body.classList.add(stopScrollClass);
   };
 
-  // Открытие модального окна
   openButtons.forEach(button => {
     button.addEventListener("click", event => {
-      event.preventDefault(); // Предотвращаем стандартное действие для ссылок
+      event.preventDefault();
       openModal();
     });
   });
 
-  // Закрытие по клику внутри модального окна (но не на вложенных элементах)
   modal.addEventListener("click", event => {
     if (event.target === modal) {
       closeModal();
     }
   });
 
-  // Закрытие по клику на кнопку
   const closeButton = modal.querySelector(closeButtonClass);
   if (closeButton) {
     closeButton.addEventListener("click", closeModal);
   }
 
-  // Закрытие по нажатию клавиши Esc
   document.addEventListener("keydown", event => {
     if (event.key === "Escape" && modal.classList.contains(activeClass)) {
       closeModal();
