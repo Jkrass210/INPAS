@@ -2710,7 +2710,6 @@ body {
 }
 
 .box-freedom-choice__right img {
-  border-radius: 20px;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -2718,6 +2717,7 @@ body {
 }
 
 .box-freedom-choice__right picture {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2725,6 +2725,14 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.box-freedom-choice__right picture::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0)), to(#fff));
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
 }
 
 .card5 {
@@ -2954,7 +2962,7 @@ body {
 }
 
 .partners-section-1__card-3 {
-  width: 68.1666666667%;
+  width: 100%;
 }
 
 .partners-section-1__card-4 {
@@ -3080,7 +3088,6 @@ body {
 }
 
 .card7 p {
-  max-width: 670px;
   font-family: var(--second-family);
   font-weight: 400;
   font-size: 16px;
@@ -3752,17 +3759,36 @@ body {
   outline: none;
 }
 
-.drop-down-2__box label input:checked + .drop-down-2__castom {
-  background-color: var(--yfvfy);
+.drop-down-2__box label input[type=radio] + .drop-down-2__castom {
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: 2px solid var(--yfvfy);
+  -webkit-transition: border 0.4s ease-in-out;
+  transition: border 0.4s ease-in-out;
 }
 
-.drop-down-2__box label .drop-down-2__castom {
-  width: 17px;
-  min-width: 17px;
-  height: 17px;
-  border-radius: 100%;
-  border: 2px solid var(--color-text-white);
-  background-color: var(--color-20);
+.drop-down-2__box label input[type=radio]:checked + .drop-down-2__castom {
+  border: 6px solid var(--yfvfy);
+}
+
+.drop-down-2__box label input[type=checkbox] + .drop-down-2__castom {
+  width: 18px;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  border: 2px solid var(--yfvfy);
+  -webkit-transition: background-image 0.4s ease-in-out;
+  transition: background-image 0.4s ease-in-out;
+}
+
+.drop-down-2__box label input[type=checkbox]:checked + .drop-down-2__castom {
+  border: none;
+  background-image: url("../img/filter/ok.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .filter__title {

@@ -70,17 +70,35 @@
           outline: none;
         }
 
-        &:checked + .drop-down-2__castom {
-          background-color: var(--yfvfy);
+        &[type="radio"] + .drop-down-2__castom{
+          width: 20px;
+          min-width: 20px;
+          height: 20px;
+          border-radius: 100%;
+          border: 2px solid var(--yfvfy);
+          transition: border 0.4s ease-in-out;
         }
-      }
-      .drop-down-2__castom {
-        width: 17px;
-        min-width: 17px;
-        height: 17px;
-        border-radius: 100%;
-        border: 2px solid var(--color-text-white);
-        background-color: var(--color-20);
+
+        &[type="radio"]:checked + .drop-down-2__castom{
+          border: 6px solid var(--yfvfy);
+        }
+
+        &[type="checkbox"] + .drop-down-2__castom{
+          width: 18px;
+          min-width: 18px;
+          height: 18px;
+          border-radius: 2px;
+          border: 2px solid var(--yfvfy);
+          transition: background-image 0.4s ease-in-out;
+        }
+
+        &[type="checkbox"]:checked + .drop-down-2__castom{
+          border: none;
+          background-image: url("../img/filter/ok.svg");
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
       }
     }
   }
