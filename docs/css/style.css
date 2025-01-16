@@ -620,7 +620,7 @@ body {
 .title-h1 {
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 74px;
+  font-size: 64px;
   line-height: 101%;
   color: var(--color-text-white);
 }
@@ -803,8 +803,8 @@ body {
 
 .main-section-1__marker1 {
   position: absolute;
-  top: -25px;
-  right: 19%;
+  top: -34px;
+  right: 26%;
 }
 
 .main-section-1__left {
@@ -1044,7 +1044,8 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 40.4191616766%;
-  padding: 210px 0 35px 35px;
+  gap: 5px;
+  padding: 205px 0 30px 30px;
 }
 
 .card1__img {
@@ -1062,7 +1063,7 @@ body {
 }
 
 .card1__link-title {
-  display: inline-block;
+  display: block;
   margin-bottom: 10px;
   font-family: var(--font-family);
   font-weight: 400;
@@ -1070,6 +1071,18 @@ body {
   color: var(--color-text-black);
   -webkit-transition: color 0.4s ease-in-out;
   transition: color 0.4s ease-in-out;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  /* Альтернатива для Firefox */
+  line-height: 1.2;
+  /* Высота строки */
+  max-height: 3.6em;
+  /* Ограничение высоты на 2 строки */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal;
 }
 
 .card1__link-title:focus,
@@ -1088,6 +1101,19 @@ body {
   font-weight: 400;
   font-size: 16px;
   color: var(--color-1);
+  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  /* Альтернатива для Firefox */
+  line-height: 1.2;
+  /* Высота строки */
+  max-height: 4.8em;
+  /* Ограничение высоты на 2 строки */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal;
 }
 
 .card1__link {
@@ -6564,6 +6590,18 @@ body {
 
   .card1__desc {
     font-size: 14px;
+  }
+
+  .card1__link-title {
+    -webkit-line-clamp: 2;
+    max-height: 2.4em;
+    /* Ограничение высоты на 2 строки */
+  }
+
+  .card1__desc {
+    -webkit-line-clamp: 3;
+    max-height: 3.6em;
+    /* Ограничение высоты на 2 строки */
   }
 
   .quiz-container__counter {
