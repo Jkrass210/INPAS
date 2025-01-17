@@ -10,7 +10,12 @@ import { testWebP } from './module/testWebP.js'
 import { playVideo } from './module/playVideo.js';
 import { initCatalogTabs1 } from './module/initCatalogTabs1.js';
 import { handleSwiperControls } from './module/handleSwiperControls.js';
+
+import { moveModalBlocks } from './module/moveModalBlocks.js';
+
 import { setupModal } from "./module/setupModal.js";
+import { setupModalLocal } from "./module/setupModalLocal.js";
+window.setupModalLocal = setupModalLocal;
 
 testWebP(function (support) {
   if (support == true) {
@@ -34,6 +39,13 @@ if(document.querySelector('#openAboutCompany')){
     openDrop(btnSearch, false)
   })
 }
+
+/*if(document.querySelector('#card1')){
+  const btnSearch = document.querySelector('#card1');
+  btnSearch.addEventListener('click', () => {
+    openDrop(btnSearch, false)
+  })
+}*/
 
 if(document.querySelector('#openDrop2')){
   const btnDrop1 = document.querySelector('#openDrop2');
@@ -454,4 +466,8 @@ if(document.querySelectorAll('.open-modal-2') && document.querySelector('.modal-
     stopScrollClass: "stop-scroll",
     activeClass: "active",
   });
+}
+
+if(document.querySelectorAll('div.modal.modal-2[data-drop-id]') && document.querySelector('.box-swiper__hidden-for-modal')){
+  moveModalBlocks();
 }

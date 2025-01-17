@@ -79,4 +79,3 @@ export function openDrop(btn, itemSelector, init = true, updateButtonText = fals
     });
   }
 }
-

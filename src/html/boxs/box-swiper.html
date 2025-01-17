@@ -25,10 +25,12 @@
   <div class="box-swiper__swiper swiper">
     <ul class="box-swiper__swiper-wrapper list-reset swiper-wrapper">
       <li class="box-swiper__swiper-slide swiper-slide">
-        @@include('../components/card4.html',{"url":"img/main/section-5/1.png","name":"A50 (переносной мини-POS)","desc":"Подключаем без визита в банк за 3-5 дней, от вас нужны только документы"})
+        @@include('../components/card4.html',{"url":"img/main/section-5/1.png","name":"A50 (переносной мини-POS)","desc":"Подключаем без визита в банк за 3-5 дней, от вас нужны только документы","idBtn":"card1"})
+        @@include('./modal-order.html',{"idBtn":"card1"})
       </li>
       <li class="box-swiper__swiper-slide swiper-slide">
-        @@include('../components/card4.html',{"url":"img/main/section-5/2.png","name":"S920 (переносной)","desc":"Подключаем без визита в банк за 3-5 дней, от вас нужны только документы"})
+        @@include('../components/card4.html',{"url":"img/main/section-5/2.png","name":"S920 (переносной)","desc":"Подключаем без визита в банк за 3-5 дней, от вас нужны только документы","idBtn":"card2"})
+        @@include('./modal-order.html',{"idBtn":"card2"})
       </li>
       <li class="box-swiper__swiper-slide swiper-slide">
         @@include('../components/card4.html',{"url":"img/main/section-5/3.png","name":"D210E (переносной)","desc":"Подключаем без визита в банк за 3-5 дней, от вас нужны только документы"})
@@ -45,4 +47,5 @@
     </ul>
   </div>
   <div class="box-swiper__mobail-hidden"></div>
+  <div class="box-swiper__hidden-for-modal"></div>
 </div>

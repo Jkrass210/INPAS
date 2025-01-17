@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Каталог</title>
-  <link href="css/normalize.min.css?_v=20250116073508" rel="stylesheet">
-  <link href="css/swiper-bundle.min.css?_v=20250116073508" rel="stylesheet">
-  <link href="css/style.min.css?_v=20250116073508" rel="stylesheet">
+  <link href="css/normalize.min.css?_v=20250117094858" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css?_v=20250117094858" rel="stylesheet">
+  <link href="css/style.min.css?_v=20250117094858" rel="stylesheet">
 
-  <script src="js/swiper-bundle.min.js?_v=20250116073508" defer></script>
-  <script src="js/fslightbox-min.js?_v=20250116073508" defer></script>
-  <script type="module" src="js/main-min.js?_v=20250116073508"></script>
+  <script src="js/swiper-bundle.min.js?_v=20250117094858" defer></script>
+  <script src="js/fslightbox-min.js?_v=20250117094858" defer></script>
+  <script type="module" src="js/main-min.js?_v=20250117094858"></script>
 </head>
 <body>
   <header class="header default">
@@ -612,9 +612,40 @@
     <p class="card4__price">
       16 670 ₽
     </p>
-    <a class="card4__btn open-modal-2" href="#">
+    <button class="card4__btn btn-reset" href="#" id="card1" onclick="setupModalLocal('card1')">
       Купить
-    </a>
+    </button>
+  </div>
+</div>
+                <div class="modal modal-2" data-drop-id="card1">
+  <div class="modal-feedback order active">
+    <form class="box-contact-us-section__form form" action="#" method="post">
+      <h4>Заказать</h4>
+      <p class="form__desc-top name">
+        A50 (переносной мини-POS)
+      </p>
+      <input class="input1"  id="name" name="name" type="text" placeholder="Имя">
+      <input class="input1"  id="email" name="email" type="email" placeholder="Email">
+      <input class="input1"  id="phone" name="phone" type="text" placeholder="+7 (999) 999-99-99">
+      <button class="btn1 btn-reset">
+  Отправить
+</button>
+      <p class="form__desc-bottom">
+        Нажимая кнопку «Отправить заявку», вы соглашаетесь с <a href="#">политикой конфиденциальности</a> и пользовательскимсоглашением
+      </p>
+    </form>
+  </div>
+  <div class="modal-contact-you">
+    <button class="btn-close btn-reset">
+  <span></span>
+  <span></span>
+</button>
+    <div class="modal-contact-you__box-img">
+      <picture><source srcset="img/modal/1.webp" type="image/webp"><img src="img/modal/1.jpg" alt="img"></picture>
+    </div>
+    <div class="modal-contact-you__wrapp">
+      <p>Наши сотрудники свяжутся с Вами с минуты на минуту.</p>
+    </div>
   </div>
 </div>
               </li>
@@ -633,9 +664,9 @@
     <p class="card4__price">
       16 670 ₽
     </p>
-    <a class="card4__btn open-modal-2" href="#">
+    <button class="card4__btn btn-reset" href="#" id="@@idBtn" onclick="setupModalLocal('@@idBtn')">
       Купить
-    </a>
+    </button>
   </div>
 </div>
               </li>
@@ -654,9 +685,9 @@
     <p class="card4__price">
       16 670 ₽
     </p>
-    <a class="card4__btn open-modal-2" href="#">
+    <button class="card4__btn btn-reset" href="#" id="@@idBtn" onclick="setupModalLocal('@@idBtn')">
       Купить
-    </a>
+    </button>
   </div>
 </div>
               </li>
@@ -675,9 +706,9 @@
     <p class="card4__price">
       16 670 ₽
     </p>
-    <a class="card4__btn open-modal-2" href="#">
+    <button class="card4__btn btn-reset" href="#" id="@@idBtn" onclick="setupModalLocal('@@idBtn')">
       Купить
-    </a>
+    </button>
   </div>
 </div>
               </li>
@@ -696,9 +727,9 @@
     <p class="card4__price">
       16 670 ₽
     </p>
-    <a class="card4__btn open-modal-2" href="#">
+    <button class="card4__btn btn-reset" href="#" id="@@idBtn" onclick="setupModalLocal('@@idBtn')">
       Купить
-    </a>
+    </button>
   </div>
 </div>
               </li>
@@ -717,9 +748,9 @@
     <p class="card4__price">
       16 670 ₽
     </p>
-    <a class="card4__btn open-modal-2" href="#">
+    <button class="card4__btn btn-reset" href="#" id="@@idBtn" onclick="setupModalLocal('@@idBtn')">
       Купить
-    </a>
+    </button>
   </div>
 </div>
               </li>
@@ -738,9 +769,9 @@
     <p class="card4__price">
       16 670 ₽
     </p>
-    <a class="card4__btn open-modal-2" href="#">
+    <button class="card4__btn btn-reset" href="#" id="@@idBtn" onclick="setupModalLocal('@@idBtn')">
       Купить
-    </a>
+    </button>
   </div>
 </div>
               </li>
@@ -759,9 +790,9 @@
     <p class="card4__price">
       16 670 ₽
     </p>
-    <a class="card4__btn open-modal-2" href="#">
+    <button class="card4__btn btn-reset" href="#" id="@@idBtn" onclick="setupModalLocal('@@idBtn')">
       Купить
-    </a>
+    </button>
   </div>
 </div>
               </li>
@@ -780,9 +811,9 @@
     <p class="card4__price">
       16 670 ₽
     </p>
-    <a class="card4__btn open-modal-2" href="#">
+    <button class="card4__btn btn-reset" href="#" id="@@idBtn" onclick="setupModalLocal('@@idBtn')">
       Купить
-    </a>
+    </button>
   </div>
 </div>
               </li>
@@ -801,9 +832,9 @@
     <p class="card4__price">
       16 670 ₽
     </p>
-    <a class="card4__btn open-modal-2" href="#">
+    <button class="card4__btn btn-reset" href="#" id="@@idBtn" onclick="setupModalLocal('@@idBtn')">
       Купить
-    </a>
+    </button>
   </div>
 </div>
               </li>
@@ -822,9 +853,9 @@
     <p class="card4__price">
       16 670 ₽
     </p>
-    <a class="card4__btn open-modal-2" href="#">
+    <button class="card4__btn btn-reset" href="#" id="@@idBtn" onclick="setupModalLocal('@@idBtn')">
       Купить
-    </a>
+    </button>
   </div>
 </div>
               </li>
@@ -843,9 +874,9 @@
     <p class="card4__price">
       16 670 ₽
     </p>
-    <a class="card4__btn open-modal-2" href="#">
+    <button class="card4__btn btn-reset" href="#" id="@@idBtn" onclick="setupModalLocal('@@idBtn')">
       Купить
-    </a>
+    </button>
   </div>
 </div>
               </li>
@@ -1028,7 +1059,7 @@
     </div>
   </div>
 </div>
-  <div class="modal modal-2">
+  <div class="modal modal-2" data-drop-id="@@idBtn">
   <div class="modal-feedback order active">
     <form class="box-contact-us-section__form form" action="#" method="post">
       <h4>Заказать</h4>
